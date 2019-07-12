@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Property Create here</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<h2>Property Create Form</h2>
+
+<form action="" method="post" id="PropertyForm" data-types-url="{% url 'ajax_load_types' %}">
+{% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+     <button type="submit">Save</button>
+    <a href="{% url 'property_list' %}">Nevermind</a>
+
+</form>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+$("#id_category").change(function(){
+var url=$("#PropertyForm").attr("data-types-url");
+var categoryId=$(this).val();
+
+$.ajax({
+url:url,
+data:{
+'category':categoryId
+},
+success:function(data){
+$("#id_type").html(data);
+}
+});
+});
+
+
+</script>
+
+
+</body>
+</html>
