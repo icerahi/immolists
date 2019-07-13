@@ -29,15 +29,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'properties',
 
+    'pagedown',
+    'markdown_deux',
     'django.contrib.sites',
-
     'rest_framework',
 
     'rest_framework.authtoken',
-
     'corsheaders',
     'rest_auth',
     'rest_auth.registration',
+
 
     'allauth',
     'allauth.account',
@@ -134,6 +135,8 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
 STATIC_ROOT=os.path.join(BASE_DIR,'static-root')
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 CORS_ORIGIN_WHITELIST = [
 
@@ -161,4 +164,4 @@ EMAIL_HOST_USER = 'rootcodeerror@gmail.com'
 EMAIL_HOST_PASSWORD = 'rahiriya'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 CSRF_COOKIE_NAME = "XSRF-TOKEN"
- 
+

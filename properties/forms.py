@@ -1,11 +1,14 @@
 from django import forms
+from pagedown.widgets import PagedownWidget
+
 from .models import PropertyForSell,Type
 
 class PropertyForSellForm(forms.ModelForm):
-
+    full_description=forms.CharField(widget=PagedownWidget())
+    key_features=forms.CharField(widget=PagedownWidget())
     class Meta:
         model=PropertyForSell
-        fields = ['realator', 'category', 'type', 'title',]
+        fields = '__all__'
 
 
     def __init__(self,*args,**kwargs):

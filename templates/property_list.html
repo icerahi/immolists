@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Property List</title>
+     {% load markdown_deux_tags %}
+    {{ form.media }}
 </head>
 <body>
 <h1>Property of the Month</h1>
 {% for object in object_list %}
+Posted on :{{object.created}} <br>
 Property name : <a href="{% url 'property_update' pk=object.pk %}">{{object.title}}</a><br>
 Relator:{{object.realator}}<br>
 Property category:{{object.category}}<br>
 property type: {{object.type}}<br>
+Price : {{object.min_price}}-{{object.max_price}} <br>
+location :{{object.location}}<br>
+Full Descripton :{{object.full_description|markdown}} <br>
+Key Features :{{object.key_features|markdown}}<br>
+Google map:
+<iframe src="{{object.google_map}}" frameborder="20"></iframe>
+<a style="position: static; overflow: visible; float: none; display: inline;" target="_blank" rel="noopener" href="{{object.google_map}}" title="Open this area in Google Maps (opens a new window)">
+    See map in google map</a>
+
 {% endfor %}
 
 </body>
