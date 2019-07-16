@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if object.realator.email == request.user.email %}
+<a href="{{ object.get_update_url }}">update your property</a>
+<button style="float:right"><a href="{{object.get_delete_url}}"> delete your property</a></button>
+<br>
+{% endif %}
+<br><br><br>
+Posted on :{{object.created}} <br>
+Property name : <a href="{{object.get_absolute_url}}">{{object.title}}</a><br>
+Relator:{{object.realator}}<br>
+Property category:{{object.category}}<br>
+property type: {{object.type}}<br>
+Price : {{object.min_price}}-{{object.max_price}} <br>
+location :{{object.location}}<br>
+Full Descripton :{{object.full_description|safe }} <br>
+Key Features :{{object.key_features|safe }}<br>
+Google map:
+ <a style="position: static; overflow: visible; float: none; display: inline;" target="_blank" rel="noopener" href="{{object.google_map}}" title="Open this area in Google Maps (opens a new window)">
+    See map in google map</a>
+
+<iframe src="https://www.google.com/maps/dir/23.0347196,91.4181732/West+Sonapur/@23.0343633,91.4176155,18z/data=!4m9!4m8!1m0!1m5!1m1!1s0x375369baf9895efb:0xf952e1d089819d4d!2m2!1d91.41569!2d23.0261756!3e0" frameborder="10" height="200" width="400"></iframe>
+
+
+
+{% endblock %}

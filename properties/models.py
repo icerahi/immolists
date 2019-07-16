@@ -1,7 +1,11 @@
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.conf import settings
 from django.db import models
-
-
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+from django.urls import reverse
+from django.utils.text import slugify
 
 
 class Category(models.Model):
@@ -28,10 +32,10 @@ class PropertyForSell(models.Model):
     )
     realator         =models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.DO_NOTHING,default=None)
     category         =models.ForeignKey(Category,on_delete=models.DO_NOTHING)
-    type             =models.ForeignKey(Type,on_delete=models.DO_NOTHING)
+    type             =models.ForeignKey(Type,on_delete=models.DO_NOTHING,default='banglo')
     title            =models.CharField(max_length=200)
-    full_description =models.TextField()
-    key_features     =models.TextField()
+    full_description =RichTextUploadingField()
+    key_features     =RichTextField()
     min_price        =models.IntegerField()
     max_price        =models.IntegerField()
     created          =models.DateTimeField(auto_now_add=True)
@@ -47,4 +51,18 @@ class PropertyForSell(models.Model):
     def __str__(self):
         return f"{self.title}"
 
+    def get_absolute_url(self):
+        return reverse('property_detail',kwargs={'pk':self.pk,
+                                                 'slug':self.slug})
+    def get_update_url(self,*args,**kwargs):
+        return reverse('property_update',kwargs={'pk':self.pk,
+                                                'slug':self.slug})
+    def get_delete_url(self):
+        return reverse('property_delete',kwargs={'pk':self.pk,
+                                                 'slug':self.slug})
 
+
+@receiver(pre_save,sender=PropertyForSell)
+def pre_save_slug(sender,**kwargs):
+    slug=slugify(kwargs['instance'].title)
+    kwargs['instance'].slug=slug

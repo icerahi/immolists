@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> Property Create here</title>
-    <style>
+{% extends 'base.html' %}
 
-    </style>
-    {{ form.media }}
-</head>
-<body>
+{% block content %}
 <h2>Property Create Form</h2>
 
-<form action="" method="post" id="PropertyForm" data-types-url="{% url 'ajax_load_types' %}">
+<form class="" action="" method="post" id="PropertyForm" data-types-url="{% url 'ajax_load_types' %}">
 {% csrf_token %}
     <table>
+        {{ form.media }}
         {{form.as_table}}
     </table>
      <button type="submit">Save</button>
@@ -41,6 +34,4 @@ $("#id_type").html(data);
 
 </script>
 
-
-</body>
-</html>
+ {% endblock %}
