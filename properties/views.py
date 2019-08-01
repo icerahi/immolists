@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView, DetailView, DeleteView
+from django.views.generic import ListView,CreateView, UpdateView, DetailView, DeleteView,TemplateView
 
 from properties.forms import PropertyForSellForm
 from properties.models import PropertyForSell, Type
@@ -47,6 +47,39 @@ def load_types(request):
     types=Type.objects.filter(category_id=category_id).order_by('name')
     return render(request,'type_dropdown_list.html',{'types':types})
 
+
+
+class CheckTemplate(TemplateView):
+    template_name='dashboard_base.html'
+
+class EnquireSend(TemplateView):
+    template_name = 'enquire_send.html'
+
+class EnquireCome(TemplateView):
+    template_name = 'enquire_come.html'
+
+class PropertyList(TemplateView):
+    template_name = 'list.html'
+
+class FavouriteList(TemplateView):
+    template_name = 'favourite.html'
+
+class OfferList(TemplateView):
+    template_name = 'offer.html'
+
+class PersonalInfo(TemplateView):
+    template_name = 'personalinfo.html'
+
+class PasswordChange(TemplateView):
+    template_name = 'password_change.html'
+
+class Sell(TemplateView):
+    template_name = 'sell.html'
+
+class Rent(TemplateView):
+    template_name = 'rent.html'
+class MakeOffer(TemplateView):
+    template_name = 'make_offer.html'
 
 
 

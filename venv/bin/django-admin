@@ -1,4 +1,4 @@
-#!/home/rahi/PycharmProjects/Immolists/venv/bin/python
+#!/home/rahi/Desktop/immolists/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
