@@ -20,7 +20,7 @@ class PropertyCreateView(CreateView,LoginRequiredMixin):
     model=PropertyForSell
     form_class = PropertyForSellForm
     success_url = reverse_lazy('property_list')
-    template_name = 'sell_property.html'
+    template_name = 'sell.html'
 
     def form_valid(self, form):
         form=PropertyForSellForm(self.request.POST,self.request.FILES)
