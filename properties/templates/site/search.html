@@ -1,0 +1,524 @@
+{% extends 'site/base.html' %}
+{% load static %}
+{% block content %}
+
+<!--	Property Search Form One
+=============================================================-->
+<div class="full-row py-5 bg-gray">
+	<div class="container">
+		<form class="form1 formicon" method="post" action="http://unicoderbd.com/theme/html/homex/action_page_post.php">
+		  <div class="row">
+		  	<div class="col-md-2 col-lg-2">
+		  		<div class="form-group">
+		  			<select class="form-control">
+					  <option>Any Status</option>
+					  <option>For Rent</option>
+					  <option>For Sale</option>
+					  <option>For Lease</option>
+					</select>
+		  		</div>
+		  	</div>
+		  	<div class="col-md-7 col-lg-7">
+		  		<div class="form-group">
+		  			<input type="text" class="form-control" id="validationDefault03" placeholder="Enter Address, Street and City or Enter State, Zip code" required>
+		  		</div>
+		  	</div>
+		  	<div class="col-md-3 col-lg-3">
+		  		<div class="form-group">
+		  			<button type="submit" class="btn btn-default1 w-100">Search Property</button>
+		  		</div>
+		  	</div>
+		  	<div class="col-md-2 col-lg-2">
+		  		<div class="form-group">
+		  			<select class="form-control">
+					  <option>Any Type</option>
+					  <option>Appartment</option>
+					  <option>Condose</option>
+					  <option>Land</option>
+					  <option>Commercial</option>
+					  <option>Villah</option>
+					</select>
+		  		</div>
+		  	</div>
+		  	<div class="col-md-3 col-lg-3">
+		  		<div class="form-group">
+		  			<input type="text" class="form-control" id="validationDefault04" placeholder="Min Area" required>
+		  		</div>
+		  	</div>
+		  	<div class="col-md-3 col-lg-3">
+		  		<div class="form-group">
+		  			<input type="text" class="form-control" id="validationDefault05" placeholder="Max Area" required>
+		  		</div>
+		  	</div>
+		  	<div class="col-md-4 col-lg-4">
+		  		<div class="form-group">
+		  			<div class="price_range">
+						<div class="price-filter">
+							<span class="price-slider">
+								<input class="filter_price" type="text" name="price" value="100000;900000" />
+							</span>
+						</div>
+					</div>
+		  		</div>
+		  	</div>
+		  	<div class="col-md-12 col-lg-12">
+		  		<p class="d-inline-block hover_gray formicon">
+				  <a class="checkbox_collapse" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">More Option</a>
+				</p>
+				<div class="row">
+				  <div class="col">
+				    <div class="collapse" id="multiCollapseExample1">
+				        <div class="card card-body color-secondery bg-gray px-0">
+							<div class="row">
+								<div class="col-lg-3">
+									<ul class="check_submit">
+										<li>
+											<input id="feature_1" class="hide" type="checkbox">
+											<label for="feature_1">Parking Garage</label>
+										</li>
+										<li>
+											<input id="feature_2" class="hide" type="checkbox">
+											<label for="feature_2">Security System</label>
+										</li>
+										<li>
+											<input id="feature_3" class="hide" type="checkbox">
+											<label for="feature_3">Window Covering</label>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-3">
+									<ul class="check_submit">
+										<li>
+											<input id="feature_4" class="hide" type="checkbox">
+											<label for="feature_4">Swiming Pool</label>
+										</li>
+										<li>
+											<input id="feature_5" class="hide" type="checkbox">
+											<label for="feature_5">Air Condition</label>
+										</li>
+										<li>
+											<input id="feature_8" class="hide" type="checkbox">
+											<label for="feature_8">Fire Protection</label>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-3">
+									<ul class="check_submit">
+										<li>
+											<input id="feature_9" class="hide" type="checkbox">
+											<label for="feature_9">Garden</label>
+										</li>
+										<li>
+											<input id="feature_10" class="hide" type="checkbox">
+											<label for="feature_10">Fire Place</label>
+										</li>
+										<li>
+											<input id="feature_11" class="hide" type="checkbox">
+											<label for="feature_11">Emeargency Exit</label>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-3">
+									<ul class="check_submit">
+										<li>
+											<input id="feature_12" class="hide" type="checkbox">
+											<label for="feature_12">Home Theater</label>
+										</li>
+										<li>
+											<input id="feature_13" class="hide" type="checkbox">
+											<label for="feature_13">Gym & Sports</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+				    </div>
+				  </div>
+				</div>
+		  	</div>
+		  </div>
+		</form>
+	</div>
+</div>
+<!--	Property List and Grid
+===============================================================-->
+<section class="full-row">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12">
+				<div class="choost_listing">
+					<div class="row">
+						<div class="col-lg-12">
+							<form class="top_filter pb-4">
+								<div class="row">
+									<div class="col-md-9 col-lg-9">
+										<div class="short_by">
+											<label>Shorts By :</label>
+											<div class="form-group m-0 pr-5">
+												<select class="form-control bg-gray border-none">
+												  <option>Default Order</option>
+												  <option>Newest First</option>
+												  <option>Oldest First</option>
+												  <option>Top Rated</option>
+												  <option>Most Popular</option>
+												</select>
+											</div>
+											<label>1-10 of 25 results</label>
+										</div>
+									</div>
+									<div class="col-md-3 col-lg-3">
+										<div class="property-view py-1 float-right color-primary-a">
+											<a href="property_grid_simple_search.html"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+											<a href="property_list_simple_search-2.html" class="active"><i class="fa fa-th-list" aria-hidden="true"></i></a>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12 col-lg-12">
+							<div class="list_item full-width">
+				  				<!-- Thumbnail 1 Start -->
+							  	<div class="thumbnail_one mb_30">
+							  		<div class="image_area overlay_one overfollow">
+										<img src="{% static 'images/thumbnail/02.jpg' %}" alt="">
+										<div class="Featured">Featured</div>
+										<div class="sale sale_position bg-primary">For Sale</div>
+										<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+										<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+									</div>
+									<div class="thum_one_content">
+										<div class="thum_title color-secondery">
+											<h5 class="hover_primary"><a href="property_single_1.html">Apolo Family Appartment</a></h5>
+											<p><i class="fa fa-map-marker" aria-hidden="true"></i>Avenue South Burlington, Los Angles</p>
+										</div>
+										<div class="thum_data bg-gray mt_15">
+											<ul>
+												<li><span>3400</span> Sqft</li>
+												<li><span>2</span> Beds</li>
+												<li><span>3</span> Rooms</li>
+												<li><span>3</span> Baths</li>
+												<li><span>1</span> Garage</li>
+												<li><span>2</span> Piazza</li>
+												<li><span>Large</span> Kitchen</li>
+											</ul>
+										</div>
+										<div class="ft_area p_20">
+											<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+											<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+										</div>
+									</div>
+							    </div>
+							    <!-- Thumbnail 1 End -->
+							    <!-- Thumbnail 2 Start -->
+							  	<div class="thumbnail_one mb_30">
+							  		<div class="image_area overlay_one overfollow">
+										<img src="{% static 'images/thumbnail/02.jpg' %}" alt="">
+										<div class="Featured">Featured</div>
+										<div class="sale sale_position bg-primary">For Sale</div>
+										<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+										<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+									</div>
+									<div class="thum_one_content">
+										<div class="thum_title color-secondery">
+											<h5 class="hover_primary"><a href="property_single_1.html">Lovelece Road Greenfield</a></h5>
+											<p><i class="fa fa-map-marker" aria-hidden="true"></i>Avenue South Burlington, Los Angles</p>
+										</div>
+										<div class="thum_data bg-gray mt_15">
+											<ul>
+												<li><span>2500</span> Sqft</li>
+												<li><span>2</span> Beds</li>
+												<li><span>3</span> Rooms</li>
+												<li><span>3</span> Baths</li>
+												<li><span>1</span> Garage</li>
+												<li><span>2</span> Piazza</li>
+												<li><span>Large</span> Kitchen</li>
+											</ul>
+										</div>
+										<div class="ft_area p_20">
+											<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+											<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+										</div>
+									</div>
+							    </div>
+							    <!-- Thumbnail 2 End -->
+							    <!-- Thumbnail 3 Start -->
+							  	<div class="thumbnail_one mb_30">
+							  		<div class="image_area overlay_one overfollow">
+										<img src="{% static 'images/thumbnail/02.jpg' %}" alt="">
+										<div class="Featured">Featured</div>
+										<div class="sale sale_position bg-primary">For Sale</div>
+										<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+										<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+									</div>
+									<div class="thum_one_content">
+										<div class="thum_title color-secondery">
+											<h5 class="hover_primary"><a href="property_single_1.html">Relaxing Apartment</a></h5>
+											<p><i class="fa fa-map-marker" aria-hidden="true"></i>Avenue South Burlington, Los Angles</p>
+										</div>
+										<div class="thum_data bg-gray mt_15">
+											<ul>
+												<li><span>3400</span> Sqft</li>
+												<li><span>2</span> Beds</li>
+												<li><span>3</span> Rooms</li>
+												<li><span>3</span> Baths</li>
+												<li><span>1</span> Garage</li>
+												<li><span>2</span> Piazza</li>
+												<li><span>Large</span> Kitchen</li>
+											</ul>
+										</div>
+										<div class="ft_area p_20">
+											<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+											<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+										</div>
+									</div>
+							    </div>
+							    <!-- Thumbnail 3 End -->
+							    <!-- Thumbnail 4 Start -->
+							  	<div class="thumbnail_one mb_30">
+							  		<div class="image_area overlay_one overfollow">
+										<img src="{% static 'images/thumbnail/02.jpg' %}" alt="">
+										<div class="Featured">Featured</div>
+										<div class="sale sale_position bg-primary">For Sale</div>
+										<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+										<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+									</div>
+									<div class="thum_one_content">
+										<div class="thum_title color-secondery">
+											<h5 class="hover_primary"><a href="property_single_1.html">Relaxing Apartment</a></h5>
+											<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+										</div>
+										<div class="thum_data bg-gray mt_15">
+											<ul>
+												<li><span>2500</span> Sqft</li>
+												<li><span>2</span> Beds</li>
+												<li><span>3</span> Rooms</li>
+												<li><span>3</span> Baths</li>
+												<li><span>1</span> Garage</li>
+												<li><span>2</span> Piazza</li>
+												<li><span>Large</span> Kitchen</li>
+											</ul>
+										</div>
+										<div class="ft_area p_20">
+											<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+											<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+										</div>
+									</div>
+							    </div>
+							    <!-- Thumbnail 4 End -->
+							    <!-- Thumbnail 5 Start -->
+							  	<div class="thumbnail_one mb_30">
+							  		<div class="image_area overlay_one overfollow">
+										<img src="{% static 'images/thumbnail/02.jpg' %}" alt="">
+										<div class="Featured">Featured</div>
+										<div class="sale sale_position bg-primary">For Sale</div>
+										<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+										<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+									</div>
+									<div class="thum_one_content">
+										<div class="thum_title color-secondery">
+											<h5 class="hover_primary"><a href="property_single_1.html">Nirala Appartment</a></h5>
+											<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+										</div>
+										<div class="thum_data bg-gray mt_15">
+											<ul>
+												<li><span>2500</span> Sqft</li>
+												<li><span>2</span> Beds</li>
+												<li><span>3</span> Rooms</li>
+												<li><span>3</span> Baths</li>
+												<li><span>1</span> Garage</li>
+												<li><span>2</span> Piazza</li>
+												<li><span>Large</span> Kitchen</li>
+											</ul>
+										</div>
+										<div class="ft_area p_20">
+											<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+											<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+										</div>
+									</div>
+							    </div>
+							    <!-- Thumbnail 5 End -->
+							    <!-- Thumbnail 6 Start -->
+							  	<div class="thumbnail_one mb_30">
+							  		<div class="image_area overlay_one overfollow">
+										<img src="{% static 'images/thumbnail/02.jpg' %}" alt="">
+										<div class="Featured">Featured</div>
+										<div class="sale sale_position bg-primary">For Sale</div>
+										<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+										<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+									</div>
+									<div class="thum_one_content">
+										<div class="thum_title color-secondery">
+											<h5 class="hover_primary"><a href="property_single_1.html">Meridian Villas</a></h5>
+											<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+										</div>
+										<div class="thum_data bg-gray mt_15">
+											<ul>
+												<li><span>2500</span> Sqft</li>
+												<li><span>2</span> Beds</li>
+												<li><span>3</span> Rooms</li>
+												<li><span>3</span> Baths</li>
+												<li><span>1</span> Garage</li>
+												<li><span>2</span> Piazza</li>
+												<li><span>Large</span> Kitchen</li>
+											</ul>
+										</div>
+										<div class="ft_area p_20">
+											<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+											<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+										</div>
+									</div>
+							    </div>
+							    <!-- Thumbnail 6 End -->
+							    <!-- Thumbnail 7 Start -->
+							  	<div class="thumbnail_one mb_30">
+							  		<div class="image_area overlay_one overfollow">
+										<img src="{% static 'images/thumbnail/02.jpg' %}" alt="">
+										<div class="Featured">Featured</div>
+										<div class="sale sale_position bg-primary">For Sale</div>
+										<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+										<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+									</div>
+									<div class="thum_one_content">
+										<div class="thum_title color-secondery">
+											<h5 class="hover_primary"><a href="property_single_1.html">Modern Family Home</a></h5>
+											<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+										</div>
+										<div class="thum_data bg-gray mt_15">
+											<ul>
+												<li><span>2500</span> Sqft</li>
+												<li><span>2</span> Beds</li>
+												<li><span>3</span> Rooms</li>
+												<li><span>3</span> Baths</li>
+												<li><span>1</span> Garage</li>
+												<li><span>2</span> Piazza</li>
+												<li><span>Large</span> Kitchen</li>
+											</ul>
+										</div>
+										<div class="ft_area p_20">
+											<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+											<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+										</div>
+									</div>
+							    </div>
+							    <!-- Thumbnail 7 End -->
+							    <!-- Thumbnail 8 Start -->
+							  	<div class="thumbnail_one mb_30">
+							  		<div class="image_area overlay_one overfollow">
+										<img src="{% static 'images/thumbnail/02.jpg' %}" alt="">
+										<div class="Featured">Featured</div>
+										<div class="sale sale_position bg-primary">For Sale</div>
+										<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+										<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+									</div>
+									<div class="thum_one_content">
+										<div class="thum_title color-secondery">
+											<h5 class="hover_primary"><a href="property_single_1.html">Real House Luxury Villa</a></h5>
+											<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+										</div>
+										<div class="thum_data bg-gray mt_15">
+											<ul>
+												<li><span>2500</span> Sqft</li>
+												<li><span>2</span> Beds</li>
+												<li><span>3</span> Rooms</li>
+												<li><span>3</span> Baths</li>
+												<li><span>1</span> Garage</li>
+												<li><span>2</span> Piazza</li>
+												<li><span>Large</span> Kitchen</li>
+											</ul>
+										</div>
+										<div class="ft_area p_20">
+											<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+											<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+										</div>
+									</div>
+							    </div>
+							    <!-- Thumbnail 8 End -->
+							    <!-- Thumbnail 9 Start -->
+							  	<div class="thumbnail_one mb_30">
+							  		<div class="image_area overlay_one overfollow">
+										<img src="{% static 'images/thumbnail/02.jpg' %}" alt="">
+										<div class="Featured">Featured</div>
+										<div class="sale sale_position bg-primary">For Sale</div>
+										<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+										<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+									</div>
+									<div class="thum_one_content">
+										<div class="thum_title color-secondery">
+											<h5 class="hover_primary"><a href="property_single_1.html">Apolo Family Appartment</a></h5>
+											<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+										</div>
+										<div class="thum_data bg-gray mt_15">
+											<ul>
+												<li><span>2500</span> Sqft</li>
+												<li><span>2</span> Beds</li>
+												<li><span>3</span> Rooms</li>
+												<li><span>3</span> Baths</li>
+												<li><span>1</span> Garage</li>
+												<li><span>2</span> Piazza</li>
+												<li><span>Large</span> Kitchen</li>
+											</ul>
+										</div>
+										<div class="ft_area p_20">
+											<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+											<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+										</div>
+									</div>
+							    </div>
+							    <!-- Thumbnail 9 End -->
+							    <!-- Thumbnail 10 Start -->
+							  	<div class="thumbnail_one mb_30">
+							  		<div class="image_area overlay_one overfollow">
+										<img src="{% static 'images/thumbnail/02.jpg' %}" alt="">
+										<div class="Featured">Featured</div>
+										<div class="sale sale_position bg-primary">For Sale</div>
+										<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+										<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+									</div>
+									<div class="thum_one_content">
+										<div class="thum_title color-secondery">
+											<h5 class="hover_primary"><a href="property_single_1.html">Lovelece Road Greenfield</a></h5>
+											<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+										</div>
+										<div class="thum_data bg-gray mt_15">
+											<ul>
+												<li><span>3400</span> Sqft</li>
+												<li><span>2</span> Beds</li>
+												<li><span>3</span> Rooms</li>
+												<li><span>3</span> Baths</li>
+												<li><span>1</span> Garage</li>
+												<li><span>2</span> Piazza</li>
+												<li><span>Large</span> Kitchen</li>
+											</ul>
+										</div>
+										<div class="ft_area p_20">
+											<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+											<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+										</div>
+									</div>
+							    </div>
+							    <!-- Thumbnail 10 End -->
+				  			</div>
+
+							<nav aria-label="Page navigation" class="alinment d-table">
+							  <ul class="pagination mt_30">
+							    <li class="page-item"><a class="page-link active" href="#">Previous</a></li>
+							    <li class="page-item"><a class="page-link" href="#">1</a></li>
+							    <li class="page-item"><a class="page-link" href="#">2</a></li>
+							    <li class="page-item"><a class="page-link" href="#">3</a></li>
+							    <li class="page-item">...</li>
+							    <li class="page-item"><a class="page-link" href="#">45</a></li>
+							    <li class="page-item"><a class="page-link active" href="#">Next</a></li>
+							  </ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock content %}

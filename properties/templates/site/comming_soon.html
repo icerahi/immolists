@@ -1,0 +1,45 @@
+{% extends 'site/base.html' %}
+
+{% load static %}
+{% block content %}
+
+<section style="background-image: url(static/images/comming-soon-bg.png) no-repeat center center / 100%; height: 100vh" class="full-row">
+	<div class="bg-shape"></div>
+	<div class="comming-soon bg-white">
+		<div class="container-fluid h-100">
+			<div class="row h-100">
+				<div class="col-lg-6 col-12 bg-white overflow-auto" style="padding: 50px">
+					<div class="logo-area mb-5"><a href="index-2.html"><img src="{% static 'images/logo/logo.png' %}" alt=""></a></div>
+					<div class="left-content d-inline-block pt-4 coming-soon-tab">
+						<img src="images/vacation.png" alt="">
+						<h2 class="comming-title color-primary">Coming Soon</h2>
+						<h5 class="inner-title color-primary">Stay Connected, Stay Updated!</h5>
+					</div>
+				</div>
+
+				<div class="col-lg-6 col-12 bg-default" style="height:100%">
+					<div class="xy-center p-5 bg-default w-100">
+						<div class="time-count" data-countdown="2019/12/30"></div>
+						<h2 class="color-white pb-4 pt-5 d-inline-block">Get Updates!</h2>
+						<form class="send-mail position-relative w-75" action="#" method="post">
+							<div class="form-group">
+								<input type="text" name="email" class="form-control" placeholder="Email Address">
+								<button class="btn btn-primary position-absolute text-white">Send Now</button>
+							</div>
+						</form>
+						<div class="social_media color-white-a mt-5">
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

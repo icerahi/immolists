@@ -1,0 +1,148 @@
+{% extends 'site/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="page-banner bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12">
+				<div class="breadcrumbs color-secondery">
+					<ul>
+						<li class="hover_gray"><a href="#">Home</a></li>
+						<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+						<li class="color-default">Contact</li>
+					</ul>
+				</div>
+				<div class="float-right color-primary">
+					<h3 class="banner-title font-weight-bold">Contact</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--	Contact Information
+===============================================================-->
+<section class="full-row">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-4">
+				<div class="contact_info">
+					<h3 class="mb-4 color-primary">Support</h3>
+					<div class="d-flex">
+						<div class="circle mr-4"><img src="{% static 'images/team/01.jpg' %}" alt=""></div>
+						<div class="contact_details">
+							<h5 class="d-table">Lawrance Kyle</h5>
+							<span class="d-table color-secondery">Support Member</span>
+							<a class="color-default" href="#">www.support@homex.com</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 col-lg-4">
+				<div class="contact_info">
+					<h3 class="mb-4 color-primary">Contacts</h3>
+					<ul class="icon_default">
+						<li class="d-flex mb-4">
+							<span class="fa-1x mr-4 w-25-px"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+							<div class="contact_address">
+								<h5 class="color-primary">Address</h5>
+								<span>Collins Street West, Victoria 8007, Australia</span>
+							</div>
+						</li>
+						<li class="d-flex mb-4">
+							<span class="fa-1x mr-4 w-25-px"><i class="fa fa-phone" aria-hidden="true"></i></span>
+							<div class="contact_address">
+								<h5 class="color-primary">Call Us</h5>
+								<span class="d-table">012 34 567 809 (or)</span>
+								<span>012 34 567 809 </span>
+							</div>
+						</li>
+						<li class="d-flex mb-4">
+							<span class="fa-1x mr-4 w-25-px"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+							<div class="contact_address">
+								<h5 class="color-primary">Address</h5>
+								<span>helpline@homex.com</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-12 col-lg-4">
+				<div class="contact_info">
+					<h3 class="mb-4 color-primary">Social</h3>
+					<div class="social_media pt-3 hover_primary">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--	Get In Touch
+===============================================================-->
+<section class="full-row pt-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12">
+				<div class="main-title-one">
+					<h2 class="title color-primary">Get In Touch</h2>
+					<p class="sub-title color-secondery py_60">Nullam dapibus nullam aliquet maecenas pede dignissim Felis porta risus sociis.</p>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<form id="contact-form" class="w-100" action="http://unicoderbd.com/theme/html/homex/email.php" method="post">
+					<div class="row">
+						<div class="col-md-12 col-lg-6">
+							<div class="form-group">
+								<input type="text" id="name" name="firstname" class="form-control bg-gray" placeholder="Your Name*">
+							</div>
+							<div class="form-group">
+								<input type="text" id="email" name="email" class="form-control bg-gray" placeholder="Email Address*">
+							</div>
+							<div class="form-group">
+								<input type="text" id="site-link" name="site-link" class="form-control bg-gray" placeholder="Website">
+							</div>
+							<div class="form-group">
+								<input type="text" id="subject" name="subject"  class="form-control bg-gray" placeholder="Subject">
+							</div>
+						</div>
+						<div class="col-md-12 col-lg-6">
+							<div class="form-group">
+								<textarea id="message" name="message" class="form-control bg-gray" rows="7" placeholder="Type Comments..."></textarea>
+							</div>
+							<button type="submit" id="send" value="send message" class="btn btn-default1">Send Message</button>
+						</div>
+						<div class="col-md-12">
+							<div class="error-handel">
+								<div id="success">Your email sent Successfully, Thank you.</div>
+								<div id="error"> Error occurred while sending email. Please try again later.</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--	Map
+===============================================================-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 col-lg-12">
+			<div class="row">
+				<div id="map" class="contact-location"></div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}

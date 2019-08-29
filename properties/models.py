@@ -8,6 +8,7 @@ from django.urls import reverse
 from django.utils.text import slugify
 
 
+
 class Category(models.Model):
     name=models.CharField(max_length=200,unique=True,)
 
@@ -46,6 +47,7 @@ class PropertyForSell(models.Model):
     published        =PublishedManager() #Costom model manager
     location         =models.CharField(max_length=200)
     google_map       =models.URLField()
+    image            =models.ImageField(upload_to='media/sellproperty/',default='default.jpg')
 
 
     def __str__(self):

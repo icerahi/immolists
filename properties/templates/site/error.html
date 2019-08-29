@@ -1,0 +1,41 @@
+ {% extends 'site/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-banner bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12">
+				<div class="breadcrumbs color-secondery">
+					<ul>
+						<li class="hover_gray"><a href="#">Home</a></li>
+						<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+						<li class="hover_gray"><a href="#">Pages</a></li>
+						<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+						<li class="color-default">404</li>
+					</ul>
+				</div>
+				<div class="float-right color-primary">
+					<h3 class="banner-title font-weight-bold">404</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Banner Section End -->
+
+<!-- Error Section Start -->
+<section class="full-row py_80 bg_gray">
+	<div class="container">
+		<div class="row">
+			<div class="mx-auto text-center">
+				<h1 class="error-title color-default w-100">404</h1>
+				<div class="error_info">
+					<span class="error_text d-table">Nunc tempus, auctor mauris montes, attis fringilla dignissim. Vitae habitant estibulum quisque commodo.</span>
+					<a class="btn btn-default1 mt-3" href="index-2.html">Go Back Home</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

@@ -22,6 +22,7 @@ class PropertyForSellForm(forms.ModelForm):
         self.fields['status'].widget.attrs['class'] = 'form-control'
         self.fields['location'].widget.attrs['class'] = 'form-control'
         self.fields['google_map'].widget.attrs['class'] = 'form-control'
+        self.fields['image'].widget.attrs['class']='form-control'
 
 
 

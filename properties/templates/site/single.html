@@ -1,0 +1,821 @@
+{% extends 'site/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="page-banner bg-gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="breadcrumbs color-secondery">
+						<ul>
+							<li class="hover_gray"><a href="#">Home</a></li>
+							<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+							<li class="hover_gray"><a href="#">Property</a></li>
+							<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+							<li>Property List</li>
+						</ul>
+					</div>
+					<div class="float-right color-primary">
+						<h3 class="banner-title font-weight-bold">Property Single</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="full-row">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="full-row overflow-hidden">
+								<div class="property-slider-two">
+									<!-- Slider HTML markup -->
+									<div id="single-property-2" style="width:1200px;height:640px;margin:0 auto;margin-bottom: 0px;">
+
+										<!-- Slide 1-->
+										<div class="ls-slide" data-ls="duration:4000; kenburnsscale:1.2;">
+											<img width="1920" height="1080" src="{% static 'images/slider/01.jpg' %}" class="ls-bg" alt="" />
+										</div>
+
+
+										<!-- Slide 2-->
+										<div class="ls-slide" data-ls="duration:4000;">
+											<img width="1920" height="1080" src="{% static 'images/slider/02.jpg' %}" class="ls-bg" alt="" />
+										</div>
+
+										<!-- Slide 3-->
+										<div class="ls-slide" data-ls="duration:4000;">
+											<img width="1920" height="1080" src="{% static 'images/slider/03.jpg' %}" class="ls-bg" alt="" />
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="property_single_top mt-5">
+						<div class="row">
+							<div class="col-md-6 col-lg-6">
+								<div class="sale bg-default">For Sale</div>
+								<div class="icon_default">
+									<h5 class="mt_10 color-primary">Nirala Appartment</h5>
+									<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-6">
+								<div class="property-price">
+									<div class="add_favourite float-right color-secondery">
+										<form action="#">
+											<button value="" title="Add to favourite property"><i class="fa fa-star-o" aria-hidden="true"></i></button>
+										</form>
+									</div>
+									<div class="area_price">$352,000</div>
+									<div class="amount">Fixed Amount</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="property_details">
+						<div class="row">
+							<div class="col-md-12 col-lg-8">
+								<div class="pro_det">
+									<div class="thum_data bg-gray mt-5">
+										<ul>
+											<li><span>2500</span> Sqft</li>
+											<li><span>2</span> Beds</li>
+											<li><span>3</span> Rooms</li>
+											<li><span>3</span> Baths</li>
+											<li><span>1</span> Garage</li>
+											<li><span>2</span> Piazza</li>
+											<li><span>Large</span> Kitchen</li>
+										</ul>
+									</div>
+									<h4 class="color-primary mt_30 mb_30">Description</h4>
+									<p>Bibendum purus aenean mus aenean eu interdum nonummy ipsum ad consequat. Dui eros donec faucibus convallis tempus rutrum id donec mus hymenaeos placerat congue curae mauris turpis gravida viverra consequat consequat gravida luctus.</p>
+									<p class="mt_30">Consectetuer aliquet. Libero porttitor curabitur vivamus accumsan placerat mattis, in lobortis auctor dolor mus, morbi. Dictumst dictumst. Faucibus. Est mollis. Turpis tortor. In vivamus venenatis neque hendrerit risus amet auctor cras, varius augue nullam morbi posuere lacus porttitor dictumst tincidunt curabitur ilisis torquent magnis cras maecenas vel. Odio proin, aptent tristique urna, nibh iaculis auctor Arcu faucibus sollicitudin donec inceptos dapibus viverra. Lorem consequat. Ac viverra torquent.</p>
+									 <a class="btn-link clops mt_30" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">More Details</a>
+									 <div class="collapse multi-collapse" id="multiCollapseExample1">
+									  <div class="card card-body">
+										<p>Hymenaeos class nullam pretium cras tristique orci tincidunt, dapibus. Blandit phasellus ligula. Elit senectus posuere commodo in semper, et placerat vehicula ante. Vehicula dui bibendum curabitur. Scelerisque mus mattis elit dolor suspendisse gravida. Faucibus, viverra feugiat dignissim dis. Nulla accumsan nonummy a semper donec rhoncus hendrerit, mi gravida eget nulla neque torquent parturient facilisis praesent enim mus sem. Cubilia. Suscipit. Senectus curae; id augue dapibus sagittis tempor. Cursus. Tortor montes imperdiet sollicitudin tristique consequat. Pellentesque conubia euismod proin convallis donec torquent elit nisi eget aliquam ipsum lorem convallis velit sapien augue tempor ligula aliquet euismod eget nisl justo urna suscipit.</p>
+										<p class="mt_30">Purus morbi sociis. Torquent montes convallis magna potenti gravida laoreet id. Nam vehicula aliquam massa suspendisse in facilisi in pharetra eget justo viverra, posuere. Sed interdum euismod adipiscing lobortis massa risus ad enim lectus magnis lacinia ultricies dolor curabitur gravida, potenti dapibus est hymenaeos maecenas. Scelerisque vehicula. Turpis lacus pellentesque nisl platea urna ut sapien semper mus amet aptent. Volutpat nam nascetur commodo vitae maecenas augue feugiat, sem interdum molestie ultricies dictumst. Ante suscipit. Netus ultrices class mollis elit potenti auctor penatibus. Commodo per. Praesent torquent, rhoncus porttitor vitae sem platea, sed dapibus facilisi nam convallis, tristique eleifend taciti ultricies elit varius. Ipsum habitant senectus turpis magna nostra lacus nisl aliquam pharetra pellentesque, eros ullamcorper. Hymenaeos sit laoreet ante per convallis ornare posuere, cum vitae elementum fusce amet. Eget. At laoreet. Molestie sit ac. Vestibulum quis ipsum neque curabitur convallis Convallis nisi adipiscing ligula. Imperdiet habitasse condimentum, sed potenti accumsan tristique cras tempus. Consectetuer curae; ad consequat platea aliquet est enim dis justo justo torquent eget pede malesuada curae; scelerisque dolor Cras natoque commodo molestie elit mauris conubia ad ultrices mus cum dictum. Quisque urna aliquam, ridiculus curae; egestas turpis aptent elit curabitur ipsum. Euismod rhoncus orci vestibulum euismod nunc.</p>
+									  </div>
+									</div>
+									<h5 class="pt_60 mb_30 color-primary">Property Summary</h5>
+									<div class="table overflow-x-scroll">
+										<table class="table table-striped color-secondery">
+										  <tbody>
+											<tr>
+											  <td>Property Id :</td>
+											  <td>LA459C27</td>
+											  <td>Listing Type :</td>
+											  <td>For Sale</td>
+											</tr>
+											<tr>
+											  <td>Property Type:</td>
+											  <td>Appartment</td>
+											  <td>Current Owner :</td>
+											  <td>Green Developers LTD</td>
+											</tr>
+											<tr>
+											  <td>Insurance :</td>
+											  <td>Yes</td>
+											  <td>Architecture :</td>
+											  <td>Nova Socity</td>
+											</tr>
+											<tr>
+											  <td>Total Floor :</td>
+											  <td>10 Story Building</td>
+											  <td>Year of Built :</td>
+											  <td>2008 - 2012</td>
+											</tr>
+											<tr>
+											  <td>Furniture Type :</td>
+											  <td>High Class</td>
+											  <td>Payment Way :</td>
+											  <td>Instalment / Cash</td>
+											</tr>
+										  </tbody>
+										</table>
+									</div>
+									<h5 class="pt_60 mb_30 color-primary">More Details</h5>
+									<div class="row">
+										<div class="col-md-12 col-lg-4">
+											<div class="more_details">
+												<ul>
+													<li class="color-secondery"><span class="color-primary">Age: </span>10 Years</li>
+													<li class="color-secondery"><span class="color-primary">Swiming Pool: </span>Yes</li>
+													<li class="color-secondery"><span class="color-primary">Heating System: </span>Floor Heating</li>
+													<li class="color-secondery"><span class="color-primary">Parking: </span>Attached Garage</li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-4">
+											<div class="more_details">
+												<ul>
+													<li class="color-secondery"><span class="color-primary">Type: </span>Appartment</li>
+													<li class="color-secondery"><span class="color-primary">Security: </span>3 Step Security</li>
+													<li class="color-secondery"><span class="color-primary">Dining Capacity: </span>20 People</li>
+													<li class="color-secondery"><span class="color-primary">Heating: </span>Forced Air, Gas</li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-4">
+											<div class="more_details">
+												<ul>
+													<li class="color-secondery"><span class="color-primary">3rd Party: </span>No</li>
+													<li class="color-secondery"><span class="color-primary">Alivator: </span>2 Medium Type</li>
+													<li class="color-secondery"><span class="color-primary">Exit: </span>3 Exit Gate</li>
+													<li class="color-secondery"><span class="color-primary">Water: </span>City</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<h5 class="pt_60 mb_30 color-primary">Floor Plans</h5>
+									<div class="accordion" id="accordionExample">
+									  <div class="card">
+										<div class="card-header" id="headingOne">
+										  <h5 class="mb-0">
+											<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											  Floor Plans	[ 4200 sqft ]
+											</button>
+										  </h5>
+										</div>
+
+										<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+										  <div class="card-body">
+											<ul class="mb_30">
+												<li><span>Bed: </span>162.5 sqft</li>
+												<li><span>Kitchen: </span>108.2 sqft</li>
+												<li><span>Dining: </span>145.7 sqft</li>
+												<li><span>Bath:  </span>38.7 sqft</li>
+												<li><span>Storage:  </span>123. 2 sqft</li>
+											</ul>
+											<img src="{% static 'images/house-floor-plan.png' %}" alt="">
+										  </div>
+										</div>
+									  </div>
+									  <div class="card">
+										<div class="card-header" id="headingTwo">
+										  <h5 class="mb-0">
+											<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+											  Garage Plan     [ 340 sqft ]
+											</button>
+										  </h5>
+										</div>
+										<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+										  <div class="card-body">
+											<ul class="mb_30">
+												<li><span>Bed: </span>162.5 sqft</li>
+												<li><span>Kitchen: </span>108.2 sqft</li>
+												<li><span>Dining: </span>145.7 sqft</li>
+												<li><span>Bath:  </span>38.7 sqft</li>
+												<li><span>Storage:  </span>123. 2 sqft</li>
+											</ul>
+											<img src="{% static 'images/house-floor-plan.png' %}" alt="">
+										  </div>
+										</div>
+									  </div>
+									  <div class="card">
+										<div class="card-header" id="headingThree">
+										  <h5 class="mb-0">
+											<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+											  Garden Design    [ 480 sqft ]
+											</button>
+										  </h5>
+										</div>
+										<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+										  <div class="card-body">
+											<ul class="mb_30">
+												<li><span>Bed: </span>162.5 sqft</li>
+												<li><span>Kitchen: </span>108.2 sqft</li>
+												<li><span>Dining: </span>145.7 sqft</li>
+												<li><span>Bath:  </span>38.7 sqft</li>
+												<li><span>Storage:  </span>123. 2 sqft</li>
+											</ul>
+											<img src="{% static 'images/house-floor-plan.png' %}" alt="">
+										  </div>
+										</div>
+									  </div>
+									</div>
+									<h5 class="pt_60 mb_30 color-primary">Property Video</h5>
+									<div class="property_video overlay_one mb_30">
+										<img src="{% static 'images/video.jpg' %}" alt="">
+										<a class="video-popup" href="#" title="video popup">
+										<i class="fa fa-play" aria-hidden="true"></i></a>
+										<div class="loader xy-center">
+											<div class="loader-inner ball-scale-multiple">
+												<div></div>
+												<div></div>
+												<div></div>
+											</div>
+										</div>
+									</div>
+									<h5 class="pt_60 mb_30 color-primary">Nearby Places</h5>
+									<ul class="nav nav-pills mb-3 bg-gray" id="pills-tab" role="tablist">
+									  <li class="nav-item">
+										<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Hospital</a>
+									  </li>
+									  <li class="nav-item">
+										<a class="nav-link" id="pills-profile-tab2" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Shopping</a>
+									  </li>
+									  <li class="nav-item">
+										<a class="nav-link" id="pills-contact-tab3" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">School</a>
+									  </li>
+									  <li class="nav-item">
+										<a class="nav-link" id="pills-contact-tab4" data-toggle="pill" href="#pills-resturant" role="tab" aria-controls="pills-contact" aria-selected="false">Resturant</a>
+									  </li>
+									</ul>
+									<div class="tab-content" id="pills-tabContent">
+									  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home">
+										<div class="table overflow-x-scroll">
+											<table class="table">
+											  <thead>
+												<tr>
+												  <th scope="col">Name</th>
+												  <th scope="col">Distance</th>
+												  <th scope="col">Type</th>
+												</tr>
+											  </thead>
+											  <tbody>
+												<tr>
+												  <td>Massachusetts General Hospital</td>
+												  <td>23.7 km</td>
+												  <td>Medical Collage</td>
+												</tr>
+												<tr>
+												  <td>Langone Medical Center</td>
+												  <td>13.2 km</td>
+												  <td>Hart Hospital</td>
+												</tr>
+												<tr>
+												  <td>Mount Sinai Hospital</td>
+												  <td>58.0 km</td>
+												  <td>Eye Hospital</td>
+												</tr>
+											  </tbody>
+											</table>
+										</div>
+									  </div>
+									  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile">
+										<div class="table overflow-x-scroll">
+											<table class="table">
+											  <thead>
+												<tr>
+												  <th scope="col">Name</th>
+												  <th scope="col">Distance</th>
+												  <th scope="col">Type</th>
+												</tr>
+											  </thead>
+											  <tbody>
+												<tr>
+												  <td>Massachusetts General Hospital</td>
+												  <td>23.7 km</td>
+												  <td>Medical Collage</td>
+												</tr>
+												<tr>
+												  <td>Langone Medical Center</td>
+												  <td>13.2 km</td>
+												  <td>Hart Hospital</td>
+												</tr>
+												<tr>
+												  <td>Mount Sinai Hospital</td>
+												  <td>58.0 km</td>
+												  <td>Eye Hospital</td>
+												</tr>
+											  </tbody>
+											</table>
+										</div>
+									  </div>
+									  <div class="tab-pane fade" id="pills-resturant" role="tabpanel" aria-labelledby="pills-resturant">
+										<div class="table overflow-x-scroll">
+											<table class="table">
+											  <thead>
+												<tr>
+												  <th scope="col">Name</th>
+												  <th scope="col">Distance</th>
+												  <th scope="col">Type</th>
+												</tr>
+											  </thead>
+											  <tbody>
+												<tr>
+												  <td>Massachusetts General Hospital</td>
+												  <td>23.7 km</td>
+												  <td>Medical Collage</td>
+												</tr>
+												<tr>
+												  <td>Langone Medical Center</td>
+												  <td>13.2 km</td>
+												  <td>Hart Hospital</td>
+												</tr>
+												<tr>
+												  <td>Mount Sinai Hospital</td>
+												  <td>58.0 km</td>
+												  <td>Eye Hospital</td>
+												</tr>
+											  </tbody>
+											</table>
+										</div>
+									  </div>
+									  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact">
+										<div class="table overflow-x-scroll">
+											<table class="table">
+											  <thead>
+												<tr>
+												  <th scope="col">Name</th>
+												  <th scope="col">Distance</th>
+												  <th scope="col">Type</th>
+												</tr>
+											  </thead>
+											  <tbody>
+												<tr>
+												  <td>Massachusetts General Hospital</td>
+												  <td>23.7 km</td>
+												  <td>Medical Collage</td>
+												</tr>
+												<tr>
+												  <td>Langone Medical Center</td>
+												  <td>13.2 km</td>
+												  <td>Hart Hospital</td>
+												</tr>
+												<tr>
+												  <td>Mount Sinai Hospital</td>
+												  <td>58.0 km</td>
+												  <td>Eye Hospital</td>
+												</tr>
+											  </tbody>
+											</table>
+										</div>
+									  </div>
+									</div>
+									<div class="single-map">
+										<h5 class="pt_60 mb_30 color-primary">Property Location</h5>
+										<div id="map"></div>
+									</div>
+									<h5 class="pt_60 mb_30 color-primary">Related Property</h5>
+									<div class="list_item related-property">
+										<!-- Thumbnail 1 Start -->
+										<div class="thumbnail_one mb_30">
+											<div class="image_area overlay_one overfollow">
+												<img src="{% static 'images/thumbnaillist/01.jpg' %}" alt="">
+												<div class="Featured">Featured</div>
+												<div class="sale sale_position bg-primary">For Sale</div>
+												<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+												<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+											</div>
+											<div class="thum_one_content">
+												<div class="thum_title color-secondery">
+													<h5 class="hover_primary"><a href="#">Apolo Family Appartment</a></h5>
+													<p><i class="fa fa-map-marker" aria-hidden="true"></i>Avenue South Burlington, Los Angles</p>
+												</div>
+												<div class="thum_data bg-gray mt_15">
+													<ul>
+														<li><span>3400</span> Sqft</li>
+														<li><span>2</span> Beds</li>
+														<li><span>3</span> Rooms</li>
+														<li><span>3</span> Baths</li>
+														<li><span>1</span> Garage</li>
+														<li><span>2</span> Piazza</li>
+														<li><span>Large</span> Kitchen</li>
+													</ul>
+												</div>
+												<div class="ft_area p_20">
+													<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+													<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+												</div>
+											</div>
+										</div>
+										<!-- Thumbnail 1 End -->
+										<!-- Thumbnail 2 Start -->
+										<div class="thumbnail_one mb_30">
+											<div class="image_area overlay_one overfollow">
+												<img src="{% static 'images/thumbnaillist/02.jpg' %}" alt="">
+												<div class="Featured">Featured</div>
+												<div class="sale sale_position bg-primary">For Sale</div>
+												<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+												<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+											</div>
+											<div class="thum_one_content">
+												<div class="thum_title color-secondery">
+													<h5 class="hover_primary"><a href="#">Lovelece Road Greenfield</a></h5>
+													<p><i class="fa fa-map-marker" aria-hidden="true"></i>Avenue South Burlington, Los Angles</p>
+												</div>
+												<div class="thum_data bg-gray mt_15">
+													<ul>
+														<li><span>2500</span> Sqft</li>
+														<li><span>2</span> Beds</li>
+														<li><span>3</span> Rooms</li>
+														<li><span>3</span> Baths</li>
+														<li><span>1</span> Garage</li>
+														<li><span>2</span> Piazza</li>
+														<li><span>Large</span> Kitchen</li>
+													</ul>
+												</div>
+												<div class="ft_area p_20">
+													<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+													<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+												</div>
+											</div>
+										</div>
+										<!-- Thumbnail 2 End -->
+										<!-- Thumbnail 3 Start -->
+										<div class="thumbnail_one mb_30">
+											<div class="image_area overlay_one overfollow">
+												<img src="{% static 'images/thumbnaillist/03.jpg' %}" alt="">
+												<div class="Featured">Featured</div>
+												<div class="sale sale_position bg-primary">For Sale</div>
+												<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+												<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+											</div>
+											<div class="thum_one_content">
+												<div class="thum_title color-secondery">
+													<h5 class="hover_primary"><a href="#">Relaxing Apartment</a></h5>
+													<p><i class="fa fa-map-marker" aria-hidden="true"></i>Avenue South Burlington, Los Angles</p>
+												</div>
+												<div class="thum_data bg-gray mt_15">
+													<ul>
+														<li><span>3400</span> Sqft</li>
+														<li><span>2</span> Beds</li>
+														<li><span>3</span> Rooms</li>
+														<li><span>3</span> Baths</li>
+														<li><span>1</span> Garage</li>
+														<li><span>2</span> Piazza</li>
+														<li><span>Large</span> Kitchen</li>
+													</ul>
+												</div>
+												<div class="ft_area p_20">
+													<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+													<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+												</div>
+											</div>
+										</div>
+										<!-- Thumbnail 3 End -->
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 col-lg-4">
+								<ul class="property_btn mt-5">
+									<li class="download"><a href="#" class="btn btn-primary"><i class="fa fa-download" aria-hidden="true"></i></a></li>
+									<li><a href="#" class="btn btn-primary">Add to Compare</a></li>
+								</ul>
+								<div class="broker_contact mt_30 d-inline-block p_30 boxshadow_one mb-5">
+									<div class="img_80 float-left pr_20 mb_20"><img src="{% static 'images/user/02.jpg' %}" alt=""></div>
+									<div class="broker_name">
+										<h6 class="font-weight-bold color-default">Josphine Pacheco</h6>
+										<span class="color-secondery">+( 81 ) 84 538 231</span>
+									</div>
+									<form class="form4 w-100 d-inline-block" action="http://unicoderbd.com/theme/html/homex/action.php" method="post">
+										<div class="row">
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group">
+												  <input class="form-control" id="name" name="firstname" placeholder="Name" type="text">
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group">
+												  <input class="form-control" id="email" name="email" placeholder="Email" type="text">
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group">
+												  <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text">
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group">
+												  <textarea class="form-control" id="massage" name="massage" cols="30" rows="6" placeholder="Massage"></textarea>
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<button type="submit" value="submit" class="btn btn-default1 w-100">Send Message</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="mb-5">
+									<h5 class="mb_30 color-primary">Instalment Calculator</h5>
+									<form class="form5 w-100 d-inline-block" action="http://unicoderbd.com/theme/html/homex/action.php" method="post">
+										<label class="sr-only" for="inlineFormInputGroupUsername2">Property Price</label>
+										<div class="input-group mb-2 mr-sm-2">
+											<div class="input-group-prepend">
+												<div class="input-group-text">$</div>
+											</div>
+											<input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Property Price">
+										</div>
+										<label class="sr-only" for="inlineFormInputGroupUsername3">Down Payment</label>
+										<div class="input-group mb-2 mr-sm-2">
+											<div class="input-group-prepend">
+												<div class="input-group-text">$</div>
+											</div>
+											<input type="text" class="form-control" id="inlineFormInputGroupUsername3" placeholder="Down Payment">
+										</div>
+										<label class="sr-only" for="inlineFormInputGroupUsername4">Duration Year</label>
+										<div class="input-group mb-2 mr-sm-2">
+											<div class="input-group-prepend">
+												<div class="input-group-text"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+											</div>
+											<input type="text" class="form-control" id="inlineFormInputGroupUsername4" placeholder="Duration Year">
+										</div>
+										<label class="sr-only" for="inlineFormInputGroupUsername5">Interest Rate</label>
+										<div class="input-group mb-2 mr-sm-2">
+											<div class="input-group-prepend">
+												<div class="input-group-text">%</div>
+											</div>
+											<input type="text" class="form-control" id="inlineFormInputGroupUsername5" placeholder="Interest Rate">
+										</div>
+										<button type="submit" id="send" value="submit" class="btn btn-default1 mt-4">Calclute Instalment</button>
+									</form>
+								</div>
+								<div class="mb-5">
+									<h5 class="mb_30 color-primary">Monthly Best Deal</h5>
+									<div class="owl-carousel featured_property">
+										<div class="thumbnail_three">
+											<div class="image_area overlay_one overfollow">
+												<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
+												<div class="Featured">Featured</div>
+												<div class="sale sale_position bg-primary">For Sale</div>
+												<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+												<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+											</div>
+											<div class="thum_three_content bg-white color-secondery">
+												<div class="thum_title2 icon_default bg-gray">
+													<h5 class="hover_primary"><a href="#">Nirala Appartment</a></h5>
+													<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+												</div>
+											</div>
+										</div>
+										<div class="thumbnail_three">
+											<div class="image_area overlay_one overfollow">
+												<img src="{% static 'images/thumbnail/02.jpg' %}" alt="">
+												<div class="Featured">Featured</div>
+												<div class="sale sale_position bg-primary">For Sale</div>
+												<div class="area_price price_position">$212,000 <span>$1200/Sqft</span></div>
+												<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+											</div>
+											<div class="thum_three_content bg-white color-secondery">
+												<div class="thum_title2 icon_default bg-gray">
+													<h5 class="hover_primary"><a href="#">Apolo Family Appartment</a></h5>
+													<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+												</div>
+											</div>
+										</div>
+										<div class="thumbnail_three">
+											<div class="image_area overlay_one overfollow">
+												<img src="{% static 'images/thumbnail/03.jpg' %}" alt="">
+												<div class="Featured">Featured</div>
+												<div class="sale sale_position bg-primary">For Sale</div>
+												<div class="area_price price_position">$52,000 <span>$1200/Sqft</span></div>
+												<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+											</div>
+											<div class="thum_three_content bg-white color-secondery">
+												<div class="thum_title2 icon_default bg-gray">
+													<h5 class="hover_primary"><a href="#">Office Floor In Trade Center</a></h5>
+													<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+												</div>
+											</div>
+										</div>
+										<div class="thumbnail_three">
+											<div class="image_area overlay_one overfollow">
+												<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
+												<div class="Featured">Featured</div>
+												<div class="sale sale_position bg-primary">For Sale</div>
+												<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+												<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+											</div>
+											<div class="thum_three_content bg-white color-secondery">
+												<div class="thum_title2 icon_default bg-gray">
+													<h5 class="hover_primary"><a href="#">Nirala Appartment</a></h5>
+													<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mb-5">
+									<h5 class="mb-4 mt-5 color-primary">Advance Search</h5>
+									<form class="form3 formicon" method="post" action="http://unicoderbd.com/theme/html/homex/action_page_post.php">
+										<div class="row">
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group">
+													<select class="form-control bg-gray">
+													  <option>Any Status</option>
+													  <option>For Rent</option>
+													  <option>For Sale</option>
+													  <option>For Lease</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group">
+													<select class="form-control bg-gray">
+													  <option>Any Type</option>
+													  <option>Appartment</option>
+													  <option>Condose</option>
+													  <option>Land</option>
+													  <option>Commercial</option>
+													  <option>Villah</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group">
+													<select class="form-control bg-gray">
+													  <option>Location</option>
+													  <option>USA</option>
+													  <option>Australia</option>
+													  <option>Russia</option>
+													  <option>France</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group">
+													<select class="form-control bg-gray">
+													  <option>All State</option>
+													  <option>USA</option>
+													  <option>Australia</option>
+													  <option>Russia</option>
+													  <option>France</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group">
+													<select class="form-control bg-gray">
+													  <option>All City</option>
+													  <option>USA</option>
+													  <option>Australia</option>
+													  <option>Russia</option>
+													  <option>France</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-6">
+												<div class="form-group">
+													<select class="form-control bg-gray">
+													  <option>Beds</option>
+													  <option>2</option>
+													  <option>3</option>
+													  <option>4</option>
+													  <option>6</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-6">
+												<div class="form-group">
+													<select class="form-control bg-gray">
+													  <option>Baths</option>
+													  <option>1</option>
+													  <option>2</option>
+													  <option>4</option>
+													  <option>4</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group my-4">
+													<label for="validationDefault05">Price Range :</label>
+													<div class="price_range mb_60">
+														<div class="price-filter">
+															<span class="price-slider">
+																<input id="validationDefault05" class="filter_price" type="text" name="price" value="100000;900000" />
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group mb_30">
+													<label for="validationDefault05">Area Range :</label>
+													<div class="layout-slider mb_60">
+													  <span><input id="Slider1" type="text" name="price" value="30000.5; 60000" /></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<p class="d-inline-block hover_gray">
+												  <a class="checkbox_collapse" data-toggle="collapse" href="#additional1" role="button" aria-expanded="false" aria-controls="additional1">Additional Features</a>
+												</p>
+												<div class="row">
+												  <div class="col">
+													<div class="collapse" id="additional1">
+													  <div class="card card-body color-secondery px-0">
+														<div class="row">
+															<div class="col-lg-6">
+																<ul class="check_submit">
+																	<li>
+																		<input id="feature_1" class="hide" type="checkbox">
+																		<label for="feature_1">Parking Garage</label>
+																	</li>
+																	<li>
+																		<input id="feature_2" class="hide" type="checkbox">
+																		<label for="feature_2">Security System</label>
+																	</li>
+																	<li>
+																		<input id="feature_3" class="hide" type="checkbox">
+																		<label for="feature_3">Cover Window</label>
+																	</li>
+																	<li>
+																		<input id="feature_4" class="hide" type="checkbox">
+																		<label for="feature_4">Swiming Pool</label>
+																	</li>
+																	<li>
+																		<input id="feature_5" class="hide" type="checkbox">
+																		<label for="feature_5">Air Condition</label>
+																	</li>
+																	<li>
+																		<input id="feature_8" class="hide" type="checkbox">
+																		<label for="feature_8">Fire Protection</label>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-lg-6">
+																<ul class="check_submit">
+																	<li>
+																		<input id="feature_9" class="hide" type="checkbox">
+																		<label for="feature_9">Garden</label>
+																	</li>
+																	<li>
+																		<input id="feature_10" class="hide" type="checkbox">
+																		<label for="feature_10">Fire Place</label>
+																	</li>
+																	<li>
+																		<input id="feature_11" class="hide" type="checkbox">
+																		<label for="feature_11">Emeargency Exit</label>
+																	</li>
+																	<li>
+																		<input id="feature_12" class="hide" type="checkbox">
+																		<label for="feature_12">Home Theater</label>
+																	</li>
+																	<li>
+																		<input id="feature_13" class="hide" type="checkbox">
+																		<label for="feature_13">Gym & Sports</label>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													  </div>
+													</div>
+												  </div>
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-12">
+												<div class="form-group mt_30">
+													<button type="submit" class="btn btn-default1 w-100">Search Property</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock content %}

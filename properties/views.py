@@ -27,6 +27,7 @@ class PropertyCreateView(CreateView,LoginRequiredMixin):
         form.instance.realator=self.request.user
         return super(PropertyCreateView, self).form_valid(form)
 
+
 class PropertyUpdateView(UpdateView,LoginRequiredMixin):
     model=PropertyForSell
     success_url = reverse_lazy('property_list')
@@ -49,6 +50,9 @@ def load_types(request):
 
 
 
+
+#Test Templates
+######################### Dashboard #############################
 class CheckTemplate(TemplateView):
     template_name='dashboard_base.html'
 
@@ -58,7 +62,7 @@ class EnquireSend(TemplateView):
 class EnquireCome(TemplateView):
     template_name = 'enquire_come.html'
 
-class PropertyList(TemplateView):
+class MyList(TemplateView):
     template_name = 'list.html'
 
 class FavouriteList(TemplateView):
@@ -81,5 +85,43 @@ class Rent(TemplateView):
 class MakeOffer(TemplateView):
     template_name = 'make_offer.html'
 
+##########################################################################
 
+## Actual Template test
+
+
+class Home(TemplateView):
+    template_name ='site/home.html'
+
+def Search(request):
+    return render(request,'site/search.html')
+
+class CommingSoon(TemplateView):
+    template_name = 'site/comming_soon.html'
+
+class AgentList(TemplateView):
+    template_name = 'site/agent_list.html'
+
+class AboutAgent(TemplateView):
+    template_name = 'site/about_agent.html'
+
+class PropertyList(TemplateView):
+    template_name = 'site/property_list.html'
+
+class single(TemplateView):
+    template_name = 'site/single.html'
+class faq(TemplateView):
+    template_name = 'site/faq.html'
+
+class register(TemplateView):
+    template_name = 'site/register.html'
+class login(TemplateView):
+    template_name = 'site/login.html'
+class forget_password(TemplateView):
+    template_name = 'site/forget_password.html'
+
+class error(TemplateView):
+    template_name = 'site/error.html'
+class contact(TemplateView):
+    template_name = 'site/contact.html'
 
