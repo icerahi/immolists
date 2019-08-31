@@ -63,7 +63,7 @@ class EnquireCome(TemplateView):
     template_name = 'enquire_come.html'
 
 class MyList(TemplateView):
-    template_name = 'list.html'
+    template_name = 'mylist.html'
 
 class FavouriteList(TemplateView):
     template_name = 'favourite.html'
@@ -116,7 +116,7 @@ class faq(TemplateView):
 class register(TemplateView):
     template_name = 'site/register.html'
 class login(TemplateView):
-    template_name = 'site/login.html'
+    template_name = 'site/logins.html'
 class forget_password(TemplateView):
     template_name = 'site/forget_password.html'
 

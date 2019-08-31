@@ -1,33 +1,40 @@
-{% load static %}
-
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
- <link href="{% static 'plugins/css/ace.min.css' %}" type="text/css" media="all" rel="stylesheet" />
-  <link href="{% static 'plugins/css/semantic.min.css' %}" type="text/css" media="all" rel="stylesheet" />
-  <link href="{% static 'plugins/css/resizable.min.css' %}" type="text/css" media="all" rel="stylesheet" />
-  <link href="{% static 'martor/css/martor.min.css' %}" type="text/css" media="all" rel="stylesheet" />
-      <link rel="stylesheet" href="{% static 'mycss.css'%}">
-    <title>Hello, world!</title>
-
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
   </head>
-
   <body>
+    {% block body %}
 
-  {% block content %}{% endblock %}
+    {% if messages %}
+    <div>
+      <strong>Messages:</strong>
+      <ul>
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
 
-  <script type="text/javascript" src="{% static 'plugins/js/ace.js' %}"></script>
-  <script type="text/javascript" src="{% static 'plugins/js/semantic.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'plugins/js/mode-markdown.js' %}"></script>
-  <script type="text/javascript" src="{% static 'plugins/js/ext-language_tools.js' %}"></script>
-  <script type="text/javascript" src="{% static 'plugins/js/theme-github.js' %}"></script>
-  <script type="text/javascript" src="{% static 'plugins/js/highlight.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'plugins/js/resizable.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'plugins/js/emojis.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'martor/js/martor.min.js' %}"></script>
+    <div>
+      <strong>Menu:</strong> what's up polapain
+      <ul>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
+        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+        {% else %}
+        <li><a href="{% url 'account_login' %}">Sign In</a></li>
+        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
   </body>
 </html>

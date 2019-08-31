@@ -1,0 +1,86 @@
+{% extends 'site/base.html' %}
+{% load static %}
+
+{% block content %}
+ <div class="page-banner bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12">
+				<div class="breadcrumbs color-secondery">
+					<ul>
+						<li class="hover_gray"><a href="#">Home</a></li>
+						<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+						<li class="color-default">SignUp</li>
+					</ul>
+				</div>
+				<div class="float-right color-primary">
+					<h3 class="banner-title font-weight-bold">Signup</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<section class="full-row">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 col-md-7">
+				<div class="login_massage pb_60">
+
+					    {% if messages %}
+						<div>
+						  <strong>Messages:</strong>
+						  <ul>
+							{% for message in messages %}
+							<li>{{message}}</li>
+							{% endfor %}
+						  </ul>
+						</div>
+						{% endif %}
+				</div>
+				<div class="login_list">
+					<h5 class="pb_20 color-primary">Keep in a mind a few basic password roules :</h5>
+					<div class="row">
+						<div class="col-md-6 col-lg-4">
+							<ul class="flat_small">
+								<li><span class="color-default"><i class="flaticon-checked"></i></span>Change your passwords periodically</li>
+								<li><span class="color-default"><i class="flaticon-checked"></i></span>Avoid re-using password for multiple site</li>
+								<li><span class="color-default"><i class="flaticon-checked"></i></span>Use complex characters including uppercase and number</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-5 col-lg-5">
+				<div class="login_form">
+					<ul class="d-inline-block mb_30">
+						<li ><a href="{% url 'account_login' %}" class="color-primary">Login</a></li>
+						<li class="active"><a href="{% url 'account_signup' %}" class="color-primary">Register</a></li>
+					</ul>
+					<form class="form9" method="POST" action="{% url 'account_signup' %}">
+				  {% csrf_token %}
+				  {{ form.as_p }}
+				  {% if redirect_field_value %}
+				  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+				  {% endif %}
+
+
+
+					  <button type="submit" class="btn btn-default1 mt_15">SignUp</button>
+
+						<a  class="color-primary d-block mt_30" href="{% url 'account_reset_password' %}">I forgot my password !</a>
+
+
+					  <div class="from_socalmedia d-block mt_60">
+				  		<button class="btn facebook w-100">Login With Facebook</button>
+				  		<button class="btn twiter w-100">Login With Twitter</button>
+				  		<button class="btn googleplus w-100">Login With Google Plus</button>
+					  </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

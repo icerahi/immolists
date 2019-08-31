@@ -1,0 +1,105 @@
+{% extends 'dashboard_base.html' %}
+{% load static %}
+{% block body %}
+
+
+
+			<div class="col-md-11 col-xl-10 bg-gray">
+					<div class="row">
+						<div class="full-row deshbord_panel w-100 mb-5">
+							<h4 class="color-primary mb-4">Property Listing</h4>
+
+							<div class="items_list bg_transparent color-secondery icon_default">
+								<table class="w-100">
+									<thead>
+										<tr class="bg-white">
+											<th>Properties</th>
+											<th>Added Date</th>
+											<th>Views</th>
+											<th>Reason</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+
+
+
+
+
+									{% for object in object_list %}
+
+
+										<tr>
+											<td>
+												<img src="{{ object.main_image.url }}" alt="">
+												<div class="property_info d-table">
+													<h5 class="color-primary">{{ object.title }}</h5>
+													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> {{ object.location }}</span>
+													<div class="price mt-3">
+														<span class="color-default">${{object.min_price }}- ${{ object.max_price}}</span>
+														<span>/ Fixed Amount</span>
+													</div>
+												</div>
+											</td>
+											<td>{{object.created }}</td>
+											<td>34 (costom view)</td>
+											<td>For Sale</td>
+											<td>
+												<a href="{{ object.get_update_url }}" class="btn btn-default1 mr-3">Edit</a>
+
+												<button type="button" class="btn btn-default1" data-toggle="modal" data-target="#{{object.slug}}">Delete</button>
+											<!-- delete modal Modal -->
+											<div class="modal fade" id="{{object.slug}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+											  <div class="modal-dialog" role="document">
+												<div class="modal-content">
+												  <div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Delete Property</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													  <span aria-hidden="true">&times;</span>
+													</button>
+												  </div>
+
+													<form method="POST" action="{{ object.get_delete_url }}" enctype="multipart/form-data">
+														{% csrf_token %}
+												  <div class="modal-body">
+													Are You Sure To Delete This Property??
+												  </div>
+												  <div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+													<button type="submit" class="btn btn-primary">Yes</button>
+												  </div>
+														</form>
+
+												</div>
+											  </div>
+											</div>
+
+
+											</td>
+										</tr>
+
+									{% endfor %}
+
+
+									</tbody>
+								</table>
+							</div>
+
+
+
+							<nav aria-label="Page navigation" class="alinment d-table pt-5">
+							  <ul class="pagination">
+							    <li class="page-item"><a class="page-link active" href="#">Previous</a></li>
+							    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+							    <li class="page-item"><a class="page-link" href="#">2</a></li>
+							    <li class="page-item"><a class="page-link" href="#">3</a></li>
+							    <li class="page-item">...</li>
+							    <li class="page-item"><a class="page-link" href="#">45</a></li>
+							    <li class="page-item"><a class="page-link active" href="#">Next</a></li>
+							  </ul>
+							</nav>
+
+						</div>
+ 					</div>
+				</div>
+{% endblock body %}

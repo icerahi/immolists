@@ -8,7 +8,9 @@ from immolists.views import IndexView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('properties.urls')),
+    path('dashboard/',include(('dashboard.urls','dashboard'),namespace='dashboard')),
     path('ckeditor/',include('ckeditor_uploader.urls')),
+    path('account/', include('allauth.urls')),
 
 ]
 if settings.DEBUG:

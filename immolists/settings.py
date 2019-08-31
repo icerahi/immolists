@@ -27,14 +27,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     'properties',
+    'dashboard',
+    'sellproperty',
 
     #3rd party
     'ckeditor',
     'ckeditor_uploader',
 
-    'django.contrib.sites',
+
     'rest_framework',
 
     'rest_framework.authtoken',
@@ -42,7 +45,7 @@ INSTALLED_APPS = [
 
     
 
-
+# allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -78,6 +81,15 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS=(
+
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+)
+
+LOGIN_REDIRECT_URL = '/dashboard/add_sell'
 
 WSGI_APPLICATION = 'immolists.wsgi.application'
 
@@ -154,12 +166,12 @@ REST_FRAMEWORK = {
 }
 
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'rootcodeerror@gmail.com'
-SERVER_EMAIL = 'rootcodeerror@gmail.com'
+DEFAULT_FROM_EMAIL = 'zanjarwhite@gmail.com'
+SERVER_EMAIL = 'zanjarwhite@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'rootcodeerror@gmail.com'
-EMAIL_HOST_PASSWORD = 'rahiriya'
+EMAIL_HOST_USER = 'zanjarwhite@gmail.com'
+EMAIL_HOST_PASSWORD = '@@@@@@@@@@@'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 CSRF_COOKIE_NAME = "XSRF-TOKEN"
 
