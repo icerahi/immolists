@@ -1,6 +1,7 @@
 import os
 import random
 
+from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
@@ -32,6 +33,10 @@ class PublishedManager(models.Manager):
     def get_queryset(self):
         return super(PublishedManager, self).get_queryset().filter(status='published')
 
+class AllObjectManager(models.Manager):
+    def get_queryset(self):
+        return super(AllObjectManager, self).get_queryset()
+
 
 
 def get_filename_extention(filepath):
@@ -55,9 +60,9 @@ class SellProperty(models.Model):
         ('draf','Draft'),
         ('published','Published')
     )
-    realator         = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
-    category         =models.ForeignKey(Category,on_delete=models.DO_NOTHING)
-    type             =models.ForeignKey(Type,on_delete=models.DO_NOTHING,default='banglo')
+    realator         = models.ForeignKey(User,on_delete=models.CASCADE)
+    category         =models.ForeignKey(Category,on_delete=models.CASCADE)
+    type             =models.ForeignKey(Type,on_delete=models.CASCADE)
     title            =models.CharField(max_length=200)
     full_description =RichTextUploadingField()
     key_features     =RichTextField()
@@ -68,11 +73,12 @@ class SellProperty(models.Model):
     slug             = models.SlugField()
     status           =models.CharField(max_length=12,choices=STATUS_CHOICES,default='published')
     published        =PublishedManager() #Costom model manager
+    objects          =AllObjectManager() # Costom model manager
     location         =models.CharField(max_length=200)
     google_map       =models.URLField()
-    main_image       =models.ImageField(upload_to='sellproperty/',default='default.jpg')
-    image_2          =models.ImageField(upload_to='sellproperty/',null=True,blank=True)
-    image_3          =models.ImageField(upload_to='sellproperty/',null=True,blank=True)
+    main_image       =models.ImageField(upload_to=upload_image_path,default='default.jpg')
+    image_2          =models.ImageField(upload_to=upload_image_path,null=True,blank=True)
+    image_3          =models.ImageField(upload_to=upload_image_path,null=True,blank=True)
 
 
     def __str__(self):
@@ -86,17 +92,9 @@ class SellProperty(models.Model):
     def get_delete_url(self,*args,**kwargs):
         return reverse('dashboard:sell_delete',kwargs={'pk':self.pk,'slug':self.slug})
 
-"""def get_absolute_url(self):
-        return reverse('property_detail',kwargs={'pk':self.pk,
-                                                 'slug':self.slug})
-    def get_update_url(self,*args,**kwargs):
-        return reverse('property_update',kwargs={'pk':self.pk,
-                                                'slug':self.slug})
-    def get_delete_url(self):
-        return reverse('property_delete',kwargs={'pk':self.pk,
-                                                 'slug':self.slug})
+    def get_absolute_url(self,*args,**kwargs):
+        return reverse('site:detail',kwargs={'pk':self.pk,'slug':self.slug})
 
-"""
 
 @receiver(pre_save,sender=SellProperty)
 def pre_save_slug(sender,**kwargs):

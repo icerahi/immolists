@@ -1,92 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c4271de-3896-46bb-bb1d-ab896c0dbcf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dashboard/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/templates/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/templates/account/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/Screenshot_from_2019-08-29_11-53-00.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/Screenshot_from_2019-08-29_11-56-33.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/migrations/0002_auto_20190830_0247.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/account_inactive.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_signup_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_signup_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/email/password_reset_key_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/email/password_reset_key_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/email_confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/logins.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/messages/cannot_delete_primary_email.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/messages/email_confirmation_sent.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/messages/email_confirmed.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/messages/email_deleted.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/messages/logged_in.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/messages/logged_out.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/messages/password_changed.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/messages/password_set.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/messages/primary_email_set.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/messages/unverified_primary_email.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/password_change.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/password_reset.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/password_reset_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/password_reset_from_key.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/password_reset_from_key_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/password_set.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/signup_closed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/signups.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/snippets/already_logged_in.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/verification_sent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/verified_email_required.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/openid/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/openid/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/authentication_error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/connections.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/login_cancelled.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/messages/account_connected.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/messages/account_connected_other.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/messages/account_connected_updated.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/messages/account_disconnected.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/snippets/login_extra.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/snippets/provider_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tests/test_403_csrf.html" afterDir="false" />
+    <list default="true" id="4c4271de-3896-46bb-bb1d-ab896c0dbcf2" name="Default Changelist" comment=" 'need design more'">
+      <change afterPath="$PROJECT_DIR$/accounts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/sellproperty/1054673420572043/23656.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/sellproperty/109690369443028/Screenshot_from_2019-08-29_11-56-16.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/sellproperty/189168318681776/Screenshot_from_2019-08-02_00-57-14.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/sellproperty/537608652291969/23656.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/sellproperty/560085897110091/Screenshot_from_2019-08-29_11-53-12.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/sellproperty/633395299155025/Screenshot_from_2019-08-02_00-24-38.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/sellproperty/985393374120484/23656.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_site/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_site/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_site/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_site/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_site/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_site/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_site/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_site/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/sell.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/sell.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/immolists/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/immolists/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/immolists/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/immolists/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/properties/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/dashboard_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/mylist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/sell.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/sell.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/properties/templates/site/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/about_agent.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/about_agent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/agent_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/agent_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/comming_soon.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/comming_soon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/forget_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/forget_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/property_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/property_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/site/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/detail_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/properties/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/properties/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/properties/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/property_create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/property_delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/property_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/property_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sell_property.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0002_auto_20190830_0247.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/migrations/0002_auto_20190901_0834.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sellproperty/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,8 +60,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -117,19 +80,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/original_site/templates" />
+      <recent name="$PROJECT_DIR$/properties/templates" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/dashboard/templates" />
+      <recent name="$PROJECT_DIR$/dashboard" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/dashboard/templates" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/static/dashboard" />
       <recent name="$PROJECT_DIR$/static/dashboard/js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/dashboard/templates" />
-      <recent name="$PROJECT_DIR$/dashboard" />
-      <recent name="$PROJECT_DIR$/properties/templates/account" />
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/templates/allauth" />
     </key>
   </component>
   <component name="RunDashboard">

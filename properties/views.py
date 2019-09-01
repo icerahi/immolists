@@ -109,7 +109,7 @@ class PropertyList(TemplateView):
     template_name = 'site/property_list.html'
 
 class single(TemplateView):
-    template_name = 'site/single.html'
+    template_name = 'site/detail_view.html'
 class faq(TemplateView):
     template_name = 'site/faq.html'
 

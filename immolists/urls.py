@@ -6,12 +6,11 @@ from django.urls import path, include
 from immolists.views import IndexView
 
 urlpatterns = [
+    path('dashboard/', include(('dashboard.urls', 'dashboard'), namespace='dashboard')),
     path('admin/', admin.site.urls),
-    path('',include('properties.urls')),
-    path('dashboard/',include(('dashboard.urls','dashboard'),namespace='dashboard')),
     path('ckeditor/',include('ckeditor_uploader.urls')),
-    path('account/', include('allauth.urls')),
-
+    path('accounts/', include('allauth.urls')),
+    path('', include(('original_site.urls', 'original_site'), namespace='site')),
 ]
 if settings.DEBUG:
     urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

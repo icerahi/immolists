@@ -30,8 +30,10 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     'properties',
+    'original_site',
     'dashboard',
     'sellproperty',
+    'accounts',
 
     #3rd party
     'ckeditor',
@@ -89,7 +91,9 @@ AUTHENTICATION_BACKENDS=(
 
 )
 
-LOGIN_REDIRECT_URL = '/dashboard/add_sell'
+LOGIN_REDIRECT_URL ='/dashboard/'
+LOGOUT_REDIRECT_URL='/'
+ACCOUNT_LOGOUT_ON_GET=True
 
 WSGI_APPLICATION = 'immolists.wsgi.application'
 

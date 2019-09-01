@@ -38,8 +38,8 @@ class MyList(ListView,LoginRequiredMixin):
     model = SellProperty
     template_name = 'mylist.html'
 
-    def get_queryset(self):
-        queryset=super(MyList, self).get_queryset()
+    def get_queryset(self,*args,**kwargs):
+        queryset=SellProperty.objects.all()
         queryset=queryset.filter(realator=self.request.user)
         return queryset
 
@@ -50,8 +50,9 @@ class SellPropertyUpdate(UpdateView,LoginRequiredMixin):
     success_url = reverse_lazy('dashboard:mylist')
 
 class SellPropertyDelete(LoginRequiredMixin,DeleteView,SuccessMessageMixin):
-    model=SellProperty
+    model=SellProperty()
     success_url =reverse_lazy('dashboard:mylist')
     success_message = "Property Deleted Successfully"
+
 
 

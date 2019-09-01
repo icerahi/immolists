@@ -61,7 +61,7 @@
 
 							  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
 							    <a class="dropdown-item" href="#">Profile</a>
-							    <a class="dropdown-item" href="#">sign out</a>
+							    <a class="dropdown-item" href="{% url 'account_logout' %}">sign out</a>
 							  </div>
 							</div>
 						</div>
@@ -80,28 +80,28 @@
 						<div class="full-row deshbord_sidebar flat_small py_30 w-100">
 							<h6 class="color-default border_gray pb_15 m-0 px_15"><span>Overview</span></h6>
 							<ul class="mt_10">
-								<li class="{% if url_name == 'dashboard' %}active{% endif %}"><a href="{% url 'dashboard' %}"><i class="flaticon-dashboard"></i><span>Dashboard</span></a></li>
-								<li class="{% if url_name == 'send' %}active{% endif %}"><a href="{% url 'send' %}"><i class="flaticon-contact-1"></i><span>Enquire Send</span> </a></li>
- 								<li class="{% if url_name == 'come' %}active{% endif %}"><a href="{% url 'come' %}"><i class="flaticon-calendar"></i><span>Enquire Come</span></a></li>
+								<li class="{% if url_name == 'dashboard' %}active{% endif %}"><a href="{% url 'dashboard:dashboard' %}"><i class="flaticon-dashboard"></i><span>Dashboard</span></a></li>
+								<li class="{% if url_name == 'send' %}active{% endif %}"><a href="#"><i class="flaticon-contact-1"></i><span>Enquire Send</span> </a></li>
+ 								<li class="{% if url_name == 'come' %}active{% endif %}"><a href="#"><i class="flaticon-calendar"></i><span>Enquire Come</span></a></li>
 							</ul>
 							<h6 class="color-default border_gray pb_15 pt_50 m-0 px_15"><span>Property Submission</span></h6>
 							<ul class="mt_10">
 								<li class="{% if url_name == 'add_sell' %}active{% endif %}"><a href="{% url 'dashboard:add_sell' %}"><i class="flaticon-tax"></i><span>Submit for Sell</span></a></li>
-								<li class="{% if url_name == 'rent' %}active{% endif %}"><a href="{% url 'rent' %}"><i class="flaticon-real-estate"></i><span>Submit for Rent</span></a></li>
-								<li class="{% if url_name == 'make_offer' %}active{% endif %}"><a href="{% url 'make_offer' %}"><i class="flaticon-percentage"></i><span>Make Offer</span></a></li>
+								<li class="{% if url_name == 'rent' %}active{% endif %}"><a href="#"><i class="flaticon-real-estate"></i><span>Submit for Rent</span></a></li>
+								<li class="{% if url_name == 'make_offer' %}active{% endif %}"><a href="#"><i class="flaticon-percentage"></i><span>Make Offer</span></a></li>
 							</ul>
 							<h6 class="color-default border_gray pb_15 pt_50 m-0 px_15"><span>Manage Property</span></h6>
 							<ul class="mt_10">
 								<li class="{% if url_name == 'mylist' %}active{% endif %}"><a href="{% url 'dashboard:mylist' %}"><i class="flaticon-house-1"></i><span>Listing Properties</span></a></li>
-								<li class="{% if url_name == 'favourite' %}active{% endif %}"><a href="{% url 'favourite' %}"><i class="flaticon-star"></i><span>Favorite Properties</span></a></li>
- 								<li class="{% if url_name == 'offer' %}active{% endif %}"><a href="{% url 'offer' %}"><i class="flaticon-bill"></i><span>Listing Offer</span></a></li>
+								<li class="{% if url_name == 'favourite' %}active{% endif %}"><a href="#"><i class="flaticon-star"></i><span>Favorite Properties</span></a></li>
+ 								<li class="{% if url_name == 'offer' %}active{% endif %}"><a href="#"><i class="flaticon-bill"></i><span>Listing Offer</span></a></li>
  							</ul>
 
 
 							<h6 class="color-default border_gray pb_15 pt_50 m-0 px_15"><span>Settings</span></h6>
 							<ul class="mt_10">
-								<li class="{% if url_name == 'personalinfo' %}active{% endif %}"><a href="{% url 'personalinfo' %}"><i class="flaticon-seller"></i><span>Personal Information</span></a></li>
- 								<li class="{% if url_name == 'password_change'%}active{% endif %}"><a href="{% url 'password_change' %}"><i class="flaticon-lock"></i><span>Change Password</span></a></li>
+								<li class="{% if url_name == 'personalinfo' %}active{% endif %}"><a href="#"><i class="flaticon-seller"></i><span>Personal Information</span></a></li>
+ 								<li class="{% if url_name == 'password_change'%}active{% endif %}"><a href="#"><i class="flaticon-lock"></i><span>Change Password</span></a></li>
 								<li><a href="dashboard_system_setting.html"><i class="flaticon-settings"></i><span>System Settings</span></a></li>
 							</ul>
 						</div>
