@@ -1,0 +1,99 @@
+{% extends 'dashboard_base.html' %}
+{% load static %}
+
+{% block body %}
+ 	<div class="col-md-11 col-xl-10 bg-gray">
+					<div class="row">
+						<div class="full-row deshbord_panel w-100 mb-5">
+							<h4 class="color-primary mb-4">Personal Information</h4>
+							<div class="dashboard_personal_info p-5 bg-white">
+								<form action="#" method="post" enctype="multipart/form-data">
+									{% csrf_token %}
+                                    {{ form.media }}
+									<h5 class="color-primary">Account Info</h5>
+									<hr>
+									<div class="row mt-4">
+										<div class="col-lg-6 col-md-12">
+											<div class="form-group">
+												<label>Realator ID</label>
+												<input value="{{request.user.realator.id}}" type="text" name="user_id" class="form-control" readonly>
+											</div>
+
+											<div class="form-group">
+												<label>Username</label>
+                                          {{ user_form.username.errors }}
+                                            {{ user_form.username }}
+                                            </div>
+
+											<div class="form-group">
+												<label>Email Address</label>
+                                                {{ user_form.email.errors }}
+                                                     {{ user_form.email }}
+ 											</div>
+                                            <div class="form-group">
+												<label>Profile Picture</label>
+                                                {{ profile_form.image.errors }}
+                                                     {{ profile_form.image }}
+ 											</div>
+
+
+											<div class="form-group">
+												<label>Your Name</label>
+                                                 {{ profile_form.fullname.errors }}
+                                                     {{ profile_form.fullname}}
+
+											</div>
+
+
+											<div class="form-group position-relative">
+												<label>Phone Number</label>
+                                                 {{ profile_form.phone.errors }}
+                                                     {{ profile_form.phone }}
+											</div>
+											<div class="form-group">
+												<label>Country</label>
+                                                 {{ profile_form.country.errors }}
+                                                     {{ profile_form.country }}
+											</div>
+												<div class="form-group">
+												<label>Address</label>
+                                                     {{ profile_form.address.errors }}
+                                                     {{ profile_form.address }}
+											</div>
+
+											<div class="form-group">
+												<label>About Me</label>
+                                                {{ profile_form.about.errors }}
+                                                     {{ profile_form.about }}
+ 											</div>
+											<div class="form-group">
+												<label>Date Of Birth</label>
+                                                 {{ profile_form.date_of_birth.errors }}
+                                                     {{ profile_form.date_of_birth }}
+ 											</div>
+
+ 										</div>
+										<div class="col-lg-1"></div>
+										<div class="col-lg-5 col-md-12">
+											<div class="user_photo">
+												<img src="{{request.user.realator.image.url}}" alt="">
+												<div class="d-table">
+													<button type="submit" class="btn btn-default1 mb-0 mr-2" for="btn-uploat">Save Changes</button>
+
+ 												</div>
+												<div class="user_info mt-4">
+													<span class="d-table mb-1"><b>Name:</b> {{request.user.realator.fullname}}</span>
+													<span class="d-table mb-1"><b>Email:</b>{{request.user.email}}</span>
+													<span class="d-table mb-1"><b>Phone:</b> {{request.user.realator.phone}}</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+ 					</div>
+				</div>
+
+
+{% endblock body %}

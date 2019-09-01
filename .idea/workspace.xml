@@ -2,54 +2,425 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4271de-3896-46bb-bb1d-ab896c0dbcf2" name="Default Changelist" comment=" 'need design more'">
-      <change afterPath="$PROJECT_DIR$/accounts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/1054673420572043/23656.png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/109690369443028/Screenshot_from_2019-08-29_11-56-16.png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/189168318681776/Screenshot_from_2019-08-02_00-57-14.png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/537608652291969/23656.png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/560085897110091/Screenshot_from_2019-08-29_11-53-12.png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/633395299155025/Screenshot_from_2019-08-02_00-24-38.png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/985393374120484/23656.png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/original_site/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/original_site/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/original_site/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/original_site/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/original_site/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/original_site/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/original_site/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/original_site/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/migrations/0002_auto_20190901_1828.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/migrations/0003_remove_profile_address2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/migrations/0004_auto_20190901_1946.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/templates/profile_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/23656.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/address/js/address.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/css/bootstrap-slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/css/color.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/css/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/css/layerslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/css/owl.video.play.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/__.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ad.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ae.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/af.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ag.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ai.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/al.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/am.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ao.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/aq.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ar.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/as.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/at.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/au.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/aw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ax.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/az.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ba.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bb.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bd.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/be.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bf.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bh.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bi.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bj.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bl.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bq.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/br.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bs.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bt.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bv.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/by.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/bz.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ca.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cd.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cf.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ch.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ci.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ck.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cl.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/co.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cv.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cx.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cy.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/cz.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/de.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/dj.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/dk.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/dm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/do.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/dz.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ec.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ee.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/eg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/eh.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/er.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/es.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/et.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/eu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/fi.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/fj.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/fk.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/fm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/fo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/fr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ga.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gb.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gd.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ge.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gf.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gh.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gi.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gl.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gp.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gq.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gs.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gt.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/gy.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/hk.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/hm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/hn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/hr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ht.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/hu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/id.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ie.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/il.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/im.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/in.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/io.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/iq.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ir.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/is.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/it.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/je.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/jm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/jo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/jp.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ke.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/kg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/kh.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ki.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/km.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/kn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/kp.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/kr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/kw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ky.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/kz.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/la.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/lb.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/lc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/li.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/lk.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/lr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ls.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/lt.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/lu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/lv.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ly.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ma.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/md.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/me.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mf.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mh.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mk.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ml.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mp.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mq.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ms.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mt.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mv.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mx.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/my.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/mz.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/na.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/nc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ne.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/nf.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ng.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ni.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/nl.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/no.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/np.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/nr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/nu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/nz.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/om.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/pa.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/pe.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/pf.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/pg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ph.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/pk.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/pl.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/pm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/pn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/pr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ps.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/pt.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/pw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/py.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/qa.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/re.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ro.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/rs.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ru.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/rw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sa.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sb.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sd.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/se.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sh.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/si.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sj.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sk.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sl.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/so.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sprite-hq.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sprite-hq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sprite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ss.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/st.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sv.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sx.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sy.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/sz.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/td.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tf.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/th.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tj.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tk.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tl.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/to.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tt.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tv.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/tz.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ua.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ug.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/um.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/us.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/uy.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/uz.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/va.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/vc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ve.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/vg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/vi.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/vn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/vu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/wf.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ws.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/ye.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/yt.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/za.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/zm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/flags/zw.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/about/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/about/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/banner/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/bg-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/bg-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/bg-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/bg-image/pattern/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/blog/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/blog/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/blog/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/blog/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/blog/details/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/blog/details/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/blog/details/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/blog/details/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/comming-soon-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/condos-pool.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/counterbg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/dashboard/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/dashboard/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/dashboard/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/dashboard/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/duplex-design.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/fancybox/fancybox_loading.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/haddyliving.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/home5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/house-floor-plan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/icon-muted-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/icon-unmuted-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/investment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/layout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/logo/logo-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/logo/logo-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/logo/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/main-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/making.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/massagetwo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/partner/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/partner/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/partner/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/partner/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/partner/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/services/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/services/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/corinne.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/flash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/gallery-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/gallery-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/gallery-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/gallery-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/gallery-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/gallery-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/gallery-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/rosie.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/slider/wake.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/team/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail/04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail/05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail/06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail2/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail2/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail2/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail2/04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail4/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail4/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail4/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail4/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail5/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail5/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnail5/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnaillist/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnaillist/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnaillist/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnaillist/04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnaillist/05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/thumbnaillist/06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/user/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/user/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/vacation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/images/video.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/YouTubePopUp.jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/draggable-0.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/greensock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/jquery.countdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/jquery.dependClass-0.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/jquery.geocomplete.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/jquery.slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/layerslider.kreaturamedia.jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/layerslider.transitions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/map.scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/tmpl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-root/js/wow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/sell.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/sell.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/immolists/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/immolists/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/immolists/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/immolists/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/about_agent.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/about_agent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/agent_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/agent_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/comming_soon.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/comming_soon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/forget_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/forget_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/property_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/property_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/site/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/detail_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/properties/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/properties/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0002_auto_20190830_0247.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/migrations/0002_auto_20190901_0834.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/templates/personalinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/personalinfo.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,8 +431,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -80,19 +451,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/original_site/templates" />
-      <recent name="$PROJECT_DIR$/properties/templates" />
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/dashboard/templates" />
-      <recent name="$PROJECT_DIR$/dashboard" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/dashboard/templates" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/static/dashboard" />
       <recent name="$PROJECT_DIR$/static/dashboard/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dashboard/templates" />
+      <recent name="$PROJECT_DIR$/original_site/templates" />
+      <recent name="$PROJECT_DIR$/properties/templates" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/dashboard" />
     </key>
   </component>
   <component name="RunDashboard">

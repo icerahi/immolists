@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     #3rd party
     'ckeditor',
     'ckeditor_uploader',
+    'django_countries',
+    'address',
 
 
     'rest_framework',
@@ -97,7 +99,7 @@ ACCOUNT_LOGOUT_ON_GET=True
 
 WSGI_APPLICATION = 'immolists.wsgi.application'
 
-
+GOOGLE_API_KEY = 'AIzaSyDfEGAxItxo1IiNHGRYX59lXcEouHVQp2c'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 

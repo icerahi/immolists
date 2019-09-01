@@ -1,6 +1,8 @@
 
 from django.urls import path, include
 
+from accounts import views
+from accounts.views import PersonalInformation
 from dashboard.views import CreateSellProperty, MyList, SellPropertyUpdate, SellPropertyDelete, Dashboard, load_types
 from immolists.views import IndexView
 
@@ -12,6 +14,9 @@ urlpatterns = [
     path('ajax/load-types/', load_types, name='ajax_load_types'),
     path('add_sell/',CreateSellProperty.as_view(),name='add_sell'),
 
+    path('personal-information/<username>/',PersonalInformation.as_view(),name='personal_info'),
+
+    path('personal-information/<username>/edit/',views.profile_edit,name='profile_edit'),
 
 
 
