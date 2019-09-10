@@ -1,7 +1,7 @@
 from django import forms
 
 
-from .models import  Type, SellProperty
+from .models import Type, SellProperty, Enquiry
 
 
 class SellPropertyForm(forms.ModelForm):
@@ -27,6 +27,21 @@ class SellPropertyForm(forms.ModelForm):
         self.fields['image_3'].widget.attrs['class'] = 'form-control'
 
 
+class EnquiryForm(forms.ModelForm):
+    class Meta:
+        model=Enquiry
+        exclude=('property',)
 
+    def __init__(self,*args,**kwargs):
+        super(EnquiryForm, self).__init__(*args,**kwargs)
+        self.fields['name'].widget.attrs['class']='form-control'
+        self.fields['email'].widget.attrs['class']='form-control'
+        self.fields['phone'].widget.attrs['class']='form-control'
+        self.fields['message'].widget.attrs['class']='form-control'
+
+        self.fields['name'].widget.attrs['placeholder']='Name'
+        self.fields['email'].widget.attrs['placeholder']='Email'
+        self.fields['phone'].widget.attrs['placeholder']='Phone'
+        self.fields['message'].widget.attrs['placeholder']='Message'
 
 

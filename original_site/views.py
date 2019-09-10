@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 from django.views.generic import ListView, DetailView
 
-from sellproperty.models import SellProperty
+from sellproperty.forms import EnquiryForm
+from sellproperty.models import SellProperty, Enquiry
 
 
 class Home(ListView):
@@ -17,6 +19,47 @@ class Home(ListView):
         return context
 
 
-class PropertyDetailView(DetailView):
-    model = SellProperty
-    template_name = 'site/detail_view.html'
+
+
+def PropertyDetailView(request,pk,slug):
+    property=get_object_or_404(SellProperty,pk=pk,slug=slug)
+    viewed=request.session.get('viewed',[])
+    if viewed:
+        if property.id not in viewed:
+            viewed.append(property.id)
+            request.session['viewed']=viewed
+            property.views+=1
+            property.save()
+    else:
+        viewed=[property.id]
+        request.session['viewed']=viewed
+        property.views+=1
+        property.save()
+    is_favourite=False
+    if property.favourite.filter(id=request.user.id).exists():
+        is_favourite=True
+
+    if request.method=='POST':
+        form=EnquiryForm(request.POST or None)
+        if form.is_valid():
+            name=request.POST.get('name')
+            email=request.POST.get('email')
+            phone=request.POST.get('phone')
+            message=request.POST.get('message')
+            data=Enquiry.objects.create(property=property,name=name,email=email,phone=phone,message=message)
+            data.save()
+            return HttpResponseRedirect(property.get_absolute_url())
+    else:
+        if request.user.is_authenticated:
+            form=EnquiryForm(initial={'name':request.user.realator.fullname,'email':request.user.email,
+                                      'phone':request.user.realator.phone})
+        else:
+            form=EnquiryForm()
+    context={
+        'form':form,
+        'object':property,
+        'is_favourite':is_favourite,
+
+    }
+
+    return render(request,'site/detail_view.html',context)

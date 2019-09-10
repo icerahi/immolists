@@ -18,22 +18,26 @@
 											<th>Views</th>
 											<th>Reason</th>
 											<th>Action</th>
+
 										</tr>
+
 									</thead>
+
+
 									<tbody>
 
 
 
 
 
-									{% for object in object_list %}
 
+							{% for object in object_list %}
 
 										<tr>
 											<td>
-												<img src="{{ object.main_image.url }}" alt="">
+												<a href="{{object.get_absolute_url}}">	<img src="{{ object.main_image.url }}" alt=""></a>
 												<div class="property_info d-table">
-													<h5 class="color-primary">{{ object.title }}</h5>
+													<h5 class="color-primary"><a href="{{object.get_absolute_url}}">{{ object.title }}</a></h5>
 													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> {{ object.location }}</span>
 													<div class="price mt-3">
 														<span class="color-default">${{object.min_price }}- ${{ object.max_price}}</span>
@@ -41,8 +45,9 @@
 													</div>
 												</div>
 											</td>
-											<td>{{object.created }}</td>
-											<td>34 (costom view)</td>
+											<td>{{ object.created|date:"D d M Y" }} \ {{ object.created|time:"H:i a" }}</td>
+
+											<td>{{object.views}}</td>
 											<td>For Sale</td>
 											<td>
 												<a href="{{ object.get_update_url }}" class="btn btn-default1 mr-3">Edit</a>
@@ -75,8 +80,14 @@
 											</div>
 
 
+
 											</td>
 										</tr>
+											{% empty %}
+
+							  <p>You have no list to show </p>
+
+
 
 									{% endfor %}
 
@@ -87,17 +98,6 @@
 
 
 
-							<nav aria-label="Page navigation" class="alinment d-table pt-5">
-							  <ul class="pagination">
-							    <li class="page-item"><a class="page-link active" href="#">Previous</a></li>
-							    <li class="page-item"><a class="page-link active" href="#">1</a></li>
-							    <li class="page-item"><a class="page-link" href="#">2</a></li>
-							    <li class="page-item"><a class="page-link" href="#">3</a></li>
-							    <li class="page-item">...</li>
-							    <li class="page-item"><a class="page-link" href="#">45</a></li>
-							    <li class="page-item"><a class="page-link active" href="#">Next</a></li>
-							  </ul>
-							</nav>
 
 						</div>
  					</div>

@@ -73,10 +73,10 @@
 								<div class="property-price">
 									<div class="add_favourite float-right color-secondery">
 										<form action="#">
-											<button value="" title="Add to favourite property"><i class="fa fa-star-o" aria-hidden="true"></i></button>
+											<button value="" title="{{object.views}} views">{{object.views}}views</button>
 										</form>
 									</div>
-									<div class="area_price">${{object.min_price}}-${{object.max_price}}</div>
+									<div class="area_price"><h1>${{object.min_price}}-${{object.max_price}}</h1></div>
 									<div class="amount">Fixed Amount</div>
 								</div>
 							</div>
@@ -227,35 +227,46 @@
 							<div class="col-md-12 col-lg-4">
 								<ul class="property_btn mt-5">
 									<li class="download"><a href="#" class="btn btn-primary"><i class="fa fa-download" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="btn btn-primary">Add to Compare</a></li>
+									{% if is_favourite %}
+									<li><a href="{% url 'dashboard:add_favourite' pk=object.pk %}" class="btn btn-danger">Remove Favourite</a></li>
+									{% else %}
+									<li><a href="{% url 'dashboard:add_favourite' pk=object.pk %}" class="btn btn-success">Add Favourite</a></li>
+									{% endif %}
 								</ul>
 								<div class="broker_contact mt_30 d-inline-block p_30 boxshadow_one mb-5">
-									<div class="img_80 float-left pr_20 mb_20"><img src="{% static 'images/user/02.jpg' %}" alt=""></div>
+									<div class="img_80 float-left pr_20 mb_20"><img src= "{{ object.realator.image.url }}" alt=""></div>
+
 									<div class="broker_name">
-										<h6 class="font-weight-bold color-default">Josphine Pacheco</h6>
-										<span class="color-secondery">+( 81 ) 84 538 231</span>
+										 
+										<h6 class="font-weight-bold color-default">{{object.realator.username }}</h6>
+										<span class="color-secondery">Property Owner</span>
 									</div>
-									<form class="form4 w-100 d-inline-block" action="http://unicoderbd.com/theme/html/homex/action.php" method="post">
+									<form class="form4 w-100 d-inline-block" action="" method="POST">
+										{% csrf_token%}
 										<div class="row">
 											<div class="col-md-12 col-lg-12">
 												<div class="form-group">
-												  <input class="form-control" id="name" name="firstname" placeholder="Name" type="text">
-												</div>
+													{{ form.name.errors }}
+													{{ form.name }}
+ 												</div>
 											</div>
 											<div class="col-md-12 col-lg-12">
 												<div class="form-group">
-												  <input class="form-control" id="email" name="email" placeholder="Email" type="text">
-												</div>
+													{{ form.email.errors }}
+													{{ form.email }}
+ 												</div>
 											</div>
 											<div class="col-md-12 col-lg-12">
 												<div class="form-group">
-												  <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text">
-												</div>
+													{{ form.phone.errors }}
+													{{ form.phone}}
+ 												</div>
 											</div>
 											<div class="col-md-12 col-lg-12">
 												<div class="form-group">
-												  <textarea class="form-control" id="massage" name="massage" cols="30" rows="6" placeholder="Massage"></textarea>
-												</div>
+													{{ form.message.errors }}
+													{{ form.message }}
+ 												</div>
 											</div>
 											<div class="col-md-12 col-lg-12">
 												<button type="submit" value="submit" class="btn btn-default1 w-100">Send Message</button>

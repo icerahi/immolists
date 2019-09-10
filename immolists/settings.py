@@ -96,6 +96,7 @@ AUTHENTICATION_BACKENDS=(
 LOGIN_REDIRECT_URL ='/dashboard/'
 LOGOUT_REDIRECT_URL='/'
 ACCOUNT_LOGOUT_ON_GET=True
+LOGIN_URL='/accounts/login'
 
 WSGI_APPLICATION = 'immolists.wsgi.application'
 

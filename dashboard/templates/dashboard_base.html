@@ -27,9 +27,10 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'fonts/flaticon/flaticon.css' %}">
 
 
+
 	<!--	Title
 	=========================================================-->
-	<title>Homex - Real Estate Template</title>
+	<title>Immolists - The RealEstate Source</title>
 </head>
 <body>
 
@@ -39,7 +40,7 @@
 				<div class="col-lg-8 col-lg-8">
 					<div class="left_top_bar">
 						<div class="full-row deshbord_logo mr_20">
-							<a class="float-left" href="index-2.html"><img src="{% static 'images/logo/logo-icon.png' %}" alt=""></a>
+							<a class="float-left" href="/"><img src="{% static 'images/logo/logo-icon.png' %}" alt=""></a>
 						</div>
 
 
@@ -55,12 +56,12 @@
 						<div class="profile_user d-inline-block mr_20">
 							<div class="dropdown">
 							  <a class="dropdown-toggle color-white" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							  	<img src="{% static 'images/team/01.jpg' %}" alt="">
-							    Hi, Rahi
+							  	<img src="{{ request.user.realator.image.url }}" alt="">
+							    Hi, {{request.user.username}}
 							  </a>
 
 							  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-							    <a class="dropdown-item" href="#">Profile</a>
+							    <a class="dropdown-item" href="{% url 'dashboard:personal_info' username=request.user.username %}">Profile</a>
 							    <a class="dropdown-item" href="{% url 'account_logout' %}">sign out</a>
 							  </div>
 							</div>
@@ -81,8 +82,9 @@
 							<h6 class="color-default border_gray pb_15 m-0 px_15"><span>Overview</span></h6>
 							<ul class="mt_10">
 								<li class="{% if url_name == 'dashboard' %}active{% endif %}"><a href="{% url 'dashboard:dashboard' %}"><i class="flaticon-dashboard"></i><span>Dashboard</span></a></li>
-								<li class="{% if url_name == 'send' %}active{% endif %}"><a href="#"><i class="flaticon-contact-1"></i><span>Enquire Send</span> </a></li>
- 								<li class="{% if url_name == 'come' %}active{% endif %}"><a href="#"><i class="flaticon-calendar"></i><span>Enquire Come</span></a></li>
+ 								<li class="{% if url_name == 'enquiry_come' %}active{% endif %}"><a href="{% url 'dashboard:enquiry_come' %}"><i class="flaticon-calendar"></i><span>Enquiry Come</span></a></li>
+								<li class="{% if url_name == 'enquiry_send' %}active{% endif %}"><a href="{% url 'dashboard:enquiry_send' %}"><i class="flaticon-contact-1"></i><span>Enquiry Send</span> </a></li>
+
 							</ul>
 							<h6 class="color-default border_gray pb_15 pt_50 m-0 px_15"><span>Property Submission</span></h6>
 							<ul class="mt_10">
@@ -93,7 +95,7 @@
 							<h6 class="color-default border_gray pb_15 pt_50 m-0 px_15"><span>Manage Property</span></h6>
 							<ul class="mt_10">
 								<li class="{% if url_name == 'mylist' %}active{% endif %}"><a href="{% url 'dashboard:mylist' %}"><i class="flaticon-house-1"></i><span>Listing Properties</span></a></li>
-								<li class="{% if url_name == 'favourite' %}active{% endif %}"><a href="#"><i class="flaticon-star"></i><span>Favorite Properties</span></a></li>
+								<li class="{% if url_name == 'favourite_list' %}active{% endif %}"><a href="{% url 'dashboard:favourite_list' %}"><i class="flaticon-star"></i><span>Favourite Properties</span></a></li>
  								<li class="{% if url_name == 'offer' %}active{% endif %}"><a href="#"><i class="flaticon-bill"></i><span>Listing Offer</span></a></li>
  							</ul>
 
@@ -101,7 +103,7 @@
 							<h6 class="color-default border_gray pb_15 pt_50 m-0 px_15"><span>Settings</span></h6>
 							<ul class="mt_10">
 								<li class="{% if url_name == 'personal_info' %}active{% endif %}"><a href="{% url 'dashboard:personal_info' username=request.user.username %}"><i class="flaticon-seller"></i><span>Personal Information</span></a></li>
- 								<li class="{% if url_name == 'password_change'%}active{% endif %}"><a href="#"><i class="flaticon-lock"></i><span>Change Password</span></a></li>
+ 								<li class="{% if url_name == 'account_change_password'%}active{% endif %}"><a href="{% url 'account_change_password' %}"><i class="flaticon-lock"></i><span>Change Password</span></a></li>
 								<li><a href="dashboard_system_setting.html"><i class="flaticon-settings"></i><span>System Settings</span></a></li>
 							</ul>
 						</div>

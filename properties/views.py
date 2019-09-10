@@ -56,11 +56,6 @@ def load_types(request):
 class CheckTemplate(TemplateView):
     template_name='dashboard_base.html'
 
-class EnquireSend(TemplateView):
-    template_name = 'enquire_send.html'
-
-class EnquireCome(TemplateView):
-    template_name = 'enquire_come.html'
 
 class MyList(TemplateView):
     template_name = 'mylist.html'

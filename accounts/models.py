@@ -36,6 +36,7 @@ class Profile(models.Model):
     address   = AddressField(on_delete=models.CASCADE,blank=True,null=True)
     country=CountryField(blank_label='(select country)',blank=True,null=True)
 
+
 def post_save_user_receiver(sender,instance,created,*args,**kwargs):
     #user will saved as profile
     if created:

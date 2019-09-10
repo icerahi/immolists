@@ -13,6 +13,8 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.urls import reverse
 from django.utils.text import slugify
+from phonenumber_field.modelfields import PhoneNumberField
+
 
 
 
@@ -60,7 +62,7 @@ class SellProperty(models.Model):
         ('draf','Draft'),
         ('published','Published')
     )
-    realator         = models.ForeignKey(User,on_delete=models.CASCADE)
+    realator         = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     category         =models.ForeignKey(Category,on_delete=models.CASCADE)
     type             =models.ForeignKey(Type,on_delete=models.CASCADE)
     title            =models.CharField(max_length=200)
@@ -79,6 +81,9 @@ class SellProperty(models.Model):
     main_image       =models.ImageField(upload_to=upload_image_path,default='default.jpg')
     image_2          =models.ImageField(upload_to=upload_image_path,null=True,blank=True)
     image_3          =models.ImageField(upload_to=upload_image_path,null=True,blank=True)
+    views           = models.PositiveIntegerField(default=0, blank=True)
+    favourite       =models.ManyToManyField(settings.AUTH_USER_MODEL,blank=True,related_name='favourite')
+
 
 
     def __str__(self):
@@ -100,3 +105,31 @@ class SellProperty(models.Model):
 def pre_save_slug(sender,**kwargs):
     slug=slugify(kwargs['instance'].title)
     kwargs['instance'].slug=slug
+
+
+
+class EnquiryManager(models.Manager):
+    def get_come(self,user):
+        return super(EnquiryManager, self).get_queryset().filter(property__realator=user)
+    def get_send(self,user):
+        return super(EnquiryManager, self).get_queryset().filter(email=user.email)
+
+class Enquiry(models.Model):
+    property=models.ForeignKey(SellProperty,on_delete=models.CASCADE,related_name='enquiry')
+    name =models.CharField(max_length=100,blank=True,null=True)
+    email=models.EmailField(blank=True,null=True)
+    phone=PhoneNumberField(blank=True,null=True)
+    message=models.TextField(blank=True,null=True)
+    time =models.DateTimeField(auto_now_add=True)
+    objects=EnquiryManager()
+
+    def __str__(self):
+        return f'{self.name}'
+
+    class Meta:
+        ordering=['-time']
+
+    def get_come_delete_url(self,*args,**kwargs):
+        return reverse('dashboard:enquirycome_delete',kwargs={'pk':self.pk})
+    def get_send_delete_url(self,*args,**kwargs):
+        return reverse('dashboard:enquirysend_delete',kwargs={'pk':self.pk})

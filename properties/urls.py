@@ -11,8 +11,7 @@ urlpatterns = [
 
         #check dashboard templates
     path('dashboard/',views.CheckTemplate.as_view(),name='dashboard'),
-    path('send/',views.EnquireSend.as_view(),name='send'),
-    path('come/',views.EnquireCome.as_view(),name='come'),
+
     path('list/',views.MyList.as_view(),name='list'),
     path('favourite/',views.FavouriteList.as_view(),name='favourite'),
     path('offer/',views.OfferList.as_view(),name='offer'),

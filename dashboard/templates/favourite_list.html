@@ -1,0 +1,83 @@
+{% extends 'dashboard_base.html' %}
+{% load static %}
+
+{% block body %}
+			<div class="col-md-11 col-xl-10 bg-gray">
+					<div class="row">
+						<div class="full-row deshbord_panel w-100 mb-5">
+							<h4 class="color-primary mb-4">List of Favorite Property</h4>
+
+							<div class="items_list bg_transparent color-secondery icon_default">
+								<table class="w-100">
+									<thead>
+										<tr class="bg-white">
+											<th>Properties</th>
+											<th>Views</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+									{% for object in object_list %}
+										<tr>
+											<td>
+												<img src="{{ object.main_image.url }}" alt="">
+												<div class="property_info d-table">
+													<h5 class="color-primary">{{ object.title }}</h5>
+													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> {{object.location}}</span>
+													<div class="price mt-3">
+														<span class="color-default">${{object.min_price}}-${{object.max_price}}</span>
+
+													</div>
+												</div>
+											</td>
+
+											<td> {{object.views}}</td>
+
+											<td>
+												<a href="#exampleModal" class="btn btn-default1" data-toggle="modal" data-target="#rahi{{object.id}}">Remove</a>
+
+
+
+												<div class="modal fade" id="rahi{{object.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+												  <div class="modal-dialog" role="document">
+													<div class="modal-content">
+													  <div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Remove Favourite</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														  <span aria-hidden="true">&times;</span>
+														</button>
+													  </div>
+												<form method="POST" action="{% url 'dashboard:remove_favourite' pk=object.pk %}" enctype="multipart/form-data">
+														{% csrf_token %}
+													  <div class="modal-body">
+														Are You Sure To Remove From Your Favourite List??
+													  </div>
+													  <div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+														<button type="submit" class="btn btn-primary">Yes</button>
+													  </div>
+														</form>
+
+													</div>
+												  </div>
+												</div>
+
+
+											</td>
+										</tr>
+									{% empty %}
+									<p>You have no favourite to show</p>
+									{% endfor %}
+
+
+
+									</tbody>
+								</table>
+							</div>
+
+
+						</div>
+ 					</div>
+				</div>
+
+{% endblock body %}
