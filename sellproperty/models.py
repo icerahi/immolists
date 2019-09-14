@@ -14,6 +14,9 @@ from django.dispatch import receiver
 from django.urls import reverse
 from django.utils.text import slugify
 from phonenumber_field.modelfields import PhoneNumberField
+from embed_video.fields import EmbedVideoField
+
+
 
 
 
@@ -83,7 +86,7 @@ class SellProperty(models.Model):
     image_3          =models.ImageField(upload_to=upload_image_path,null=True,blank=True)
     views           = models.PositiveIntegerField(default=0, blank=True)
     favourite       =models.ManyToManyField(settings.AUTH_USER_MODEL,blank=True,related_name='favourite')
-
+    video = EmbedVideoField(null=True,blank=True)
 
 
     def __str__(self):

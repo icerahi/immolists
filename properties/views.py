@@ -12,7 +12,7 @@ from properties.models import PropertyForSell, Type
 class PropertyListView(ListView):
     model=PropertyForSell
     context_object_name='property'
-    template_name = 'property_list.html'
+    template_name = 'sell_list.html'
 
 
 
@@ -95,13 +95,13 @@ class CommingSoon(TemplateView):
     template_name = 'site/comming_soon.html'
 
 class AgentList(TemplateView):
-    template_name = 'site/agent_list.html'
+    template_name = 'site/realator_list.html'
 
 class AboutAgent(TemplateView):
-    template_name = 'site/about_agent.html'
+    template_name = 'site/profile.html'
 
 class PropertyList(TemplateView):
-    template_name = 'site/property_list.html'
+    template_name = 'site/sell_list.html'
 
 class single(TemplateView):
     template_name = 'site/detail_view.html'

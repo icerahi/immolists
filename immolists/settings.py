@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'accounts',
 
     #3rd party
+    'embed_video',
     'ckeditor',
     'ckeditor_uploader',
     'django_countries',

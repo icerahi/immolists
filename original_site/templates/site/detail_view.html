@@ -1,5 +1,6 @@
 {% extends 'site/base.html' %}
 {% load static %}
+{% load embed_video_tags %}
 
 {% block content %}
 
@@ -103,10 +104,10 @@
 
 									</div>
 
-
 									<h5 class="pt_60 mb_30 color-primary">Property Video</h5>
 									<div class="property_video overlay_one mb_30">
-										<img src="{% static 'images/video.jpg' %}" alt="">
+							<!-- Or embed shortcut: -->
+{% video object.video '800x600' %}
 										<a class="video-popup" href="#" title="video popup">
 										<i class="fa fa-play" aria-hidden="true"></i></a>
 										<div class="loader xy-center">
@@ -117,6 +118,7 @@
 											</div>
 										</div>
 									</div>
+
 
 
 									<div class="single-map">

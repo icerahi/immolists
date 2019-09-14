@@ -1,0 +1,38 @@
+{% extends 'site/base.html' %}
+{% load static %}
+{% block content %}
+
+	<section class="full-row">
+		<div class="container">
+
+			<div class="row">
+
+			{% for object in object_list %}
+				<div class="col-md-6 col-lg-4">
+					<div class="profile mb_30">
+						<div class="pro-img overfollow">
+							<img src="{{ object.image.url }}" alt="">
+						</div>
+						<div class="profile_data color-secondery hover_primary">
+							<div class="agent_name p_20">
+
+								<h5 class="font-weight-bold"><a href="{% url 'site:profile' username=object.realator.username%}">{{object.fullname}}</a></h5>
+								<span>
+									{{ object.country.name }}
+									<div class="pro_date py_15">
+
+										<p class="text-right"><span class="color-default">Total {{ object.realator.sellproperty_set.all.count }}</span> Listed</p>
+									</div></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		 {% endfor %}
+
+
+			</div>
+
+		</div>
+	</section>
+{% endblock content %}

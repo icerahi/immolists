@@ -1,0 +1,48 @@
+{% extends 'site/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<!--	Property Grid
+===============================================================-->
+
+<section class="full-row">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12">
+
+				<div class="row">
+
+					{% for object in object_list %}
+					<div class="col-md-6 col-lg-4">
+						<div class="thumbnail_one mb_30 color-secondery">
+							<div class="image_area overlay_one overfollow">
+								<img src="{{ object.main_image.url }}" alt="">
+								<div class="Featured">New</div>
+								<div class="sale sale_position bg-primary">For Sale</div>
+								<div class="area_price price_position">${{object.min_price}}-${{object.max_price}}</div>
+								<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+							</div>
+							<div class="thum_one_content">
+								<div class="thum_title">
+									<h5 class="hover_primary"><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h5>
+									<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ object.location }}</p>
+								</div>
+								<div class="ft_area p_20">
+									<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> {{ object.realator.fullname }}</div>
+									<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i>{{ object.created|timesince}}</div>
+								</div>
+							</div>
+					    </div>
+					</div>
+					{% endfor %}
+
+
+
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock content %}

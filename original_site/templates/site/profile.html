@@ -1,0 +1,172 @@
+{% extends 'site/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!--	Agents Details
+==================================================================-->
+	<section class="full-row">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="profile_details mb_30 d-inline-block rounded">
+						<div class="row">
+							<div class="col-lg-5 col-md-5">
+								<div class="pro-img overfollow">
+									<img src="{{ object.realator.image.url }}" alt="">
+								</div>
+							</div>
+							<div class="col-lg-7 col-md-7">
+								<div class="profile_data py-4 color-secondery hover_primary">
+									<div class="name_deg d-inline-block mb_30">
+										<h5 class="font-weight-bold d-block color-primary">{{object.realator.fullname}}</h5>
+										<span>{{ object.username }}</span>
+									</div>
+									<div class="badges color-default text-right">
+
+
+									</div>
+									<div class="bio_data">
+										<table class="table">
+										  <tbody>
+
+											<tr>
+											  <th>Agent ID :</th>
+											  <td>{{ object.realator.id}}</td>
+											</tr>
+											<tr>
+											  <th>Email :</th>
+											  <td>{{ object.email }}</td>
+											</tr>
+											<tr>
+											  <th>Country :</th>
+											  <td>{{ object.realator.country.name }}</td>
+											</tr>
+											 <tr>
+											  <th>Address :</th>
+											  <td>{{object.realator.address}}</td>
+											</tr>
+											 <tr>
+											  <th>Phone :</th>
+											  <td>{{ object.realator.phone}}</td>
+											</tr>
+											 <tr>
+											  <th>Birth :</th>
+											  <td>{{ object.realator.date_of_birth }}</td>
+											</tr>
+
+
+										  </tbody>
+										</table>
+
+											  <strong class="table">About :</strong>
+
+												<br><p>{{ object.realator.about }}</p>
+
+									</div>
+									<div class="agent_socalmedia d-inline-block">
+										<ul>
+											<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+
+										</ul>
+									</div>
+									<div class="pro_date py_15">
+										<p class="float-left d-inline">Joined {{ object.date_joined }}</p>
+										<p class="text-right"><span class="color-default">Total {{ object.sellproperty_set.all.count}}</span> Listed</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-12">
+					<div class="row">
+						<div class="col-md-8 col-lg-8">
+							<div class="over_view pt-4">
+								<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+								  <li class="nav-item">
+								    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">For Sell</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">For Rent</a>
+								  </li>
+								</ul>
+								<div class="tab-content mt_60" id="pills-tabContent">
+								  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+									  	<div class="row">
+								{% for property in object.sellproperty_set.all %}
+										<div class="col-md-6 col-lg-6">
+											<div class="thumbnail_one mb_30 color-secondery">
+												<div class="image_area overlay_one overfollow">
+													<img src="{{property.main_image.url}}" alt="">
+													<div class="Featured">New</div>
+													<div class="sale sale_position bg-primary">For Sale</div>
+													<div class="area_price price_position">${{ property.min_price}}-${{property.max_price}} </div>
+													<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+												</div>
+												<div class="thum_one_content">
+													<div class="thum_title">
+														<h5 class="hover_primary"><a href="{{property.get_absolute_url}}">{{property.title}}</a></h5>
+														<p><i class="fa fa-map-marker" aria-hidden="true"></i>{{property.location}}</p>
+													</div>
+													<div class="ft_area p_20">
+														<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> {{ object.username}}</div>
+														<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> {{property.created | timesince}} ago</div>
+													</div>
+												</div>
+										    </div>
+										</div>
+								 {% endfor %}
+
+
+								  </div>
+
+
+
+
+
+
+								  </div>
+								  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+								  	<div class="row">
+
+										<div class="col-md-6 col-lg-6">
+											<div class="thumbnail_one mb_30 color-secondery">
+												<div class="image_area overlay_one overfollow">
+													<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
+													<div class="Featured">New</div>
+													<div class="sale sale_position bg-primary">For Sale</div>
+													<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+													<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+												</div>
+												<div class="thum_one_content">
+													<div class="thum_title">
+														<h5 class="hover_primary"><a href="#">Nirala Appartment</a></h5>
+														<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+													</div>
+													<div class="ft_area p_20">
+														<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
+														<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+													</div>
+												</div>
+										    </div>
+										</div>
+
+
+								  </div>
+
+								</div>
+							</div>
+						</div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock content %}

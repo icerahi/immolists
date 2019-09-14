@@ -25,6 +25,7 @@ class SellPropertyForm(forms.ModelForm):
         self.fields['main_image'].widget.attrs['class'] = 'form-control'
         self.fields['image_2'].widget.attrs['class'] = 'form-control'
         self.fields['image_3'].widget.attrs['class'] = 'form-control'
+        self.fields['video'].widget.attrs['video']='form-control  video_link float-right'
 
 
 class EnquiryForm(forms.ModelForm):
