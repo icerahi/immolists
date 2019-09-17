@@ -16,7 +16,7 @@ from django.utils.text import slugify
 from phonenumber_field.modelfields import PhoneNumberField
 from embed_video.fields import EmbedVideoField
 
-
+from places.fields import PlacesField
 
 
 
@@ -65,28 +65,40 @@ class SellProperty(models.Model):
         ('draf','Draft'),
         ('published','Published')
     )
+    ACTION_FOR=(('sale','Sale',),
+                ('rent','Rent')
+    )
+    RENT_PER=(("nothing","One Time Price (For sale)"),
+            ('month','MONTH (for rent)'),
+              ('year','YEAR (for rent)'))
+
     realator         = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     category         =models.ForeignKey(Category,on_delete=models.CASCADE)
     type             =models.ForeignKey(Type,on_delete=models.CASCADE)
     title            =models.CharField(max_length=200)
     full_description =RichTextUploadingField()
     key_features     =RichTextField()
-    min_price        =models.IntegerField()
-    max_price        =models.IntegerField()
+    min_price        =models.IntegerField(null=True,blank=True)
+    max_price        =models.IntegerField(null=True,blank=True)
     created          =models.DateTimeField(auto_now_add=True)
     updated          =models.DateTimeField(auto_now=True)
     slug             = models.SlugField()
     status           =models.CharField(max_length=12,choices=STATUS_CHOICES,default='published')
     published        =PublishedManager() #Costom model manager
     objects          =AllObjectManager() # Costom model manager
-    location         =models.CharField(max_length=200)
-    google_map       =models.URLField()
     main_image       =models.ImageField(upload_to=upload_image_path,default='default.jpg')
     image_2          =models.ImageField(upload_to=upload_image_path,null=True,blank=True)
     image_3          =models.ImageField(upload_to=upload_image_path,null=True,blank=True)
     views           = models.PositiveIntegerField(default=0, blank=True)
     favourite       =models.ManyToManyField(settings.AUTH_USER_MODEL,blank=True,related_name='favourite')
-    video = EmbedVideoField(null=True,blank=True)
+    video           = EmbedVideoField(null=True,blank=True)
+    action          =models.CharField(max_length=6,choices=ACTION_FOR)
+
+    rent_per       =models.CharField(max_length=30,choices=RENT_PER,null=True,blank=True)
+    location       = PlacesField(blank=True)
+
+    def __unicode__(self):
+        return self.location.place
 
 
     def __str__(self):

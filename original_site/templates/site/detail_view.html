@@ -5,26 +5,6 @@
 {% block content %}
 
 
-<div class="page-banner bg-gray">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-lg-12">
-					<div class="breadcrumbs color-secondery">
-						<ul>
-							<li class="hover_gray"><a href="#">Home</a></li>
-							<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-							<li class="hover_gray"><a href="#">Property</a></li>
-							<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-							<li>Property List</li>
-						</ul>
-					</div>
-					<div class="float-right color-primary">
-						<h3 class="banner-title font-weight-bold">Property Single</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<section class="full-row">
 		<div class="container">
@@ -64,10 +44,10 @@
 					<div class="property_single_top mt-5">
 						<div class="row">
 							<div class="col-md-6 col-lg-6">
-								<div class="sale bg-default">For Sale</div>
+								<div class="sale bg-default">For {{object.get_action_display}}</div>
 								<div class="icon_default">
 									<h5 class="mt_10 color-primary">{{object.title }}</h5>
-									<p><i class="fa fa-map-marker" aria-hidden="true"></i>{{object.location}}</p>
+									<p><i class="fa fa-map-marker" aria-hidden="true"></i>{{object.location.place}}</p>
 								</div>
 							</div>
 							<div class="col-md-6 col-lg-6">
@@ -105,26 +85,30 @@
 									</div>
 
 									<h5 class="pt_60 mb_30 color-primary">Property Video</h5>
-									<div class="property_video overlay_one mb_30">
+									<div class="property_video  ">
 							<!-- Or embed shortcut: -->
-{% video object.video '800x600' %}
-										<a class="video-popup" href="#" title="video popup">
-										<i class="fa fa-play" aria-hidden="true"></i></a>
-										<div class="loader xy-center">
-											<div class="loader-inner ball-scale-multiple">
-												<div></div>
-												<div></div>
-												<div></div>
-											</div>
+
+										<div class="embed-responsive embed-responsive-16by9">
+										{% video object.video '640 x 385' %}
+
 										</div>
+
 									</div>
 
 
 
 									<div class="single-map">
 										<h5 class="pt_60 mb_30 color-primary">Property Location</h5>
-										<div id="map"></div>
+										<!--Google map-->
+										<!--Google map-->
+<div id="map-container-google-3" class="embed-responsive embed-responsive-16by9">
+  <iframe width="600" height="450" src="https://maps.google.com/maps?q={{object.location.latitude}},{{object.location.longitude}}&t=k&z=13&ie=UTF8&iwloc=&output=embed&z=15" frameborder="0"
+    style="border:0" allowfullscreen></iframe>
+</div>
+
+
 									</div>
+
 									<h5 class="pt_60 mb_30 color-primary">Related Property</h5>
 									<div class="list_item related-property">
 										<!-- Thumbnail 1 Start -->
@@ -236,7 +220,8 @@
 									{% endif %}
 								</ul>
 								<div class="broker_contact mt_30 d-inline-block p_30 boxshadow_one mb-5">
-									<div class="img_80 float-left pr_20 mb_20"><img src= "{{ object.realator.image.url }}" alt=""></div>
+									<div class="img_80 float-left pr_20 mb_20"><img src= "{{object.realator.realator.image.url }}" alt=""></div>
+
 
 									<div class="broker_name">
 										 

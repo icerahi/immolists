@@ -17,6 +17,8 @@ class Dashboard(TemplateView):
 
 
 class CreateSellProperty(CreateView,LoginRequiredMixin):
+    login_url = '/login'
+    redirect_field_name = 'next'
     model=SellProperty
     form_class = SellPropertyForm
     template_name = 'sell.html'
@@ -118,6 +120,16 @@ class FavouriteList(ListView,LoginRequiredMixin):
         queryset=SellProperty.objects.all()
         queryset=queryset.filter(favourite=self.request.user)
         return queryset
+
+
+class CreateRentProperty(TemplateView,LoginRequiredMixin):
+    template_name = 'rent.html'
+
+class MakeOffer(TemplateView,LoginRequiredMixin):
+    template_name = 'make_offer.html'
+
+class OfferList(TemplateView,LoginRequiredMixin):
+    template_name = 'offer_list.html'
 
 
 

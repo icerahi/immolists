@@ -48,7 +48,7 @@
 											<td>{{ object.created|date:"D d M Y" }} \ {{ object.created|time:"H:i a" }}</td>
 
 											<td>{{object.views}}</td>
-											<td>For Sale</td>
+											<td>For {{ object.get_action_display }}</td>
 											<td>
 												<a href="{{ object.get_update_url }}" class="btn btn-default1 mr-3">Edit</a>
 

@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
@@ -61,14 +62,27 @@ Please contact me, I am interested in properties that you have listed on Immolis
 Best Regards. """})
         else:
             form=EnquiryForm()
+
+
+    map_url='http://maps.googleapis.com/maps/api/staticmap?center=%(latitude)s,%(longitude)s&zoom=%(zoom)s&size=%(width)sx%(height)s&maptype=roadmap&markers=%(latitude)s,%(longitude)s&sensor=false&visual_refresh=true&scale=%(scale)s&key=%(key)s" width="%(width)s" height="%(height)s">' % {
+                'latitude': property.location.latitude,
+                'longitude': property.location.longitude,
+                'key': getattr(settings, 'PLACES_MAPS_API_KEY'),
+                'zoom': 15,
+                'width': 100,
+                'height': 100,
+                'scale': 2
+            }
     context={
         'form':form,
         'object':property,
         'is_favourite':is_favourite,
+        'map_url':map_url
 
     }
 
     return render(request,'site/detail_view.html',context)
+
 
 class ProfileView(DetailView,LoginRequiredMixin):
     template_name='site/profile.html'
@@ -76,6 +90,7 @@ class ProfileView(DetailView,LoginRequiredMixin):
 
     def get_object(self,queryset=None):
         return get_object_or_404(User,username__iexact=self.kwargs.get('username'))
+
 
 class RealatorList(ListView):
     template_name = 'site/realator_list.html'

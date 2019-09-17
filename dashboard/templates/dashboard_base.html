@@ -91,14 +91,14 @@
 							<h6 class="color-default border_gray pb_15 pt_50 m-0 px_15"><span>Property Submission</span></h6>
 							<ul class="mt_10">
 								<li class="{% if url_name == 'add_sell' %}active{% endif %}"><a href="{% url 'dashboard:add_sell' %}"><i class="flaticon-tax"></i><span>Submit for Sell</span></a></li>
-								<li class="{% if url_name == 'rent' %}active{% endif %}"><a href="#"><i class="flaticon-real-estate"></i><span>Submit for Rent</span></a></li>
-								<li class="{% if url_name == 'make_offer' %}active{% endif %}"><a href="#"><i class="flaticon-percentage"></i><span>Make Offer</span></a></li>
+								<li class="{% if url_name == 'add_rent' %}active{% endif %}"><a href="{% url 'dashboard:add_rent' %}"><i class="flaticon-real-estate"></i><span>Submit for Rent</span></a></li>
+								<li class="{% if url_name == 'make_offer' %}active{% endif %}"><a href="{% url 'dashboard:make_offer' %}"><i class="flaticon-percentage"></i><span>Make Offer</span></a></li>
 							</ul>
 							<h6 class="color-default border_gray pb_15 pt_50 m-0 px_15"><span>Manage Property</span></h6>
 							<ul class="mt_10">
 								<li class="{% if url_name == 'mylist' %}active{% endif %}"><a href="{% url 'dashboard:mylist' %}"><i class="flaticon-house-1"></i><span>Listing Properties</span></a></li>
 								<li class="{% if url_name == 'favourite_list' %}active{% endif %}"><a href="{% url 'dashboard:favourite_list' %}"><i class="flaticon-star"></i><span>Favourite Properties</span></a></li>
- 								<li class="{% if url_name == 'offer' %}active{% endif %}"><a href="#"><i class="flaticon-bill"></i><span>Listing Offer</span></a></li>
+ 								<li class="{% if url_name == 'myoffer' %}active{% endif %}"><a href="{% url 'dashboard:myoffer' %}"><i class="flaticon-bill"></i><span>Listing Offer</span></a></li>
  							</ul>
 
 

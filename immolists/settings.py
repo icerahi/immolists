@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    'properties',
+
     'original_site',
     'dashboard',
     'sellproperty',
@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'django_countries',
     'address',
+
+
+    'places',
 
 
     'rest_framework',
@@ -96,12 +99,18 @@ AUTHENTICATION_BACKENDS=(
 
 LOGIN_REDIRECT_URL ='/dashboard/'
 LOGOUT_REDIRECT_URL='/'
-ACCOUNT_LOGOUT_ON_GET=True
+ACCOUNT_LOGOUT_ON_GET=False
 LOGIN_URL='/accounts/login'
 
 WSGI_APPLICATION = 'immolists.wsgi.application'
+GOOGLE_API_KEY='AIzaSyDfEGAxItxo1IiNHGRYX59lXcEouHVQp2c'
 
-GOOGLE_API_KEY = 'AIzaSyDfEGAxItxo1IiNHGRYX59lXcEouHVQp2c'
+PLACES_MAPS_API_KEY='AIzaSyDfEGAxItxo1IiNHGRYX59lXcEouHVQp2c'
+PLACES_MAP_WIDGET_HEIGHT=480
+
+PLACES_MAP_OPTIONS='{"center": { "lat": 38.971584, "lng": -95.235072 }, "zoom": 10}'
+PLACES_MARKER_OPTIONS='{"draggable": true}'
+
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 

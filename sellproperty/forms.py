@@ -10,6 +10,8 @@ class SellPropertyForm(forms.ModelForm):
         model=SellProperty
         exclude=('realator','slug','saved')
 
+
+
     def __init__(self, *args, **kwargs):
         super(SellPropertyForm, self).__init__(*args,**kwargs)
         self.fields['title'].widget.attrs['class']='form-control'
@@ -20,12 +22,13 @@ class SellPropertyForm(forms.ModelForm):
         self.fields['min_price'].widget.attrs['class'] = 'form-control'
         self.fields['max_price'].widget.attrs['class'] = 'form-control'
         self.fields['status'].widget.attrs['class'] = 'form-control'
-        self.fields['location'].widget.attrs['class'] = 'form-control'
-        self.fields['google_map'].widget.attrs['class'] = 'form-control'
         self.fields['main_image'].widget.attrs['class'] = 'form-control'
         self.fields['image_2'].widget.attrs['class'] = 'form-control'
         self.fields['image_3'].widget.attrs['class'] = 'form-control'
-        self.fields['video'].widget.attrs['video']='form-control  video_link float-right'
+        self.fields['video'].widget.attrs['video']='form-control video_link float-right'
+        self.fields['action'].widget.attrs['class']='form-control'
+        self.fields['rent_per'].widget.attrs['class']='form-control'
+        self.fields['location'].widget.attrs['class']='form-control'
 
 
 class EnquiryForm(forms.ModelForm):
