@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.db.models import Max
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
@@ -24,8 +25,9 @@ class Home(ListView):
         return context
 
 def PropertyDetailView(request,pk,slug):
-    property=get_object_or_404(SellProperty,pk=pk,slug=slug)
-    viewed=request.session.get('viewed',[])
+
+    property=get_object_or_404(SellProperty,pk=pk,slug=slug) # get single object
+    viewed=request.session.get('viewed',[])  # view variable
     if viewed:
         if property.id not in viewed:
             viewed.append(property.id)
@@ -73,11 +75,17 @@ Best Regards. """})
                 'height': 100,
                 'scale': 2
             }
+
+    other_properties = SellProperty.objects.all().filter(realator=property.realator).order_by('?')[:3]
+    top_properties=SellProperty.objects.all().order_by('-views')[:3]
+
     context={
         'form':form,
         'object':property,
         'is_favourite':is_favourite,
-        'map_url':map_url
+        'map_url':map_url,
+        'other_properties':other_properties,
+        'top_properties':top_properties,
 
     }
 
@@ -91,6 +99,11 @@ class ProfileView(DetailView,LoginRequiredMixin):
     def get_object(self,queryset=None):
         return get_object_or_404(User,username__iexact=self.kwargs.get('username'))
 
+    def get_context_data(self, **kwargs):
+        context=super(ProfileView, self).get_context_data(**kwargs)
+        context['sell_properties']=SellProperty.objects.all().filter(action='sale',realator=self.get_object())
+        context['rent_properties']=SellProperty.objects.all().filter(action='rent',realator=self.get_object())
+        return context
 
 class RealatorList(ListView):
     template_name = 'site/realator_list.html'

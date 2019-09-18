@@ -101,7 +101,7 @@ LOGIN_REDIRECT_URL ='/dashboard/'
 LOGOUT_REDIRECT_URL='/'
 ACCOUNT_LOGOUT_ON_GET=False
 LOGIN_URL='/accounts/login'
-
+ACCOUNT_LOGOUT_ON_GET=True
 WSGI_APPLICATION = 'immolists.wsgi.application'
 GOOGLE_API_KEY='AIzaSyDfEGAxItxo1IiNHGRYX59lXcEouHVQp2c'
 

@@ -2,149 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4271de-3896-46bb-bb1d-ab896c0dbcf2" name="Default Changelist" comment=" 'need to do rent'">
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/1027845626073790/131845129.jpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/245166994958902/capi_8c147dcc2976aec62fd5cedad9f29b8f_f4100ef3fa1338e2c163_QJ3j7yn.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/292582601509211/131845129.jpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/538638063366264/capi_8c147dcc2976aec62fd5cedad9f29b8f_f4100ef3fa1338e2c163_Hww9My2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/580258127066021/131845129.jpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/786943398500248/about-img.jpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/802101252317339/131845129.jpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/802665158524956/131845129.jpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/sellproperty/919995850175847/131845129.jpg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/migrations/0002_auto_20190917_1802.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/migrations/0003_auto_20190917_1809.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static-root/django_google_maps/css/google-maps-admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static-root/django_google_maps/js/google-maps-admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static-root/images/header.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/decorator_include.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/dj_places-3.1.0.dist-info/AUTHORS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/dj_places-3.1.0.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/dj_places-3.1.0.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/dj_places-3.1.0.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/dj_places-3.1.0.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/dj_places-3.1.0.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/dj_places-3.1.0.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_decorator_include-2.1.dist-info/DESCRIPTION.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_decorator_include-2.1.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_decorator_include-2.1.dist-info/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_decorator_include-2.1.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_decorator_include-2.1.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_decorator_include-2.1.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_decorator_include-2.1.dist-info/metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_decorator_include-2.1.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django_decorator_include-2.1.dist-info/zip-safe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib-1.49-py3.7.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib-1.49-py3.7.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib-1.49-py3.7.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib-1.49-py3.7.egg-info/installed-files.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib-1.49-py3.7.egg-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib/accumulator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib/constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib/geodesic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib/geodesiccapability.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib/geodesicline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib/geomath.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib/polygonarea.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib/test/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geographiclib/test/test_geodesic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy-1.20.0.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy-1.20.0.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy-1.20.0.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy-1.20.0.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy-1.20.0.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/distance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/exc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/extra/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/extra/rate_limiter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/format.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/arcgis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/azure.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/baidu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/banfrance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/bing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/databc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/dot_us.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/geocodeearth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/geocodefarm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/geolake.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/geonames.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/googlev3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/here.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/ignfrance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/mapbox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/mapzen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/opencage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/openmapquest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/osm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/pelias.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/photon.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/pickpoint.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/placefinder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/smartystreets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/tomtom.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/what3words.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/geocoders/yandex.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/location.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/point.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/timezone.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/units.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/geopy/util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/places/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/places/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/places/conf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/places/fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/places/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/places/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/places/static/places/places.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/places/static/places/places.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/places/templates/places/widgets/places.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/places/widgets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/tests/test_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/mylist.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/mylist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/sell.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/sell.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/immolists/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/immolists/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/immolists/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/immolists/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/original_site/templates/site/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/original_site/templates/site/detail_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/detail_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/original_site/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/original_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/original_site/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/migrations/0002_propertyforsell_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/favourite.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/make_offer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/make_offer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/offer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/offer_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/templates/rent.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/rent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0002_auto_20190901_0834.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0003_enquiry.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0004_auto_20190906_1011.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0005_auto_20190907_0540.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0006_auto_20190908_1724.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0007_auto_20190908_1751.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0008_auto_20190910_1626.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/migrations/0009_sellproperty_video.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +35,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">

@@ -7,7 +7,7 @@ urlpatterns = [
     path('',views.Home.as_view(),name='home'),
     path('home/',views.Home.as_view(),name='home'),
     path('<pk>/<slug>/',views.PropertyDetailView,name='detail'),
-    path('<username>',views.ProfileView.as_view(),name='profile'),
+    path('<username>/',views.ProfileView.as_view(),name='profile'),
 ]
 
 

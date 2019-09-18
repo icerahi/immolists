@@ -95,20 +95,20 @@
 								<div class="tab-content mt_60" id="pills-tabContent">
 								  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 									  	<div class="row">
-								{% for property in object.sellproperty_set.all %}
+								{% for property in  sell_properties %}
 										<div class="col-md-6 col-lg-6">
 											<div class="thumbnail_one mb_30 color-secondery">
 												<div class="image_area overlay_one overfollow">
 													<img src="{{property.main_image.url}}" alt="">
 													<div class="Featured">New</div>
-													<div class="sale sale_position bg-primary">For Sale</div>
-													<div class="area_price price_position">${{ property.min_price}}-${{property.max_price}} </div>
+													<div class="sale sale_position bg-primary">For {{ property.get_action_display }}</div>
+												 <div class="area_price price_position">${{ property.min_price}}-${{property.max_price}} <span>{{property.views}} views</span></div>
 													<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
 												</div>
 												<div class="thum_one_content">
 													<div class="thum_title">
 														<h5 class="hover_primary"><a href="{{property.get_absolute_url}}">{{property.title}}</a></h5>
-														<p><i class="fa fa-map-marker" aria-hidden="true"></i>{{property.location}}</p>
+														<p><i class="fa fa-map-marker" aria-hidden="true"></i>{{property.location.place }}</p>
 													</div>
 													<div class="ft_area p_20">
 														<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> {{ object.username}}</div>
@@ -131,27 +131,31 @@
 								  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 								  	<div class="row">
 
+										{% for property in rent_properties %}
 										<div class="col-md-6 col-lg-6">
 											<div class="thumbnail_one mb_30 color-secondery">
 												<div class="image_area overlay_one overfollow">
-													<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
+													<img src="{{ property.main_image.url }}" alt="">
 													<div class="Featured">New</div>
-													<div class="sale sale_position bg-primary">For Sale</div>
-													<div class="area_price price_position">$352,000 <span>$1200/Sqft</span></div>
+													<div class="sale sale_position bg-primary">For {{ property.get_action_display }}</div>
+												 <div class="area_price price_position">${{ property.min_price}}-${{property.max_price}} <span>{{property.views}} views</span></div>
+
+
 													<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
 												</div>
 												<div class="thum_one_content">
 													<div class="thum_title">
-														<h5 class="hover_primary"><a href="#">Nirala Appartment</a></h5>
-														<p><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</p>
+														<h5 class="hover_primary"><a href="{{ property.get_absolute_url }}">{{property.title }}</a></h5>
+														<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ property.location.place}}</p>
 													</div>
 													<div class="ft_area p_20">
-														<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> Jeson Billiam</div>
-														<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> 6 Months Ago</div>
+														<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> {{property.realator.username}}</div>
+														<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> {{property.created|timesince}} Ago</div>
 													</div>
 												</div>
 										    </div>
 										</div>
+										{% endfor %}
 
 
 								  </div>
