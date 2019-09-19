@@ -8,7 +8,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse, reverse_lazy, resolve
 from django.views.generic import CreateView, ListView, UpdateView, TemplateView, DeleteView
 
-from sellproperty.forms import SellPropertyForm
+from sellproperty.forms import SellPropertyForm, MakeOfferForm
 from sellproperty.models import SellProperty, Type, Enquiry
 
 
@@ -122,15 +122,30 @@ class FavouriteList(ListView,LoginRequiredMixin):
         return queryset
 
 
-class CreateRentProperty(TemplateView,LoginRequiredMixin):
-    template_name = 'rent.html'
+def MakeOffer(request,pk,slug):
+    property=get_object_or_404(SellProperty,pk=pk,slug=slug)
+    if request.method=="POST":
+        form=MakeOfferForm(request.POST or None)
+        if form.is_valid():
+            discount=request.POST.get('discount')
+            data=MakeOfferForm.objects.create(property=property,discount=discount)
+            data.save()
+    else:
+        form=MakeOfferForm()
+    context={
+        'form':form,
+        'object':property,
+    }
+    return render(request,'make_offer.html',context)
 
-class MakeOffer(TemplateView,LoginRequiredMixin):
-    template_name = 'make_offer.html'
 
-class OfferList(TemplateView,LoginRequiredMixin):
+
+
+class OfferList(ListView):
+    modol=MakeOffer
     template_name = 'offer_list.html'
 
-
-
-
+    def get_queryset(self):
+        queryset=MakeOffer.objects.all()
+        queryset=queryset.filter(property__realator=self.request.user)
+        return queryset

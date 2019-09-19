@@ -78,8 +78,8 @@ class SellProperty(models.Model):
     title            =models.CharField(max_length=200)
     full_description =RichTextUploadingField()
     key_features     =RichTextField()
-    min_price        =models.IntegerField(null=True,blank=True)
-    max_price        =models.IntegerField(null=True,blank=True)
+    min_price        = models.DecimalField(max_digits=15,decimal_places=0)
+    max_price        = models.DecimalField(max_digits=15,decimal_places=0)
     created          =models.DateTimeField(auto_now_add=True)
     updated          =models.DateTimeField(auto_now=True)
     slug             = models.SlugField()
@@ -148,3 +148,15 @@ class Enquiry(models.Model):
         return reverse('dashboard:enquirycome_delete',kwargs={'pk':self.pk})
     def get_send_delete_url(self,*args,**kwargs):
         return reverse('dashboard:enquirysend_delete',kwargs={'pk':self.pk})
+
+
+class MakeOffer(models.Model):
+    property=models.ForeignKey(SellProperty,on_delete=models.CASCADE,related_name='make_offer')
+    discount=models.DecimalField(max_digits=3,decimal_places=0)
+    time=models.DateTimeField(auto_now_add=True)
+
+
+    def __str__(self):
+        return f'{self.discount}'
+    class Meta:
+        ordering=['-time']

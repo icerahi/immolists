@@ -20,166 +20,33 @@
 										</tr>
 									</thead>
 									<tbody>
+									{% for object in object_list %}
 										<tr>
 											<td>
-												<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
+												<img src="{{object.property.main_image.url}}" alt="">
 												<div class="property_info d-table">
-													<h4 class="color-primary">Apolo Family Appartment</h4>
-													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</span>
+													<h4 class="color-primary">{{object.property.title}}</h4>
+													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> {{object.property.location.place}}</span>
 													<div class="price mt-3">
-														<span class="color-default">$212,000</span>
-														<span>/ Fixed Amount</span>
+														<span class="color-default">${{object.property.max_price}}-${{object.property.min_price }}</span>
+
 													</div>
 												</div>
 											</td>
-											<td>10 Jan, 2019</td>
-											<td>10% Off</td>
-											<td>For Rent</td>
-											<td>12th Feb, 2019</td>
+											<td>{{object.time}}</td>
+											<td>{{object.discount }} Off</td>
+											<td>For {{object.property.get_action_display}}</td>
+											<td>{{object.property.created}}<td>
 											<td>
 												<a href="#" class="btn btn-default1">Remove</a>
 											</td>
 										</tr>
-										<tr>
-											<td>
-												<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
-												<div class="property_info d-table">
-													<h4 class="color-primary">Apolo Family Appartment</h4>
-													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</span>
-													<div class="price mt-3">
-														<span class="color-default">$212,000</span>
-														<span>/ Fixed Amount</span>
-													</div>
-												</div>
-											</td>
-											<td>10 Jan, 2019</td>
-											<td>5% Off</td>
-											<td>For Sale</td>
-											<td>12th Feb, 2019</td>
-											<td>
-												<a href="#" class="btn btn-default1">Remove</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
-												<div class="property_info d-table">
-													<h4 class="color-primary">Apolo Family Appartment</h4>
-													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</span>
-													<div class="price mt-3">
-														<span class="color-default">$212,000</span>
-														<span>/ Fixed Amount</span>
-													</div>
-												</div>
-											</td>
-											<td>10 Jan, 2019</td>
-											<td>$1000 Off</td>
-											<td>For Sale</td>
-											<td>12th Feb, 2019</td>
-											<td>
-												<a href="#" class="btn btn-default1">Remove</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
-												<div class="property_info d-table">
-													<h4 class="color-primary">Apolo Family Appartment</h4>
-													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</span>
-													<div class="price mt-3">
-														<span class="color-default">$212,000</span>
-														<span>/ Fixed Amount</span>
-													</div>
-												</div>
-											</td>
-											<td>10 Jan, 2019</td>
-											<td>$1200 Off</td>
-											<td>For Rent</td>
-											<td>12th Feb, 2019</td>
-											<td>
-												<a href="#" class="btn btn-default1">Remove</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
-												<div class="property_info d-table">
-													<h4 class="color-primary">Apolo Family Appartment</h4>
-													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</span>
-													<div class="price mt-3">
-														<span class="color-default">$212,000</span>
-														<span>/ Fixed Amount</span>
-													</div>
-												</div>
-											</td>
-											<td>10 Jan, 2019</td>
-											<td>7% Off</td>
-											<td>For Rent</td>
-											<td>12th Feb, 2019</td>
-											<td>
-												<a href="#" class="btn btn-default1">Remove</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
-												<div class="property_info d-table">
-													<h4 class="color-primary">Apolo Family Appartment</h4>
-													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</span>
-													<div class="price mt-3">
-														<span class="color-default">$212,000</span>
-														<span>/ Fixed Amount</span>
-													</div>
-												</div>
-											</td>
-											<td>10 Jan, 2019</td>
-											<td>3% Off</td>
-											<td>For Sale</td>
-											<td>12th Feb, 2019</td>
-											<td>
-												<a href="#" class="btn btn-default1">Remove</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
-												<div class="property_info d-table">
-													<h4 class="color-primary">Apolo Family Appartment</h4>
-													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</span>
-													<div class="price mt-3">
-														<span class="color-default">$212,000</span>
-														<span>/ Fixed Amount</span>
-													</div>
-												</div>
-											</td>
-											<td>10 Jan, 2019</td>
-											<td>12% Off</td>
-											<td>For Rent</td>
-											<td>12th Feb, 2019</td>
-											<td>
-												<a href="#" class="btn btn-default1">Remove</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<img src="{% static 'images/thumbnail/01.jpg' %}" alt="">
-												<div class="property_info d-table">
-													<h4 class="color-primary">Apolo Family Appartment</h4>
-													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Avenue South Burlington, Los Angles</span>
-													<div class="price mt-3">
-														<span class="color-default">$212,000</span>
-														<span>/ Fixed Amount</span>
-													</div>
-												</div>
-											</td>
-											<td>10 Jan, 2019</td>
-											<td>$5000 Off</td>
-											<td>For Lease</td>
-											<td>12th Feb, 2019</td>
-											<td>
-												<a href="#" class="btn btn-default1">Remove</a>
-											</td>
-										</tr>
+									{% empty %}
+									<p>No Offer for Your Property</p>
+									{% endfor %}
+
+
+
 									</tbody>
 								</table>
 							</div>

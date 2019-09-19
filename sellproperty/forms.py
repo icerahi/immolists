@@ -1,7 +1,7 @@
 from django import forms
 
 
-from .models import Type, SellProperty, Enquiry
+from .models import Type, SellProperty, Enquiry, MakeOffer
 
 
 class SellPropertyForm(forms.ModelForm):
@@ -47,5 +47,18 @@ class EnquiryForm(forms.ModelForm):
         self.fields['email'].widget.attrs['placeholder']='Email'
         self.fields['phone'].widget.attrs['placeholder']='Phone'
         self.fields['message'].widget.attrs['placeholder']='Message'
+
+class MakeOfferForm(forms.ModelForm):
+
+
+    class Meta:
+        model=MakeOffer
+        fields=('discount',)
+
+    def __init__(self,*args,**kwargs):
+        super(MakeOfferForm, self).__init__(*args,**kwargs)
+        self.fields['discount'].widget.attrs['class']='form-control'
+        self.fields['discount'].widget.attrs['placeholder'] = 'example 10% '
+
 
 
