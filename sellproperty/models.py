@@ -69,8 +69,8 @@ class SellProperty(models.Model):
                 ('rent','Rent')
     )
     RENT_PER=(("nothing","One Time Price (For sale)"),
-            ('month','MONTH (for rent)'),
-              ('year','YEAR (for rent)'))
+            ('month','PER MONTH'),
+              ('year','PER YEAR'))
 
     realator         = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     category         =models.ForeignKey(Category,on_delete=models.CASCADE)
@@ -154,6 +154,13 @@ class MakeOffer(models.Model):
     property=models.ForeignKey(SellProperty,on_delete=models.CASCADE,related_name='make_offer')
     discount=models.DecimalField(max_digits=3,decimal_places=0)
     time=models.DateTimeField(auto_now_add=True)
+    objects=AllObjectManager()
+
+
+    def get_delete_url(self,*args,**kwargs):
+        return reverse('dashboard:offer_remove',kwargs={
+            'pk':self.pk,
+        })
 
 
     def __str__(self):

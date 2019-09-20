@@ -212,14 +212,17 @@
 				<div class="thumbnail_one mb_30">
 					<div class="image_area overlay_one overfollow">
 						<img src="{{object.main_image.url}}" alt="">
-						<div class="sale sale_position bg-primary">For Sale</div>
-						<div class="area_price price_position">${{object.min_price}}-${{object.max_price}}<span>1200/Sqft</span></div>
+						{% if object.action == 'rent' %}
+						<div class="Featured">{{object.get_rent_per_display}}</div>
+						{% endif %}
+						<div class="sale sale_position bg-primary">For {{object.get_action_display }}</div>
+						<div class="area_price price_position">${{object.min_price}}-${{object.max_price}}<span>{{object.views }} views</span></div>
 						<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
 					</div>
 					<div class="thum_one_content">
 						<div class="thum_title color-secondery pb-4">
 							<h5 class="hover_primary"><a href="{{object.get_absolute_url }}">{{object.title}}</a></h5>
-							<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{object.location}}</p>
+							<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{object.location.place}}</p>
 						</div>
 					</div>
 				</div>

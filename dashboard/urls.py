@@ -5,14 +5,16 @@ from accounts import views
 from accounts.views import PersonalInformation
 from dashboard.views import CreateSellProperty, MyList, SellPropertyUpdate, SellPropertyDelete, Dashboard, load_types, \
     EnquiryCome, EnquirySend, EnquiryComeDelete, EnquirySendDelete, favourite, FavouriteList, remove_favourite, \
-    MakeOffer, OfferList
+    MakeOfferProperty, OfferList, OfferRemove
 from immolists.views import IndexView
 
 
 
 urlpatterns = [
+    path('myoffer_list/delete/<int:pk>/',OfferRemove.as_view(),name='offer_remove'),
+
     path('myoffer_list/',OfferList.as_view(),name='myoffer'),
-    path('make_offer/<int:pk>/<slug>/',MakeOffer,name='make_offer'),
+    path('make_offer/<int:pk>/<slug>/',MakeOfferProperty,name='make_offer'),
 
     path('remove_favourite/<int:pk>/',remove_favourite,name='remove_favourite'),
     path('myfavourite/',FavouriteList.as_view(),name='favourite_list'),

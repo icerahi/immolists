@@ -9,7 +9,7 @@ from django.urls import reverse, reverse_lazy, resolve
 from django.views.generic import CreateView, ListView, UpdateView, TemplateView, DeleteView
 
 from sellproperty.forms import SellPropertyForm, MakeOfferForm
-from sellproperty.models import SellProperty, Type, Enquiry
+from sellproperty.models import SellProperty, Type, Enquiry, MakeOffer
 
 
 class Dashboard(TemplateView):
@@ -122,16 +122,25 @@ class FavouriteList(ListView,LoginRequiredMixin):
         return queryset
 
 
-def MakeOffer(request,pk,slug):
+def MakeOfferProperty(request,pk,slug):
     property=get_object_or_404(SellProperty,pk=pk,slug=slug)
-    if request.method=="POST":
-        form=MakeOfferForm(request.POST or None)
+
+    if MakeOffer.objects.filter(property=property).exists():
+        data = MakeOffer.objects.get(property=property)
+        form = MakeOfferForm(request.POST or None, instance=data)
         if form.is_valid():
-            discount=request.POST.get('discount')
-            data=MakeOfferForm.objects.create(property=property,discount=discount)
-            data.save()
+            form.save()
+            return redirect('dashboard:myoffer')
     else:
-        form=MakeOfferForm()
+        if request.method == "POST":
+            form=MakeOfferForm(request.POST or None)
+            if form.is_valid():
+                discount=request.POST.get('discount')
+                data=MakeOffer.objects.create(property=property,discount=discount)
+                data.save()
+                return redirect('dashboard:myoffer')
+        else:
+            form=MakeOfferForm()
     context={
         'form':form,
         'object':property,
@@ -149,3 +158,11 @@ class OfferList(ListView):
         queryset=MakeOffer.objects.all()
         queryset=queryset.filter(property__realator=self.request.user)
         return queryset
+
+class OfferRemove(LoginRequiredMixin,DeleteView,SuccessMessageMixin):
+    model=MakeOffer
+
+    success_message = "Offer Remove Successfully"
+
+    def get_success_url(self):
+        return reverse('dashboard:myoffer')

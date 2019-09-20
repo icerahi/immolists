@@ -93,7 +93,7 @@
 			<div class="row">
 				<div class="col-md-12 col-lg-12">
 					<nav class="navbar navbar-expand-lg navbar-light">
-					  <a class="navbar-brand pl-0" href="#"><img class="nav-logo" src="{% static 'images/logo/logo.png' %}" alt=""></a>
+					  <a class="navbar-brand pl-0" href="{% url 'site:home' %}"><img class="nav-logo" src="{% static 'images/logo/logo.png' %}" alt=""></a>
 					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					    <span class="navbar-toggler-icon"></span>
 					  </button>
@@ -110,7 +110,7 @@
 
 
 						  <li class="nav-item dropdown">
-							<a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Property for Rent</a>
+							<a class="nav-link" href="{% url 'site:rent_list' %}" role="button" aria-expanded="false">Property for Rent</a>
 
 						  </li>
 							<li class="nav-item dropdown">
@@ -123,10 +123,10 @@
 								<ul class="dropdown-menu">
 
 									<li class="dropdown">
-										<a class="dropdown-item" href="#">Offer for Sale</a>
+										<a class="dropdown-item" href="{% url 'site:offer_for_sell' %}">Offer for Sale</a>
 									</li>
 									<li class="dropdown">
-										<a class="dropdown-item" href="#">Offer for Rent</a>
+										<a class="dropdown-item" href="{% url 'site:offer_for_rent' %}">Offer for Rent</a>
 									</li>
 
 								</ul>
@@ -148,6 +148,7 @@
 
 
 						</ul>
+						  <a class="btn btn-default1" href="{% url 'dashboard:add_sell' %}" >Submit Property</a>
 
 					{% if request.user.is_authenticated %}
 						  <div class="profile_user d-inline-block mr_20">

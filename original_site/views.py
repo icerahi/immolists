@@ -10,7 +10,7 @@ from django.views.generic import ListView, DetailView
 
 from accounts.models import Profile
 from sellproperty.forms import EnquiryForm
-from sellproperty.models import SellProperty, Enquiry, Category
+from sellproperty.models import SellProperty, Enquiry, Category, MakeOffer
 
 
 class Home(ListView):
@@ -76,8 +76,8 @@ Best Regards. """})
                 'scale': 2
             }
 
-    other_properties = SellProperty.objects.all().filter(realator=property.realator).order_by('?')[:3]
-    top_properties=SellProperty.objects.all().order_by('-views')[:3]
+    other_properties = SellProperty.published.all().filter(realator=property.realator).order_by('?')[:3]
+    top_properties=SellProperty.published.all().order_by('-views')[:3]
 
     context={
         'form':form,
@@ -101,8 +101,8 @@ class ProfileView(DetailView,LoginRequiredMixin):
 
     def get_context_data(self, **kwargs):
         context=super(ProfileView, self).get_context_data(**kwargs)
-        context['sell_properties']=SellProperty.objects.all().filter(action='sale',realator=self.get_object())
-        context['rent_properties']=SellProperty.objects.all().filter(action='rent',realator=self.get_object())
+        context['sell_properties']=SellProperty.published.all().filter(action='sale',realator=self.get_object())
+        context['rent_properties']=SellProperty.published.all().filter(action='rent',realator=self.get_object())
         return context
 
 class RealatorList(ListView):
@@ -112,3 +112,28 @@ class RealatorList(ListView):
 class SellList(ListView):
     template_name = 'site/sell_list.html'
     model = SellProperty
+
+    def get_queryset(self):
+        queryset=SellProperty.published.all().filter(action='sale')
+        return queryset
+
+class RentList(ListView):
+    template_name = 'site/sell_list.html'
+    model=SellProperty
+    def get_queryset(self):
+        queryset=SellProperty.published.all().filter(action='rent')
+        return queryset
+
+class OfferForSell(ListView):
+    template_name = 'site/offer_list.html'
+    model=MakeOffer
+    def get_queryset(self):
+        queryset=MakeOffer.objects.all().filter(property__action='sale')
+        return queryset
+
+class OfferForRent(ListView):
+    template_name = 'site/offer_list.html'
+    model=MakeOffer
+    def get_queryset(self):
+        queryset=MakeOffer.objects.all().filter(property__action='rent')
+        return queryset

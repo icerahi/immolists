@@ -2,9 +2,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.contrib import admin
 
-from sellproperty.models import SellProperty, Type, Category,Enquiry
-
-
+from sellproperty.models import SellProperty, Type, Category, Enquiry, MakeOffer
 
 
 class PlaceAdmin(admin.ModelAdmin):
@@ -23,7 +21,7 @@ class PlaceAdmin(admin.ModelAdmin):
             }
     position_map.allow_tags = True
 
-
+admin.site.register(MakeOffer)
 admin.site.register(SellProperty,PlaceAdmin)
 admin.site.register(Type)
 admin.site.register(Category)
