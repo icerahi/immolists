@@ -2,23 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4271de-3896-46bb-bb1d-ab896c0dbcf2" name="Default Changelist" comment=" 'need to do rent'">
-      <change afterPath="$PROJECT_DIR$/original_site/templates/site/offer_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sellproperty/migrations/0002_auto_20190919_1330.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/mylist.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/mylist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/offer_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/offer_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/original_site/templates/site/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/original_site/templates/site/comming_soon.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/comming_soon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/original_site/templates/site/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/original_site/templates/site/detail_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/detail_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/original_site/templates/site/forget_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/forget_password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/original_site/templates/site/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/original_site/templates/site/offer_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/offer_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/original_site/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/original_site/templates/site/realator_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/realator_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/original_site/templates/site/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/original_site/templates/site/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/original_site/templates/site/sell_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/templates/site/sell_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/original_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/original_site/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/original_site/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellproperty/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sellproperty/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

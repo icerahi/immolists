@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 
 from accounts.models import Profile
 from sellproperty.forms import EnquiryForm
@@ -137,3 +137,7 @@ class OfferForRent(ListView):
     def get_queryset(self):
         queryset=MakeOffer.objects.all().filter(property__action='rent')
         return queryset
+
+#search
+class Search(TemplateView):
+    template_name = 'site/search.html'
