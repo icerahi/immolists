@@ -27,9 +27,9 @@ Properties for Sale in the Philippines
 						<div class="thumbnail_one mb_30 color-secondery">
 							<div class="image_area overlay_one overfollow">
 								<img src="{{ object.main_image.url }}" alt="">
-								{% if object.action == 'rent' %}
-								<div class="Featured">{{ object.get_rent_per_display}}</div>
-								{% endif %}
+
+								<div class="Featured">{{ object.category}}</div>
+
 								<div class="sale sale_position bg-primary">For {{object.get_action_display}}</div>
 								<div class="area_price price_position">${{object.min_price}}-${{object.max_price}}</div>
 								<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>

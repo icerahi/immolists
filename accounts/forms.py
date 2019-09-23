@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from address.forms import AddressField,AddressWidget
 
 from .models import Profile
+from allauth.account.forms import LoginForm,SignupForm
 
 class UserEditForm(forms.ModelForm):
     username=forms.CharField(required=True,widget=forms.TextInput(attrs={
@@ -52,4 +53,14 @@ class ProfileForm(forms.ModelForm):
 
 
 
+class MyLoginForm(LoginForm):
+    def __init__(self, *args, **kwargs):
+        super(MyLoginForm, self).__init__(*args, **kwargs)
+        self.fields['login'].widget = forms.TextInput(attrs={'class': 'form-control'})
+        self.fields['password'].widget = forms.PasswordInput(attrs={'class': 'form-control'})
 
+class MyRegisterForm(SignupForm):
+    def __init__(self, *args, **kwargs):
+        super(MyRegisterForm, self).__init__(*args, **kwargs)
+        for field_name,field in self.fields.items():
+            field.widget.attrs['class']='form-control'

@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
-from django.db.models import Max
+from django.db.models import Max, Q
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 
@@ -24,7 +24,7 @@ class Home(ListView):
         context['categories']=Category.objects.all()
         return context
 
-def PropertyDetailView(request,pk,slug):
+def PropertyDetail(request,pk,slug):
 
     property=get_object_or_404(SellProperty,pk=pk,slug=slug) # get single object
     viewed=request.session.get('viewed',[])  # view variable
@@ -139,5 +139,45 @@ class OfferForRent(ListView):
         return queryset
 
 #search
-class Search(TemplateView):
-    template_name = 'site/search.html'
+def Search(request):
+    categories=Category.objects.all()
+    status=request.GET.get('status')
+    keywords=request.GET.get('keywords')
+    category=request.GET.get('category')
+    price=request.GET.get('price')
+
+    if price is not None:
+        min_price = price.split(';')[0]
+        max_price = price.split(';')[1]
+
+
+    if status or keywords or price :
+        properties=SellProperty.published.filter(
+            Q(action__icontains=status)|
+            Q(category__name__icontains=category)|
+            Q(max_price__icontains=max_price) |
+            Q(min_price__icontains=min_price) |
+            Q(min_price__range=(min_price,max_price)) |
+            Q(max_price__range=(min_price,max_price)) |
+            Q(realator__username__icontains=keywords)|
+            Q(realator__realator__fullname__icontains=keywords)|
+            Q(type__name__icontains=keywords)|
+            Q(title__icontains=keywords)|
+            Q(full_description__icontains=keywords)|
+            Q(key_features__icontains=keywords)|
+            Q(created__icontains=keywords)|
+            Q(rent_per__icontains=keywords)|
+            Q(location__icontains=keywords)|
+            Q(realator__realator__about__icontains=keywords)
+
+              )
+
+
+
+    context={
+        "categories":categories,
+        'properties':properties,
+    }
+    return render(request,'site/search.html',context)
+
+

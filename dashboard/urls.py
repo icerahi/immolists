@@ -6,7 +6,7 @@ from accounts.views import PersonalInformation
 from dashboard.views import CreateSellProperty, MyList, SellPropertyUpdate, SellPropertyDelete, Dashboard, load_types, \
     EnquiryCome, EnquirySend, EnquiryComeDelete, EnquirySendDelete, favourite, FavouriteList, remove_favourite, \
     MakeOfferProperty, OfferList, OfferRemove
-from immolists.views import IndexView
+
 
 
 
@@ -33,11 +33,5 @@ urlpatterns = [
     path('personal-information/<username>/',PersonalInformation.as_view(),name='personal_info'),
 
     path('personal-information/<username>/edit/',views.profile_edit,name='profile_edit'),
-
-
-
-
-
-
 
 ]

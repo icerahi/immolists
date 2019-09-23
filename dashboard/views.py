@@ -11,11 +11,11 @@ from django.views.generic import CreateView, ListView, UpdateView, TemplateView,
 from sellproperty.forms import SellPropertyForm, MakeOfferForm
 from sellproperty.models import SellProperty, Type, Enquiry, MakeOffer
 
-
+#dashboard
 class Dashboard(TemplateView):
     template_name = 'dashboard_base.html'
 
-
+#create property
 class CreateSellProperty(CreateView,LoginRequiredMixin):
     login_url = '/login'
     redirect_field_name = 'next'
@@ -32,12 +32,13 @@ class CreateSellProperty(CreateView,LoginRequiredMixin):
 
 
 
-
+# for load category on type dependency dropdown
 def load_types(request):
     category_id=request.GET.get('category')
     types=Type.objects.filter(category_id=category_id).order_by('name')
     return render(request,'type_dropdown_list.html',{'types':types})
 
+#property list
 class MyList(ListView,LoginRequiredMixin):
     model = SellProperty
     template_name = 'mylist.html'
@@ -47,12 +48,14 @@ class MyList(ListView,LoginRequiredMixin):
         queryset=queryset.filter(realator=self.request.user)
         return queryset
 
+#property edit
 class SellPropertyUpdate(UpdateView,LoginRequiredMixin):
     model = SellProperty
     form_class = SellPropertyForm
     template_name = 'sell.html'
     success_url = reverse_lazy('dashboard:mylist')
 
+#property edit
 class SellPropertyDelete(LoginRequiredMixin,DeleteView,SuccessMessageMixin):
     model=SellProperty
     success_url =reverse_lazy('dashboard:mylist')
@@ -100,7 +103,6 @@ def favourite(request,pk):
     property=get_object_or_404(SellProperty,pk=pk)
     if property.favourite.filter(id=request.user.id).exists():
         property.favourite.remove(request.user)
-
     else:
         property.favourite.add(request.user)
     return redirect(property.get_absolute_url())

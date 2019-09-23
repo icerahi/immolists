@@ -13,7 +13,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hkd8o*t28s-5-rh#un87q=k+pj*a%*n_1gjl_2kk1m-hvh9y1$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -63,6 +63,8 @@ CKEDITOR_UPLOAD_PATH="upload/"
 SITE_ID=1
 
 MIDDLEWARE = [
+
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -71,7 +73,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 ROOT_URLCONF = 'immolists.urls'
 
 TEMPLATES = [
@@ -110,6 +111,9 @@ PLACES_MAP_WIDGET_HEIGHT=480
 
 PLACES_MAP_OPTIONS='{"center": { "lat": 38.971584, "lng": -95.235072 }, "zoom": 10}'
 PLACES_MARKER_OPTIONS='{"draggable": true}'
+
+
+ACCOUNT_FORMS = {'login': 'accounts.forms.MyLoginForm','signup':'accounts.forms.MyRegisterForm'}
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -163,7 +167,7 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
 
-STATIC_ROOT=os.path.join(BASE_DIR,'static-root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 

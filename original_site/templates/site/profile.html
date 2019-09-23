@@ -101,9 +101,9 @@
 												<div class="image_area overlay_one overfollow">
 													<img src="{{property.main_image.url}}" alt="">
 
-												{% if object.action == 'rent' %}
-													<div class="Featured">{{ object.get_rent_per_display}}</div>
-													{% endif %}
+
+													<div class="Featured">{{ object.category}}</div>
+
 													<div class="sale sale_position bg-primary">For {{ property.get_action_display }}</div>
 												 <div class="area_price price_position">${{ property.min_price}}-${{property.max_price}} <span>{{property.views}} views</span></div>
 													<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
@@ -140,9 +140,9 @@
 												<div class="image_area overlay_one overfollow">
 													<img src="{{ property.main_image.url }}" alt="">
 
-													{% if property.action == 'rent' %}
-													<div class="Featured">{{ property.get_rent_per_display}}</div>
-													{% endif %}
+
+													<div class="Featured">{{ property.category}}</div>
+
 													<div class="sale sale_position bg-primary">For {{ property.get_action_display }}</div>
 												 <div class="area_price price_position">${{ property.min_price}}-${{property.max_price}} <span>{{property.views}} views</span></div>
 

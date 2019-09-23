@@ -55,52 +55,43 @@
 =============================================================-->
 <div class="full-row py-5 bg-gray">
 	<div class="container">
-		<form class="form1 formicon" method="post" action="">
+		<form class="form1 formicon" method="GET" action="{% url 'site:search' %}">
+			{% csrf_token %}
 		  <div class="row">
-		  	<div class="col-md-4 col-lg-2">
+		  	<div class="col-md-2 col-lg-2">
 		  		<div class="form-group">
-		  			<select class="form-control">
+		  			<select name="status" value="{{request.GET.status}}" class="form-control">
 					  <option>Any Status</option>
-					  <option>For Rent</option>
-					  <option>For Sale</option>
-					  <option>For Lease</option>
+					  <option name="status" value="rent">For Rent</option>
+					  <option name="status" value="sale">For Sale</option>
+
 					</select>
 		  		</div>
 		  	</div>
-		  	<div class="col-md-8 col-lg-7">
+		  	<div class="col-md-7 col-lg-7">
 		  		<div class="form-group">
-		  			<input type="text" class="form-control" id="validationDefault03" placeholder="Enter Address, Street and City or Enter State, Zip code" required>
+		  			<input name="keywords" value="{{request.GET.keywords}}" type="text" class="form-control" id="validationDefault03" placeholder="Enter Address, Street and City,Realator,Price,Title or Keywords " required>
 		  		</div>
 		  	</div>
-		  	<div class="col-md-4 col-lg-3">
+		  	<div class="col-md-3 col-lg-3">
 		  		<div class="form-group">
 		  			<button type="submit" class="btn btn-default1 w-100">Search Property</button>
 		  		</div>
 		  	</div>
-		  	<div class="col-md-8 col-lg-2">
+		  	<div class="col-md-2 col-lg-2">
 		  		<div class="form-group">
-		  			<select class="form-control">
-					  <option>Any Type</option>
-					  <option>Appartment</option>
-					  <option>Condose</option>
-					  <option>Land</option>
-					  <option>Commercial</option>
-					  <option>Villah</option>
+		  			<select selected="true" value="{{request.GET.category}}" name="category" class="form-control" >
+					  <option>Any Category</option>
+						{% for category in categories %}
+					  <option value="{{category}}">{{category}}</option>
+
+						{% endfor %}
 					</select>
 		  		</div>
 		  	</div>
-		  	<div class="col-md-6 col-lg-3">
+
+		  	<div class="col-md-4 col-lg-4">
 		  		<div class="form-group">
-		  			<input type="text" class="form-control" id="validationDefault04" placeholder="Min Area" required>
-		  		</div>
-		  	</div>
-		  	<div class="col-md-6 col-lg-3">
-		  		<div class="form-group">
-		  			<input type="text" class="form-control" id="validationDefault05" placeholder="Max Area" required>
-		  		</div>
-		  	</div>
-		  	<div class="col-md-12 col-lg-4">
-		  		<div class="form-group mb-5">
 		  			<div class="price_range">
 						<div class="price-filter">
 							<span class="price-slider">
@@ -110,81 +101,7 @@
 					</div>
 		  		</div>
 		  	</div>
-		  	<div class="col-md-12 col-lg-12">
-		  		<span class="d-inline-block hover_gray formicon">
-				  <a class="checkbox_collapse" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">More Option</a>
-				</span>
-				<div class="row">
-				  <div class="col">
-				    <div class="collapse" id="multiCollapseExample1">
-				        <div class="card card-body color-secondery bg-gray px-0">
-							<div class="row">
-								<div class="col-md-6 col-lg-3">
-									<ul class="check_submit">
-										<li>
-											<input id="feature_1" class="hide" type="checkbox">
-											<label for="feature_1">Parking Garage</label>
-										</li>
-										<li>
-											<input id="feature_2" class="hide" type="checkbox">
-											<label for="feature_2">Security System</label>
-										</li>
-										<li>
-											<input id="feature_3" class="hide" type="checkbox">
-											<label for="feature_3">Window Covering</label>
-										</li>
-									</ul>
-								</div>
-								<div class="col-md-6 col-lg-3">
-									<ul class="check_submit">
-										<li>
-											<input id="feature_4" class="hide" type="checkbox">
-											<label for="feature_4">Swiming Pool</label>
-										</li>
-										<li>
-											<input id="feature_5" class="hide" type="checkbox">
-											<label for="feature_5">Air Condition</label>
-										</li>
-										<li>
-											<input id="feature_8" class="hide" type="checkbox">
-											<label for="feature_8">Fire Protection</label>
-										</li>
-									</ul>
-								</div>
-								<div class="col-md-6 col-lg-3">
-									<ul class="check_submit">
-										<li>
-											<input id="feature_9" class="hide" type="checkbox">
-											<label for="feature_9">Garden</label>
-										</li>
-										<li>
-											<input id="feature_10" class="hide" type="checkbox">
-											<label for="feature_10">Fire Place</label>
-										</li>
-										<li>
-											<input id="feature_11" class="hide" type="checkbox">
-											<label for="feature_11">Emeargency Exit</label>
-										</li>
-									</ul>
-								</div>
-								<div class="col-md-6 col-lg-3">
-									<ul class="check_submit">
-										<li>
-											<input id="feature_12" class="hide" type="checkbox">
-											<label for="feature_12">Home Theater</label>
-										</li>
-										<li>
-											<input id="feature_13" class="hide" type="checkbox">
-											<label for="feature_13">Gym & Sports</label>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-				    </div>
-				  </div>
-				</div>
-		  	</div>
+
 		  </div>
 		</form>
 	</div>
@@ -207,9 +124,9 @@
 				<div class="thumbnail_one mb_30">
 					<div class="image_area overlay_one overfollow">
 						<img src="{{object.main_image.url}}" alt="">
-						{% if object.action == 'rent' %}
-						<div class="Featured">{{object.get_rent_per_display}}</div>
-						{% endif %}
+
+						<div class="Featured">{{object.category}}</div>
+
 						<div class="sale sale_position bg-primary">For {{object.get_action_display }}</div>
 						<div class="area_price price_position">${{object.min_price}}-${{object.max_price}}<span>{{object.views }} views</span></div>
 						<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
