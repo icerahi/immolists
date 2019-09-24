@@ -181,3 +181,5 @@ def Search(request):
     return render(request,'site/search.html',context)
 
 
+class Faq(TemplateView):
+    template_name = 'site/faq.html'
