@@ -51,9 +51,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
 
 
-    
 
-# allauth
+    # allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -63,8 +62,6 @@ CKEDITOR_UPLOAD_PATH="upload/"
 SITE_ID=1
 
 MIDDLEWARE = [
-
-
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
