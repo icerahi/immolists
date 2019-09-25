@@ -1,0 +1,117 @@
+{% extends 'site/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-banner bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12">
+				<div class="breadcrumbs color-secondery">
+					<ul>
+
+						<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+						<li class="hover_gray"><a href="#">Help and Support
+						</a></li>
+						<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+						<li class="color-default">Privacy Policy</li>
+					</ul>
+				</div>
+				<div class="float-right color-primary">
+					<h3 class="banner-title font-weight-bold">Privacy Policy</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Banner Section End -->
+
+<!-- FAQ Section Start -->
+<section class="full-row py_80">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="sidebar-widget bg-gray p-4 settings_links color-secondery-a">
+					<h4 class="inner_title mb-4 color-primary">Help and Support</h4>
+					<ul>
+						<li>
+							<a href="{% url 'site:faq' %}">Faq</a>
+						</li>
+						<li class="active">
+							<a href="{% url 'site:privacy' %}">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="{% url 'site:terms' %}">Terms and Condition</a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="info-pages bg-gray p-4">
+
+					<div class="faq_item mb_30">
+
+						<div class="faq_answer d-table">
+							<h5 class="mb-2 color-primary">General</h5>
+                            <p>
+                                IMMOLISTS is committed to safeguarding and maintaining your privacy. By using Immolists.com or the mobile application Immolists Mobile (collectively “our Website”), you consent to our use of cookies and other tracking technologies in accordance with the terms of this Privacy Policy (the “Policy”). For transparency purposes, we will disclose in this Policy what type of personal information may be collected from you, why we collect it, how we use it and in which situations we may share it with third parties.
+                                <br><br>
+When you visit our Website, participate in a contest, promotion, survey or save your information online on our Website, we may collect personal information from you, such as your name, email, mailing or IP address, telephone number, geolocalisation coordinates or any other personal information for the following purposes:
+                            </p>
+                            <ol>
+                                <li>to tailor and improve your experience of our Website;</li>
+                                <li>to provide advertisements, content or features that correspond to your profile and interests;</li>
+                                <li>to offer you products and services that appeal to you;</li>
+                                <li>to send you communications you have signed-up to receive;</li>
+                                <li>to perform user data analysis;</li>
+                                <li>to register and manage your online account;</li>
+                                <li>to respond to your comments, questions and requests;</li>
+                                <li>to carry out any other purpose for which the information was collected;</li>
+                                <li>as otherwise described in this Policy.</li>
+                            </ol>
+                            <p>We may change or add to this Policy from time to time, so we encourage you to review it periodically. If we make changes, we will notify you by revising the date at the top of this Policy.</p>
+  							<hr>
+
+                     <h5 class="mb-2 color-primary">Cookies, web beacons and other tracking technologies</h5>
+                            <p>
+                                Our Website uses “cookies” which are small data files that record user preferences on your hard disk. Cookies can be used to enhance or customize your online experience. For example, we may use cookies to recognize you when you return to our Website to enable certain website features.
+                            </p>
+                            <p>
+                                Most browsers are set to accept cookies by default. You can configure your browser to accept or reject all cookies or even notify you when a cookie is sent. However, if you do no accept cookies, certain features of our Website may not be available to you and its functionality may be affected.
+                            </p>
+                            <p>
+                                Our Website also uses “web beacons” which are often transparent graphic images used to monitor the behavior of users on a specific website. They help us analyze your online behavior and the effectiveness of our advertising. These web beacons may be used to collect information such as your browser type, your operating system, your IP address, pages viewed and other technical information about your computer or mobile device.
+                            </p>
+                            <hr>
+                     <h5 class="mb-2 color-primary">Third-party ad servers</h5>
+                            <p>
+                                We work with third-party companies that use tracking technologies to serve tailored advertisements to you on our behalf and on behalf of other advertisers across the Web and to provide us with analytics services. These companies may collect information about your activity on our Website and use this information to, among other things, analyze and track data, determine the popularity of certain content, deliver advertising and content targeted to your interests.
+                            </p>
+                            <hr>
+                      <h5 class="mb-2 color-primary">Storage of personal information</h5>
+                      <p>
+                          We use, process and store personal information as long as necessary for the purposes described in this Policy unless a longer retention is required by law. We do our best to provide you with a safe online environment which is why we have safeguards in place to help protect the security and privacy of your personal information.
+                      </p>
+                            <hr>
+                  <h5 class="mb-2 color-primary">Contact us</h5>
+                            <p>
+                              If you have any questions or concerns about this Policy, please email us at 
+                                <a href="mailto:legal@Immolists.com ">legal@Immolists.com </a>.<br>
+                            </p>
+                            <hr>
+
+
+						</div>
+					</div>
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

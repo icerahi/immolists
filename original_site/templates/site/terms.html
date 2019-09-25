@@ -1,0 +1,164 @@
+{% extends 'site/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-banner bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12">
+				<div class="breadcrumbs color-secondery">
+					<ul>
+
+						<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+						<li class="hover_gray"><a href="#">Help and Support
+						</a></li>
+						<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+						<li class="color-default">Terms of Use</li>
+					</ul>
+				</div>
+				<div class="float-right color-primary">
+					<h3 class="banner-title font-weight-bold">Terms of Use</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Banner Section End -->
+
+<!-- FAQ Section Start -->
+<section class="full-row py_80">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="sidebar-widget bg-gray p-4 settings_links color-secondery-a">
+					<h4 class="inner_title mb-4 color-primary">Help and Support</h4>
+					<ul>
+						<li>
+							<a href="{% url 'site:faq' %}">Faq</a>
+						</li>
+						<li class="active">
+							<a href="{% url 'site:privacy' %}">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="{% url 'site:terms' %}">Terms and Condition</a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="info-pages bg-gray p-4">
+
+					<div class="faq_item mb_30">
+
+						<div class="faq_answer d-table">
+
+                            <p>Welcome to Immolists.com website or the mobile application Immolists Mobile (collectively the “Website”), which is owned and administered by Immolists. These website terms of use (the “Terms of Use”) constitute a legal agreement between you and Immolists concerning access to and use of the Website. PLEASE READ THE TERMS OF USE CAREFULLY before browsing the Website or using the services it describes (the “Services”).
+
+                          </p>
+                            <hr>
+                     <h5 class="mb-2 color-primary">Acceptance of Terms of Use </h5>
+                            <p>
+                         Whenever you browse the Website or use any of the Services, you agree to be bound by the Terms of Use. IF YOU DO NOT WANT TO ACCEPT THE TERMS OF USE, YOU SHOULD NOT USE THE WEBSITE OR THE SERVICES. Immolists may amend the Terms of Use at any time, at its complete discretion. Your use of the Website and/or the Services, after an amendment has been posted, shall be deemed to signify your acceptance of the revised Terms of Use. We ask that you review this page regularly.
+                             </p>
+                            <p>
+Immolists reserves the right to cancel the Terms of Use and/or your right to browse and use any or all of the Website or Services, without notice, at its complete discretion.                            </p>
+
+                            <hr>
+                     <h5 class="mb-2 color-primary">Advisory </h5>
+                            <p>
+                                The purpose of the Website is to help users purshase, exchange, sell or rent their properties (the “Properties”) without going through a third party and without paying any commission. It is up to the seller and purchaser or to the lessor and lessee to complete any eventual transaction, with the understanding that Immolists will not be part of the transaction. In the interests of transparency for the potential buyers and lessees who browse the Website, the telephone number posted on the listing and the lawn sign must be the owner’s or lessor’s, respectively. In the event that the sale or rental of the Property is entrusted to a third party, it is not permitted to refer potential buyers or lessees to the third party through the content of the listing (telephone number, email, description, etc.) or through the lawn sign, otherwise the listing will be removed from the Website without refund.
+Although Immolists strives to use its best efforts to keep the Website secure and maintain its integrity, Immolists MAKES NO WARRANTY OR REPRESENTATION WHATSOEVER REGARDING THE PROPERTIES, THE VALIDITY OR ACCURACY OF THEIR DESCRIPTIONS, OR THE CAPACITY OF THE SELLERS OR LESSORS TO SELL OR RENT THEIR PROPERTIES OR OF THE BUYERS OR LESSEES TO PURCHASE OR RENT THEM.
+                             </p>
+                            <p>
+                                IMMOLISTS IS NOT A REAL ESTATE BROKERAGE AND DOES NOT OFFER ANY REAL ESTATE BROKERAGE SERVICES.
+                            </p>
+                            <p>
+                                From time to time, the Website may provide information on the various aspects of selling and renting a property (“Information”). Such Information is provided solely for educational purposes and shall in no event be construed as advice, an opinion, recommendation or action plan. The Website and its use are not intended as a substitute for and do not replace consultation with a qualified professional, where applicable.
+                            </p>
+                          <p>
+                              IMMOLISTS authorizes only those of its clients who have active files on the Website to use Immolists signs. Should you fail to observe this policy, Immolists reserves the right to seize the signs in question.
+                          </p>
+                            <hr>
+                      <h5 class="mb-2 color-primary">Copyright </h5>
+                      <p>
+                          All material, articles, text, illustrations, graphics, images, photographs, virtual tours, information, audio or video clips, data, databases, maps, files, software and codes available on the Website (the “Content”), including the manner in which the Content is presented, are protected by Algerian and foreign law, including copyright law, and belong to Immolists, its affiliates, licensors and/or the party acknowledged as the Content supplier.
+Without limiting the generality of the foregoing, Immolists owns the copyrights in all photographs posted on the Website and/or taken by Immolists, its employees, representatives, mandataries, agents, and/or licensors.
+                       </p>
+                    <p>
+                        You shall not: (i) copy, reproduce, modify, adapt, translate, download, distribute or transmit all or any part of the Content; (ii) perform “data scraping”, “database scraping” or any other activity intended to collect, store, reorganize or manipulate data from the Website or any part of the Content in any form and by any means; (iii) sell, lease, license or otherwise use the Content for commercial, public or non-personal purposes; (iv) modify, remove or cover any trade-mark or proprietary notice included in the Content; (v) decompile, disassemble, decrypt, extract or reverse engineer the Website and its components, including, in particular, the Content, or help anyone do so; or (iv) use the Website in any way that could damage, impair, overburden, disable, or otherwise affect the Website or any services, accounts, servers, networks, resources, linked or accessible through the Website.
+                    </p>
+                            <hr>
+                  <h5 class="mb-2 color-primary">Trademarks</h5>
+                            <p>
+                             IMMOLISTS and Immolists Mobile are trademarks or are used under licence. Other names, words, title, phrases, logos, drawings, graphics, icons and trademarks posted on the Website may constitute trademarks of Immolists or of a third party. Nothing on the Website shall be construed as granting you any licence or right of use of any logo, drawing or trademark of IMMOLISTS or a third party.
+                            </p>
+                            <hr>
+                <h5 class="mb-2 color-primary">Submissions </h5>
+                   <p>
+                       Via the Website, you can post and submit messages, data, text, photographs, images and other material (“Your Content”) and interact with IMMOLISTS, its employees, agents, mandataries and other users.
+                   </p>
+                  <p>
+                You are fully responsible for the quality and accuracy of Your Content. You agree that Your Content must not violate or infringe upon the rights of others, including privacy, confidentiality, personally identifiable information and intellectual property rights, contravene any law, regulation or government order, infringe any applicable third party terms of use, including any terms of use related to the use of a mobile application or related to a service for which the terms of use are accessible on the Website, or constitute false, misleading, or otherwise illegal information. You agree not to use the Website to harass or abuse, send spam or any unwanted communications, including for commercial purposes, or send unlawful, libelous, obscene, offensive, threatening, aggressive, abusive, discriminatory or otherwise objectionable messages.
+                  </p>
+                <p>
+                Whenever you post Your Content on the Website or submit Your Content to IMMOLISTS, you grant IMMOLISTS an unlimited, irrevocable, non-exclusive, perpetual and royalty-free worldwide licence to: (i) use, copy, store, adapt, translate, modify, create derivative works, transmit, distribute and publicly perform Your Content or make it publicly available for any purpose; and (ii) grant sublicences to third parties for unlimited rights to exercise any of the foregoing rights. Other than granting the aforementioned licence, you hereby (i) agree to waive all of the moral rights to Your Content in favour of IMMOLISTS; (ii) consent to the appearance of your name, address and e-mail address for Your Content, if any, and to the disclosure and/or posting of such information, as well as any other personal or confidential information about you or a third party, which information may be found in Your Content; (iii) acknowledge and agree that IMMOLISTS shall not be liable for any loss, damage to or corruption of Your Content; and (iv) acknowledge and agree that the presentations you upload for posting on the Website or that you submit to IMMOLISTS shall not be deemed confidential.
+                </p>
+                <p>
+               IMMOLISTS reserves the right, without any obligation, to monitor the Website, Your Content or any of the content accessible via the Website, in its sole discretion, and to disclose any information necessary in order to comply with any law, regulation or government request, in the interest of operating the Website properly or protecting itself or its users. IMMOLISTS may remove Your Content and/or terminate, limit or suspend your access to the Website for any reason.
+                </p>
+                            <hr>
+              <h5 class="mb-2 color-primary">Links to Third-Party Sites</h5>
+            <p>The Website contains links to third-party sites (the “Third-Party Sites”) which will direct you away from the Website. IMMOLISTS provides these links for your convenience. The Third-Party Sites are not under IMMOLISTS’s control and the links shall not be construed as approval or an endorsement of their content by IMMOLISTS. IMMOLISTS shall not be liable for the content of Third-Party Sites, the links they contain or any changes or updates made to them, and IMMOLISTS makes no warranty in that respect.</p>
+                            <hr>
+                            <h5 class="mb-2 color-primary">Links to Website</h5>
+        <p>
+        IMMOLISTS encourages links to the Website. However, IMMOLISTS reserves the right, in its sole discretion, to refuse a link at any time. You agree to remove any link you may have to the Website at IMMOLISTS’s request. The link must allow for a new full-screen browser window, only occupied by the Website’s pages. It is strictly prohibited to frame or display the Content in any way that alters its appearance.
+        </p>
+                            <hr>
+    <h5 class="mb-2 color-primary">Privacy</h5>
+     <p>
+       You acknowledge that your personal information may be used by the Website in accordance with the privacy policy available at:
+         <a href="{% url 'site:privacy' %}">here</a>
+     </p>
+                            <hr>
+     <h5 class="mb-2 color-primary">Disclaimer of Liability</h5>
+    <p>
+     THE WEBSITE, SERVICES AND CONTENT ARE PROVIDED “AS IS” AND “AS AVAILABLE”. YOU BROWSE AND USE THE WEBSITE AND ITS FUNCTIONALITIES AT YOUR OWN RISK. IMMOLISTS MAKES NO REPRESENTATION OR WARRANTY REGARDING THE WEBSITE, THE SERVICES OR THE CONTENT. IMMOLISTS ASSUMES NO RESPONSIBILITY FOR ANY MISLEADING CONTENT OR INCORRECTLY LISTED INFORMATION.
+        <br><br>
+        IMMOLISTS ASSUMES NO LIABILITY FOR THE FAILURE TO SELL OR COMPLETE THE SALE OF YOUR PROPERTY THROUGH THE WEBSITE.
+        <br><br>
+        IMMOLISTS ASSUMES NO LIABILITY IN CASE OF FORCE MAJEURE CAUSING THE PARTIAL OR COMPLETE INTERRUPTION OF THE SERVICES, TEMPORARILY OR PERMANENTLY. FOR ILLUSTRATIVE PURPOSES, WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, IMMOLISTS ASSUMES NO LIABILITY FOR THE INTERRUPTION OF THE SERVICES CAUSED BY A THIRD PARTY, INCLUDING THE TERMINATION OF ANY THIRD PARTY’S ACTIVITIES WHICH ARE ESSENTIAL TO PROVIDE THE SERVICES.
+        <br><br>
+        IMMOLISTS, ITS AFFILIATES, THEIR DIRECTORS, EMPLOYEES, MANDATARIES, AGENTS, AND LICENSORS, INCLUDING THEIR RESPECTIVE SUCCESSORS AND ASSIGNS, SHALL UNDER NO CIRCUMSTANCES BE LIABLE FOR DAMAGE OF ANY KIND, INCLUDING INDIRECT, SPECIAL OR FORTUITOUS DAMAGE, ARISING DIRECTLY OR INDIRECTLY FROM THE USE OR PERFORMANCE OF THE WEBSITE, THE SERVICES OR THE CONTENT CONTAINED THEREON OR ON ANY OTHER SITE YOU MAY LINK TO THROUGH THE WEBSITE, EVEN IF THEY WERE OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF SUCH DAMAGE.
+        <br><br>
+        IMMOLISTS, ITS AFFILIATES, THEIR DIRECTORS, EMPLOYEES, MANDATARIES, AGENTS AND LICENSORS, INCLUDING THEIR RESPECTIVE SUCCESSORS AND ASSIGNS, DISCLAIM ANY LIABILITY FOR THE ACTS, OMISSIONS OR CONDUCT OF ANY THIRD PARTY USING THE WEBSITE AND ITS FUNCTIONALITIES OR THAT OF ANY ADVERTISER OR SPONSOR ON THE WEBSITE (“THIRD-PARTY USERS”) AND SHALL IN NO EVENT BE LIABLE FOR ANY HARM, LOSS OR DAMAGES (INCLUDING SPECIAL, INDIRECT OR INCIDENTAL DAMAGES) OR COSTS ARISING IN ANY MANNER FROM (i) THE ACTS, OMISSIONS OR CONDUCT OF A THIRD-PARTY USER; OR (ii) THE USE OF OR INABILITY TO USE ANYTHING OR ANY SOFTWARE, CONTENT, GOODS OR SERVICES ON OR OFFERED THROUGH A SITE LINKED TO THE WEBSITE.
+
+    </p>
+                            <hr>
+      <h5 class="mb-2 color-primary">Indemnification</h5>
+      <p>
+      You agree to indemnify, hold harmless and defend IMMOLISTS, its affiliates, their directors, employees, mandataries, agents, and licensors, including their respective successors and assigns, from and against all claims, demands, liability, costs or expenses of any nature, including legal fees and disbursements arising directly or indirectly from: (i) your violation of the Terms of Use; (ii) your browsing, use or inability to browse or use the Website and/or the Services or any site to which the Website is or may be linked from time to time; (iii) your use of publications, communications, distributions or downloads of any nature via the Website and/or the Services, or your reliance thereon; and/or (iv) your violation of the applicable legislation or regulations. You agree to cooperate with us in contesting any claim.
+      </p>
+                            <hr>
+        <h5 class="mb-2 color-primary">Governing Law</h5>
+      <p>
+These Terms of Use, as well as your use of the Website and Services, shall be governed by the laws of the Algerian republic, regardless of conflict of law principles. You hereby acknowledge that any litigation arising from or related to your use of the Website or Services or these Terms of Use shall be subject to the jurisdiction of the courts of the District of Algiers.      </p>
+
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

@@ -180,6 +180,15 @@ def Search(request):
     }
     return render(request,'site/search.html',context)
 
-
 class Faq(TemplateView):
     template_name = 'site/faq.html'
+class Privacy(TemplateView):
+    template_name = 'site/privacy.html'
+class Terms(TemplateView):
+    template_name = 'site/terms.html'
+
+class Contact(TemplateView):
+    template_name = 'site/contact.html'
+
+class BaseTest(TemplateView):
+    template_name = 'site/base_test.html'

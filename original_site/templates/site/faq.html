@@ -8,7 +8,7 @@
 			<div class="col-md-12 col-lg-12">
 				<div class="breadcrumbs color-secondery">
 					<ul>
-						<li class="hover_gray"><a href="#">Home</a></li>
+
 						<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
 						<li class="hover_gray"><a href="#">Help and Support
 						</a></li>
@@ -17,7 +17,7 @@
 					</ul>
 				</div>
 				<div class="float-right color-primary">
-					<h3 class="banner-title font-weight-bold">ABOUT IMMOLISTS</h3>
+					<h3 class="banner-title font-weight-bold">Freequenly Ask Question</h3>
 				</div>
 			</div>
 		</div>
@@ -31,29 +31,19 @@
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="sidebar-widget bg-gray p-4 settings_links color-secondery-a">
-					<h4 class="inner_title mb-4 color-primary">FAQ’s Category</h4>
+					<h4 class="inner_title mb-4 color-primary">Help and Support</h4>
 					<ul>
 						<li>
-							<a href="#">Service Conpatibility</a>
-						</li>
-						<li>
-							<a href="#">Property Installation</a>
-						</li>
-						<li>
-							<a href="award.html">Payment System</a>
+							<a href="{% url 'site:faq' %}">Faq</a>
 						</li>
 						<li class="active">
-							<a href="faq.html">Trustable Broker</a>
+							<a href="{% url 'site:privacy' %}">Privacy Policy</a>
 						</li>
 						<li>
-							<a href="testimonial.html">Commertial Property</a>
+							<a href="{% url 'site:terms' %}">Terms and Condition</a>
 						</li>
-						<li>
-							<a href="testimonial.html">Tax and Fees</a>
-						</li>
-						<li>
-							<a href="testimonial.html">Support</a>
-						</li>
+
+
 					</ul>
 				</div>
 			</div>

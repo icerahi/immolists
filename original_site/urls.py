@@ -4,6 +4,10 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path('base_test/',views.BaseTest.as_view(),name='base_test'),
+    path('contact/',views.Contact.as_view(),name='contact'),
+    path('privacy_policy/',views.Privacy.as_view(),name='privacy'),
+    path('terms_and_conditions/',views.Terms.as_view(),name='terms'),
     path('faq/',views.Faq.as_view(),name='faq'),
     path('search/',views.Search,name='search'),
     path('offer_for_rent/',views.OfferForRent.as_view(),name='offer_for_rent'),

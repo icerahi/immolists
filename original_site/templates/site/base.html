@@ -57,10 +57,10 @@
 								<div class="dropdown hover_white">
 								  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help and Support</a>
 								  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<a class="dropdown-item" href="faq.html">Faq</a>
-									<a class="dropdown-item" href="#">Terms and Condition</a>
-									<a class="dropdown-item" href="#">How it works</a>
-									<a class="dropdown-item" href="contact.html">Contact</a>
+									<a class="dropdown-item" href="{% url 'site:faq' %}">Faq</a>
+									<a class="dropdown-item" href="{% url 'site:terms' %}">Terms and Condition</a>
+									<a class="dropdown-item" href="{% url 'site:privacy' %}">Privacy Policy</a>
+									<a class="dropdown-item" href="{% url 'site:contact' %}">Contact</a>
 								  </div>
 								</div>
 							</li>
@@ -101,16 +101,17 @@
 					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 					    <ul class="navbar-nav mr-auto">
-
-
+						 <li class="nav-item dropdown">
+							<a  class="nav-link " href="{% url 'site:home' %}"    aria-haspopup="true" aria-expanded="false">Home</a>
+						  </li>
 
 						  <li class="nav-item dropdown">
-							<a class="nav-link active" href="{% url 'site:sell_list' %}" role="button"  aria-haspopup="true" aria-expanded="false">Property for Sale</a>
+							<a class="nav-link active" href="{% url 'site:sell_list' %}" role="button"  aria-haspopup="true" aria-expanded="false">For Sale</a>
 						  </li>
 
 
 						  <li class="nav-item dropdown">
-							<a class="nav-link" href="{% url 'site:rent_list' %}" role="button" aria-expanded="false">Property for Rent</a>
+							<a class="nav-link" href="{% url 'site:rent_list' %}" role="button" aria-expanded="false">For Rent</a>
 
 						  </li>
 							<li class="nav-item dropdown">
@@ -172,8 +173,7 @@
 	</div>
 </header>
 {% block content %}{% endblock content %}
-<!--	Footer
-============================================================-->
+
 <footer class="full-row bg-gray">
 	<div class="container">
 		<div class="newsletter py_80 borber_b">
@@ -205,8 +205,11 @@
 							<a href="#"><img class="logo-bottom" src="{% static 'images/logo/logo.png' %}" alt="image"></a>
 						</div>
 						<p class="pb_20">
-Sell or Rent your property faster, at the biggest property marketplace only dedicated real estate marketplace, and with dedicated real estate experts ready and available to meet with you face to face and manage your property requirements individually, <span>Immolists</span> is well positioned to professionally handle your real estate needs.</p>
-						<a class="btn btn-default1" href="#">Register Now</a>
+							Immolists is a Digital Media Company that owns and operates Real estate property portal website and complimentary offline media throughout Algeria.
+							<br>
+Immolists websites aim to make online real estate research easier and faster by simplifying access to it’s property listing plateform, whilst being one of the best tools to help purchase, sell or rent property.
+						</p>
+ 						<a class="btn btn-default1" href="{% url 'account_signup' %}">Register Now</a>
 					</div>
 				</div>
 				<div class="col-md-12 col-lg-8">
@@ -218,12 +221,11 @@ Sell or Rent your property faster, at the biggest property marketplace only dedi
 								</div>
 								<div class="help_links pt_50 hover_gray">
 									<ul>
-										<li class="pb_20"><a href="#">Forum</a></li>
-										<li class="pb_20"><a href="#">Statistics</a></li>
-										<li class="pb_20"><a href="#">Terms and Condition</a></li>
-										<li class="pb_20"><a href="#">Get Support</a></li>
-										<li class="pb_20"><a href="#">Freequenly Ask Question</a></li>
-										<li class="pb_20"><a href="#">Contact</a></li>
+
+										<li class="pb_20"><a href="{% url 'site:privacy' %}">Privacy & Policy</a></li>
+										<li class="pb_20"><a href="{% url 'site:terms' %}">Terms and Conditions</a></li>
+										<li class="pb_20"><a href="{% url 'site:faq' %}">Freequenly Ask Question</a></li>
+										<li class="pb_20"><a href="{% url 'site:contact' %}">Contact</a></li>
 									</ul>
 								</div>
 							</div>
@@ -235,13 +237,13 @@ Sell or Rent your property faster, at the biggest property marketplace only dedi
 								</div>
 								<div class="help_links pt_50 hover_gray">
 									<ul>
-										<li class="pb_20"><a href="#">About Us</a></li>
-										<li class="pb_20"><a href="#">Featured Property</a></li>
-										<li class="pb_20"><a href="#">Become A Member</a></li>
-										<li class="pb_20"><a href="#">Submit Property</a></li>
-										<li class="pb_20"><a href="#">How It Work</a></li>
-										<li class="pb_20"><a href="#">Our Agents</a></li>
-									</ul>
+ 										<li class="pb_20"><a href="{% url 'site:home' %}"> Home</a></li>
+										<li class="pb_20"><a href="{% url 'site:sell_list' %}">Property for sale</a></li>
+										<li class="pb_20"><a href="{% url 'site:rent_list' %}">Property for rent</a></li>
+										<li class="pb_20"><a href="{% url 'site:offer_for_sell' %}">Sale Offers</a></li>
+										<li class="pb_20"><a href="{% url 'site:offer_for_rent' %}">Rent Offers</a></li>
+										<li class="pb_20"><a href="{% url 'site:realators' %}">Realators</a></li>
+ 									</ul>
 								</div>
 							</div>
 						</div>
@@ -273,11 +275,11 @@ Sell or Rent your property faster, at the biggest property marketplace only dedi
 			</div>
 		</div>
 		<div class="copyright py_30">
-			<div class="copy_text color-secondery d-inline">© 2019 Homex All right reserved</div>
+			<div class="copy_text color-secondery d-inline">© 2019 Immolists All right reserved</div>
 			<div class="policy hover_gray">
 				<ul>
-					<li><a href="#">Privacy & Policy</a></li>
-					<li><a href="#"> Site Map</a></li>
+					<li><a href="#">Developed by</a></li>
+					<li><a href="#"> Imran Hasan Rahi</a></li>
 				</ul>
 			</div>
 		</div>

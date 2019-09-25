@@ -6,14 +6,34 @@ from django.shortcuts import render, get_object_or_404, redirect
 
 # Create your views here.
 from django.urls import reverse, reverse_lazy, resolve
+from django.views import View
+
 from django.views.generic import CreateView, ListView, UpdateView, TemplateView, DeleteView
+
 
 from sellproperty.forms import SellPropertyForm, MakeOfferForm
 from sellproperty.models import SellProperty, Type, Enquiry, MakeOffer
 
 #dashboard
-class Dashboard(TemplateView):
-    template_name = 'dashboard_base.html'
+class Dashboard(View):
+    def get(self,request):
+        total_property=SellProperty.objects.filter(realator=self.request.user).count()
+        total_sale=SellProperty.objects.filter(action='sale',realator=self.request.user).count()
+        total_rent=SellProperty.objects.filter(action='rent',realator=self.request.user).count()
+        total_offer=MakeOffer.objects.filter(property__realator=self.request.user).count()
+        recent_properties=SellProperty.objects.filter(realator=self.request.user)[:5]
+        
+
+        context={
+            'total_property':total_property,
+            'total_sale':total_sale,
+            'total_rent':total_rent,
+            'total_offer':total_offer,
+            'recent_properties':recent_properties,
+
+        }
+        return render(request,'dashboard.html',context)
+
 
 #create property
 class CreateSellProperty(CreateView,LoginRequiredMixin):

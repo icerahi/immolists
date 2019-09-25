@@ -1,0 +1,276 @@
+{% extends 'dashboard_base.html' %}
+{% load static %}
+{% block body %}
+
+				<div class="col-md-11 col-xl-10 bg-gray">
+					<div class="row">
+						<div class="full-row deshbord_panel w-100 mb-5">
+							<h4 class="color-primary mb-4">Dashboard</h4>
+							<div class="panel_massage color-primary mt_30 mb_60">
+								<div class="success bg-white">
+								  <span class="closebtn">&times;</span>
+								 	Hi, You have got a new message from new customer on <span class="color-default">City Tradecenter</span> for rent request
+								</div>
+
+								<div class="alert success bg-white">
+								  <span class="closebtn">&times;</span>
+								  Password change notice for security issue and make your password more strong.
+								</div>
+							</div>
+
+							<div class="available">
+								<div class="row">
+									<div class="col-md-6 col-xl-3">
+										<div class="profile_property ball asset mb-4">
+											<span><i class="flaticon-house-2" aria-hidden="true"></i></span>
+											<h4 class="m-0 d-inline-block">{{total_property}}</h4>
+											<p>Total Property</p>
+										</div>
+									</div>
+									<div class="col-md-6 col-xl-3">
+										<div class="profile_rent ball asset mb-4">
+											<span><i class="flaticon-rent" aria-hidden="true"></i></span>
+											<h4 class="m-0 d-inline-block">{{total_rent}}</h4>
+											<p>Property For Rent</p>
+										</div>
+									</div>
+									<div class="col-md-6 col-xl-3">
+										<div class="profile_sale ball asset mb-4">
+											<span><i class="flaticon-house" aria-hidden="true"></i></span>
+											<h4 class="m-0 d-inline-block">{{total_sale}}</h4>
+											<p>Property For Sale</p>
+										</div>
+									</div>
+									<div class="col-md-6 col-xl-3">
+										<div class="profile_earning ball asset mb-4">
+											<span><i class="flaticon-payment-1" aria-hidden="true"></i></span>
+											<h4 class="m-0 d-inline-block">{{total_offer}}</h4>
+											<p>Property For Offer</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row massanger">
+								<div class="col-md-12 col-xl-6">
+									<div class="accordion mt_30" id="accordion1" role="tablist">
+		                                <div class="card mb_20">
+		                                    <div class="card-header p-0" role="tab">
+		                                        <h6 class="m-0"><a href="#collapseOne" data-toggle="collapse" data-parent="#accordion1" aria-expanded="true" class="panel_accordian">Profile Overview</a></h6>
+		                                    </div>
+		                                    <div class="collapse show" id="collapseOne" role="tabpanel" style="">
+		                                        <div class="card-body">
+		                                        	<div class="row">
+											        	<div class="col-md-12 col-xl-6">
+											        		<div class="porfile_overview mb_20">
+											        			<span class="color-default"><i class="flaticon-house-1"></i></span>
+																<h5 class="m-0 d-inline-block">580</h5>
+																<p class="color-secondery">Property Deals</p>
+											        		</div>
+											        		<div class="porfile_overview mb_20">
+											        			<span class="color-default"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i></span>
+																<h5 class="m-0 d-inline-block">365</h5>
+																<p class="color-secondery">Total Public Comments</p>
+											        		</div>
+											        	</div>
+											        	<div class="col-md-12 col-xl-6">
+											        		<div class="porfile_overview mb_20">
+											        			<span class="color-default"><i class="flaticon-eye"></i></span>
+																<h5 class="m-0 d-inline-block">1245</h5>
+																<p class="color-secondery">Property Views</p>
+											        		</div>
+											        		<div class="porfile_overview mb_20">
+											        			<span class="color-default"><i class="flaticon-heart"></i></span>
+																<h5 class="m-0 d-inline-block">54</h5>
+																<p class="color-secondery">Bookmarked Property</p>
+											        		</div>
+											        	</div>
+											        </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+
+		                                <div class="card mb_20">
+		                                    <div class="card-header p-0" role="tab">
+		                                        <h6 class="m-0"><a class="panel_accordian" href="#collapseThree" data-toggle="collapse" data-parent="#accordion1" aria-expanded="true">Recent Enquiry Come</a></h6>
+		                                    </div>
+		                                    <div class="collapse show" id="collapseThree" role="tabpanel" style="">
+		                                        <div class="card-body">
+		                                        	<ul class="recent_comments">
+		                                        		<li class="user_reviews borber_b py_30">
+															<div class="user_img img_80"><img src="images/user/01.jpg" alt=""></div>
+															<div class="feedback d-table">
+																<div class="d-inline-block">
+																	<h5 class="font-weight-bold color-primary">Rebecca D. Nagy</h5>
+																	<div class="star-rating color-default">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</div>
+																</div>
+																<div class="float-right">
+																	<p class="float-left pr_20 color-default">On City Tradecenter</p>
+																</div>
+																<p class="color-secondery mt_15">Fermentum mus porttitor tempor arcu posuere. <a class="btn-link" href="#">Continue..</a></p>
+																<ul class="approval mt_15">
+																	<li class="hover_primary"><a href="#">Approve</a></li>
+																	<li class="hover_primary"><a href="#">Delete</a></li>
+																	<li class="hover_primary"><a href="#">Spam</a></li>
+																	<li class="hover_primary"><a href="#">View</a></li>
+																</ul>
+															</div>
+														</li>
+														<li class="user_reviews borber_b py_30">
+															<div class="user_img img_80"><img src="images/user/01.jpg" alt=""></div>
+															<div class="feedback d-table">
+																<div class="d-inline-block">
+																	<h5 class="font-weight-bold color-primary">Rebecca D. Nagy</h5>
+																	<div class="star-rating color-default">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</div>
+																</div>
+																<div class="float-right">
+																	<p class="float-left pr_20 color-default">On City Tradecenter</p>
+																</div>
+																<p class="color-secondery mt_15">Fermentum mus porttitor tempor arcu posuere. <a class="btn-link" href="#">Continue..</a></p>
+																<ul class="approval mt_15">
+																	<li class="hover_primary"><a href="#">Approve</a></li>
+																	<li class="hover_primary"><a href="#">Delete</a></li>
+																	<li class="hover_primary"><a href="#">Spam</a></li>
+																	<li class="hover_primary"><a href="#">View</a></li>
+																</ul>
+															</div>
+														</li>
+														<li class="user_reviews borber_b py_30">
+															<div class="user_img img_80"><img src="images/user/01.jpg" alt=""></div>
+															<div class="feedback d-table">
+																<div class="d-inline-block">
+																	<h5 class="font-weight-bold color-primary">Rebecca D. Nagy</h5>
+																	<div class="star-rating color-default">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</div>
+																</div>
+																<div class="float-right">
+																	<p class="float-left pr_20 color-default">On City Tradecenter</p>
+																</div>
+																<p class="color-secondery mt_15">Fermentum mus porttitor tempor arcu posuere. <a class="btn-link" href="#">Continue..</a></p>
+																<ul class="approval mt_15">
+																	<li class="hover_primary"><a href="#">Approve</a></li>
+																	<li class="hover_primary"><a href="#">Delete</a></li>
+																	<li class="hover_primary"><a href="#">Spam</a></li>
+																	<li class="hover_primary"><a href="#">View</a></li>
+																</ul>
+															</div>
+														</li>
+														<li class="user_reviews borber_b py_30">
+															<div class="user_img img_80"><img src="images/user/01.jpg" alt=""></div>
+															<div class="feedback d-table">
+																<div class="d-inline-block">
+																	<h5 class="font-weight-bold color-primary">Rebecca D. Nagy</h5>
+																	<div class="star-rating color-default">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</div>
+																</div>
+																<div class="float-right">
+																	<p class="float-left pr_20 color-default">On City Tradecenter</p>
+																</div>
+																<p class="color-secondery mt_15">Fermentum mus porttitor tempor arcu posuere. <a class="btn-link" href="#">Continue..</a></p>
+																<ul class="approval mt_15">
+																	<li class="hover_primary"><a href="#">Approve</a></li>
+																	<li class="hover_primary"><a href="#">Delete</a></li>
+																	<li class="hover_primary"><a href="#">Spam</a></li>
+																	<li class="hover_primary"><a href="#">View</a></li>
+																</ul>
+															</div>
+														</li>
+														<li class="user_reviews borber_b py_30">
+															<div class="user_img img_80"><img src="images/user/01.jpg" alt=""></div>
+															<div class="feedback d-table">
+																<div class="d-inline-block">
+																	<h5 class="font-weight-bold color-primary">Rebecca D. Nagy</h5>
+																	<div class="star-rating color-default">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</div>
+																</div>
+																<div class="float-right">
+																	<p class="float-left pr_20 color-default">On City Tradecenter</p>
+																</div>
+																<p class="color-secondery mt_15">Fermentum mus porttitor tempor arcu posuere. <a class="btn-link" href="#">Continue..</a></p>
+																<ul class="approval mt_15">
+																	<li class="hover_primary"><a href="#">Approve</a></li>
+																	<li class="hover_primary"><a href="#">Delete</a></li>
+																	<li class="hover_primary"><a href="#">Spam</a></li>
+																	<li class="hover_primary"><a href="#">View</a></li>
+																</ul>
+															</div>
+														</li>
+		                                        	</ul>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+								</div>
+								<div class="col-md-12 col-xl-6">
+									<div class="accordion mt_30" id="accordion2" role="tablist">
+
+
+										<div class="card mb_20">
+		                                    <div class="card-header p-0" role="tab">
+		                                        <h6 class="m-0"><a href="#collapseFive" data-toggle="collapse" data-parent="#accordion1" aria-expanded="true" class="panel_accordian">Recent Properties</a></h6>
+		                                    </div>
+		                                    <div class="collapse show" id="collapseFive" role="tabpanel" style="">
+		                                        <div class="card-body">
+												    <div class="row">
+														{% for property in recent_properties %}
+												    	<div class="col-md-12 col-lg-12 mb_20">
+												    		<div class="recent_properties">
+																<img src="{{property.main_image.url}}" alt="">
+																<div class="properties_info light_gray icon_default">
+																	<a class="btn btn-default1" href="#">For {{property.get_action_display}}</a>
+																	<h5 class="font-weight-bold color-primary">{{property.title}}</h5>
+																	<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{property.location.place}}</p>
+																	<span class="dates">{{property.created}}</span>
+														  		</div>
+															</div>
+												    	</div>
+														{% endfor %}
+
+												    </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+
+		                            </div>
+								</div>
+							</div>
+						</div>
+						<div class="dashboard_copyright bg-white py-4 color-secondery text-center">© 2019 Immolists All right reserved</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Scroll to top -->
+	<a href="#" class="bg-default color-white" id="scroll"><i class="fa fa-angle-up"></i></a>
+<!-- End Scroll To top -->
+
+<!-- Wrapper End -->
+
+{% endblock body%}
