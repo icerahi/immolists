@@ -102,7 +102,7 @@
 													<img src="{{property.main_image.url}}" alt="">
 
 
-													<div class="Featured">{{ object.category}}</div>
+													<div class="Featured">{{ property.category}}</div>
 
 													<div class="sale sale_position bg-primary">For {{ property.get_action_display }}</div>
 												 <div class="area_price price_position">${{ property.min_price}}-${{property.max_price}} <span>{{property.views}} views</span></div>
@@ -114,7 +114,8 @@
 														<p><i class="fa fa-map-marker" aria-hidden="true"></i>{{property.location.place }}</p>
 													</div>
 													<div class="ft_area p_20">
-														<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> {{ object.username}}</div>
+														<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i>
+															<a href="{% url 'site:profile' username=object.username %}">{{ object.username}}</a></div>
 														<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i> {{property.created | timesince}} ago</div>
 													</div>
 												</div>

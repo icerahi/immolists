@@ -63,25 +63,26 @@
 											        	<div class="col-md-12 col-xl-6">
 											        		<div class="porfile_overview mb_20">
 											        			<span class="color-default"><i class="flaticon-house-1"></i></span>
-																<h5 class="m-0 d-inline-block">580</h5>
-																<p class="color-secondery">Property Deals</p>
+																<h5 class="m-0 d-inline-block">{{total_published}}</h5>
+																<p class="color-secondery">Published Property</p>
 											        		</div>
-											        		<div class="porfile_overview mb_20">
-											        			<span class="color-default"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i></span>
-																<h5 class="m-0 d-inline-block">365</h5>
-																<p class="color-secondery">Total Public Comments</p>
+															<div class="porfile_overview mb_20">
+											        			<span class="color-default"><i class="flaticon-house-1"></i></span>
+																<h5 class="m-0 d-inline-block">{{total_draft}}</h5>
+																<p class="color-secondery">Draft Property</p>
 											        		</div>
+
 											        	</div>
 											        	<div class="col-md-12 col-xl-6">
 											        		<div class="porfile_overview mb_20">
 											        			<span class="color-default"><i class="flaticon-eye"></i></span>
-																<h5 class="m-0 d-inline-block">1245</h5>
+																<h5 class="m-0 d-inline-block">{{total_views}}</h5>
 																<p class="color-secondery">Property Views</p>
 											        		</div>
 											        		<div class="porfile_overview mb_20">
 											        			<span class="color-default"><i class="flaticon-heart"></i></span>
-																<h5 class="m-0 d-inline-block">54</h5>
-																<p class="color-secondery">Bookmarked Property</p>
+																<h5 class="m-0 d-inline-block">{{total_favourite}}</h5>
+																<p class="color-secondery">Total Favourite</p>
 											        		</div>
 											        	</div>
 											        </div>
@@ -96,131 +97,32 @@
 		                                    <div class="collapse show" id="collapseThree" role="tabpanel" style="">
 		                                        <div class="card-body">
 		                                        	<ul class="recent_comments">
+														{% for enquiry in recent_enquiry %}
 		                                        		<li class="user_reviews borber_b py_30">
-															<div class="user_img img_80"><img src="images/user/01.jpg" alt=""></div>
+															<div class="user_img img_80"><img src="" alt=""></div>
 															<div class="feedback d-table">
 																<div class="d-inline-block">
-																	<h5 class="font-weight-bold color-primary">Rebecca D. Nagy</h5>
+																	<h5 class="font-weight-bold color-primary">{{enquiry.name}}</h5>
 																	<div class="star-rating color-default">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
+
+																		<p class="float-left pr_20 color-default">Property :
+																			<a href="{{enquiry.property.get_absolute_url }}">{{enquiry.property.title}}</a></p>
+
 																	</div>
 																</div>
-																<div class="float-right">
-																	<p class="float-left pr_20 color-default">On City Tradecenter</p>
-																</div>
-																<p class="color-secondery mt_15">Fermentum mus porttitor tempor arcu posuere. <a class="btn-link" href="#">Continue..</a></p>
+
+																<p class="color-secondery mt_15">{{ enquiry.message|truncatewords:10}} <a class="btn-link" href="{% url 'dashboard:enquiry_come' %}">Continue..</a></p>
 																<ul class="approval mt_15">
-																	<li class="hover_primary"><a href="#">Approve</a></li>
-																	<li class="hover_primary"><a href="#">Delete</a></li>
-																	<li class="hover_primary"><a href="#">Spam</a></li>
-																	<li class="hover_primary"><a href="#">View</a></li>
+
+																	<li class="hover_primary"><a href="{% url 'dashboard:enquiry_come' %}">View</a></li>
 																</ul>
 															</div>
 														</li>
-														<li class="user_reviews borber_b py_30">
-															<div class="user_img img_80"><img src="images/user/01.jpg" alt=""></div>
-															<div class="feedback d-table">
-																<div class="d-inline-block">
-																	<h5 class="font-weight-bold color-primary">Rebecca D. Nagy</h5>
-																	<div class="star-rating color-default">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</div>
-																</div>
-																<div class="float-right">
-																	<p class="float-left pr_20 color-default">On City Tradecenter</p>
-																</div>
-																<p class="color-secondery mt_15">Fermentum mus porttitor tempor arcu posuere. <a class="btn-link" href="#">Continue..</a></p>
-																<ul class="approval mt_15">
-																	<li class="hover_primary"><a href="#">Approve</a></li>
-																	<li class="hover_primary"><a href="#">Delete</a></li>
-																	<li class="hover_primary"><a href="#">Spam</a></li>
-																	<li class="hover_primary"><a href="#">View</a></li>
-																</ul>
-															</div>
-														</li>
-														<li class="user_reviews borber_b py_30">
-															<div class="user_img img_80"><img src="images/user/01.jpg" alt=""></div>
-															<div class="feedback d-table">
-																<div class="d-inline-block">
-																	<h5 class="font-weight-bold color-primary">Rebecca D. Nagy</h5>
-																	<div class="star-rating color-default">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</div>
-																</div>
-																<div class="float-right">
-																	<p class="float-left pr_20 color-default">On City Tradecenter</p>
-																</div>
-																<p class="color-secondery mt_15">Fermentum mus porttitor tempor arcu posuere. <a class="btn-link" href="#">Continue..</a></p>
-																<ul class="approval mt_15">
-																	<li class="hover_primary"><a href="#">Approve</a></li>
-																	<li class="hover_primary"><a href="#">Delete</a></li>
-																	<li class="hover_primary"><a href="#">Spam</a></li>
-																	<li class="hover_primary"><a href="#">View</a></li>
-																</ul>
-															</div>
-														</li>
-														<li class="user_reviews borber_b py_30">
-															<div class="user_img img_80"><img src="images/user/01.jpg" alt=""></div>
-															<div class="feedback d-table">
-																<div class="d-inline-block">
-																	<h5 class="font-weight-bold color-primary">Rebecca D. Nagy</h5>
-																	<div class="star-rating color-default">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</div>
-																</div>
-																<div class="float-right">
-																	<p class="float-left pr_20 color-default">On City Tradecenter</p>
-																</div>
-																<p class="color-secondery mt_15">Fermentum mus porttitor tempor arcu posuere. <a class="btn-link" href="#">Continue..</a></p>
-																<ul class="approval mt_15">
-																	<li class="hover_primary"><a href="#">Approve</a></li>
-																	<li class="hover_primary"><a href="#">Delete</a></li>
-																	<li class="hover_primary"><a href="#">Spam</a></li>
-																	<li class="hover_primary"><a href="#">View</a></li>
-																</ul>
-															</div>
-														</li>
-														<li class="user_reviews borber_b py_30">
-															<div class="user_img img_80"><img src="images/user/01.jpg" alt=""></div>
-															<div class="feedback d-table">
-																<div class="d-inline-block">
-																	<h5 class="font-weight-bold color-primary">Rebecca D. Nagy</h5>
-																	<div class="star-rating color-default">
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																		<i class="fa fa-star" aria-hidden="true"></i>
-																	</div>
-																</div>
-																<div class="float-right">
-																	<p class="float-left pr_20 color-default">On City Tradecenter</p>
-																</div>
-																<p class="color-secondery mt_15">Fermentum mus porttitor tempor arcu posuere. <a class="btn-link" href="#">Continue..</a></p>
-																<ul class="approval mt_15">
-																	<li class="hover_primary"><a href="#">Approve</a></li>
-																	<li class="hover_primary"><a href="#">Delete</a></li>
-																	<li class="hover_primary"><a href="#">Spam</a></li>
-																	<li class="hover_primary"><a href="#">View</a></li>
-																</ul>
-															</div>
-														</li>
+														{% empty %}
+														<p>No Enquiry Yet</p>
+														{% endfor %}
+
+
 		                                        	</ul>
 		                                        </div>
 		                                    </div>
@@ -250,6 +152,8 @@
 														  		</div>
 															</div>
 												    	</div>
+														{% empty %}
+														<p>No Property Yet</p>
 														{% endfor %}
 
 												    </div>

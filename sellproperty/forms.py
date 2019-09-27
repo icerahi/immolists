@@ -26,6 +26,7 @@ class SellPropertyForm(forms.ModelForm):
         self.fields['image_2'].widget.attrs['class'] = 'form-control'
         self.fields['image_3'].widget.attrs['class'] = 'form-control'
         self.fields['video'].widget.attrs['video']='form-control video_link float-right'
+        self.fields['video'].widget.attrs['class'] = 'form-control'
         self.fields['action'].widget.attrs['class']='form-control'
         self.fields['rent_per'].widget.attrs['class']='form-control'
         self.fields['location'].widget.attrs['class']='form-control'

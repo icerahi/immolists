@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.db.models import Sum
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 
@@ -22,7 +23,14 @@ class Dashboard(View):
         total_rent=SellProperty.objects.filter(action='rent',realator=self.request.user).count()
         total_offer=MakeOffer.objects.filter(property__realator=self.request.user).count()
         recent_properties=SellProperty.objects.filter(realator=self.request.user)[:5]
-        
+        recent_enquiy=Enquiry.objects.get_come(user=request.user)[:5]
+
+        total_favourite=SellProperty.objects.filter(favourite=request.user).count()
+        total_published=SellProperty.objects.filter(status='published').count()
+        total_draft=SellProperty.objects.filter(status='draft').count()
+        total_views=SellProperty.objects.filter(realator=request.user).aggregate(Sum('views'))
+        total_views=total_views['views__sum']
+
 
         context={
             'total_property':total_property,
@@ -30,7 +38,11 @@ class Dashboard(View):
             'total_rent':total_rent,
             'total_offer':total_offer,
             'recent_properties':recent_properties,
-
+            'recent_enquiry':recent_enquiy,
+            'total_favourite':total_favourite,
+            'total_published':total_published,
+            'total_draft':total_draft,
+            'total_views':total_views,
         }
         return render(request,'dashboard.html',context)
 

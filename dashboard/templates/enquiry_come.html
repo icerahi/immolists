@@ -24,16 +24,18 @@
 									<tbody>
 									{% for object in object_list %}
 										<tr>
-											<td>#224</td>
+											<td>#{{objec.id}}</td>
 											<td>{{ object.name }}</td>
 											<td>
 												<h6 class="color-primary">{{ object.property.title}}</h6>
-												<p>{{ object.property.location}}</p>
+												<p>{{ object.property.location.place}}</p>
 											</td>
 											<td>{{ object.time}}</td>
 											<td>
 												<span>{{ object.phone }}</span>
 												<span>{{ object.email }}</span>
+												<br> <br>
+												Message:<p>{{object.message}}</p>
 											</td>
 											<td>
 												<a href="{{ object.property.get_absolute_url }}" class="btn btn-default1 mr-1">View</a>
