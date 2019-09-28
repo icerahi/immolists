@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db.models import Max, Q
@@ -44,7 +45,7 @@ def PropertyDetail(request,pk,slug):
         is_favourite=True
 
     if request.method=='POST':
-        form=EnquiryForm(request.POST or None)
+        form=EnquiryForm(request.POST)
         if form.is_valid():
             name=request.POST.get('name')
             email=request.POST.get('email')
@@ -52,7 +53,10 @@ def PropertyDetail(request,pk,slug):
             message=request.POST.get('message')
             data=Enquiry.objects.create(property=property,name=name,email=email,phone=phone,message=message)
             data.save()
+            messages.success(request,'Your Enquiry message successfully send to Property Owner!')
             return HttpResponseRedirect(property.get_absolute_url())
+        else:
+            messages.warning(request,'Your Enquiry not send,please fill the form correctly!')
     else:
         if request.user.is_authenticated:
             form=EnquiryForm(initial={'name':request.user.realator.fullname,'email':request.user.email,
@@ -64,8 +68,6 @@ Please contact me, I am interested in properties that you have listed on Immolis
 Best Regards. """})
         else:
             form=EnquiryForm()
-
-
     map_url='http://maps.googleapis.com/maps/api/staticmap?center=%(latitude)s,%(longitude)s&zoom=%(zoom)s&size=%(width)sx%(height)s&maptype=roadmap&markers=%(latitude)s,%(longitude)s&sensor=false&visual_refresh=true&scale=%(scale)s&key=%(key)s" width="%(width)s" height="%(height)s">' % {
                 'latitude': property.location.latitude,
                 'longitude': property.location.longitude,

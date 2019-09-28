@@ -132,10 +132,10 @@ class EnquiryManager(models.Manager):
 
 class Enquiry(models.Model):
     property=models.ForeignKey(SellProperty,on_delete=models.CASCADE,related_name='enquiry')
-    name =models.CharField(max_length=100,blank=True,null=True)
-    email=models.EmailField(blank=True,null=True)
+    name =models.CharField(max_length=100,blank=False,null=False)
+    email=models.EmailField(blank=False,null=False)
     phone=PhoneNumberField(blank=True,null=True)
-    message=models.TextField(blank=True,null=True)
+    message=models.TextField(blank=False,null=False)
     time =models.DateTimeField(auto_now_add=True)
     objects=EnquiryManager()
 

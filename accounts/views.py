@@ -1,3 +1,5 @@
+from django.contrib import messages
+
 from .forms import UserEditForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -33,7 +35,10 @@ def profile_edit(request,username):
             user_form.email=request.user.email
             profile_form.save(commit=True)
             user_form.save(commit=True)
+            messages.success(request,'Your Profile Information Update Successfully!')
             return redirect('dashboard:personal_info',username=request.user.username)
+        else:
+            messages.warning(request, 'Please fill the form with correct information!')
     else:
         profile_form=ProfileForm(instance=request.user.realator)
         user_form=UserEditForm(instance=request.user)

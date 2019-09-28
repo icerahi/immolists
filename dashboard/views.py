@@ -1,6 +1,8 @@
+
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
 from django.db.models import Sum
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
@@ -48,13 +50,14 @@ class Dashboard(View):
 
 
 #create property
-class CreateSellProperty(CreateView,LoginRequiredMixin):
+class CreateSellProperty(CreateView,LoginRequiredMixin,SuccessMessageMixin):
     login_url = '/login'
     redirect_field_name = 'next'
     model=SellProperty
     form_class = SellPropertyForm
     template_name = 'sell.html'
     success_url = reverse_lazy('dashboard:mylist')
+    success_message = 'Your Property Created Successfully !'
 
     def form_valid(self, form):
         form=SellPropertyForm(self.request.POST,self.request.FILES)
@@ -81,17 +84,22 @@ class MyList(ListView,LoginRequiredMixin):
         return queryset
 
 #property edit
-class SellPropertyUpdate(UpdateView,LoginRequiredMixin):
+class SellPropertyUpdate(UpdateView,LoginRequiredMixin,SuccessMessageMixin):
     model = SellProperty
     form_class = SellPropertyForm
     template_name = 'sell.html'
-    success_url = reverse_lazy('dashboard:mylist')
+
+    def get_success_url(self):
+        messages.success(self.request,'Your Property Update successfully!')
+        return reverse('dashboard:mylist')
 
 #property edit
 class SellPropertyDelete(LoginRequiredMixin,DeleteView,SuccessMessageMixin):
     model=SellProperty
-    success_url =reverse_lazy('dashboard:mylist')
-    success_message = "Property Deleted Successfully"
+
+    def get_success_url(self):
+        messages.success(self.request,"Your Property Deleted Successfully!")
+        return reverse('dashboard:mylist')
 
 
 # get queryset in template
@@ -109,23 +117,21 @@ class EnquirySend(ListView,LoginRequiredMixin):
 
     def get_queryset(self,*args,**kwargs):
         queryset=Enquiry.objects.get_send(self.request.user)
-        print(queryset)
         return queryset
 
 class  EnquiryComeDelete(LoginRequiredMixin,DeleteView,SuccessMessageMixin):
     model=Enquiry
 
-    success_message = "Enquiry Deleted Successfully"
 
     def get_success_url(self):
+        messages.success(self.request,"Your Enquiry Deleted Successfully!")
         return reverse('dashboard:enquiry_come')
 
 class  EnquirySendDelete(LoginRequiredMixin,DeleteView,SuccessMessageMixin):
     model=Enquiry
-
-    success_message = "Enquiry Deleted Successfully"
-
     def get_success_url(self):
+        messages.success(self.request,"Your Enquiry Deleted Successfully!")
+
         return reverse('dashboard:enquiry_send')
 
 
@@ -135,8 +141,10 @@ def favourite(request,pk):
     property=get_object_or_404(SellProperty,pk=pk)
     if property.favourite.filter(id=request.user.id).exists():
         property.favourite.remove(request.user)
+        messages.success(request,'Remove from your favourite list!')
     else:
         property.favourite.add(request.user)
+        messages.success(request,'Added your favourite list')
     return redirect(property.get_absolute_url())
 
 @login_required
@@ -144,6 +152,7 @@ def remove_favourite(request,pk):
     property=get_object_or_404(SellProperty,pk=pk)
     if property.favourite.filter(id=request.user.id).exists():
         property.favourite.remove(request.user)
+        messages.success(request,'Remove from your favourite list!')
     return redirect('dashboard:favourite_list')
 
 class FavouriteList(ListView,LoginRequiredMixin):
@@ -164,6 +173,7 @@ def MakeOfferProperty(request,pk,slug):
         form = MakeOfferForm(request.POST or None, instance=data)
         if form.is_valid():
             form.save()
+            messages.success(request,'Offer updated successfully!')
             return redirect('dashboard:myoffer')
     else:
         if request.method == "POST":
@@ -172,6 +182,7 @@ def MakeOfferProperty(request,pk,slug):
                 discount=request.POST.get('discount')
                 data=MakeOffer.objects.create(property=property,discount=discount)
                 data.save()
+                messages.success(request,'Make offer successfully!')
                 return redirect('dashboard:myoffer')
         else:
             form=MakeOfferForm()
@@ -196,7 +207,6 @@ class OfferList(ListView):
 class OfferRemove(LoginRequiredMixin,DeleteView,SuccessMessageMixin):
     model=MakeOffer
 
-    success_message = "Offer Remove Successfully"
-
     def get_success_url(self):
+        messages.success(self.request,"Your Property Offer Remove Successfully!")
         return reverse('dashboard:myoffer')

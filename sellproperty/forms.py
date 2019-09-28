@@ -32,10 +32,12 @@ class SellPropertyForm(forms.ModelForm):
         self.fields['location'].widget.attrs['class']='form-control'
 
 
+
 class EnquiryForm(forms.ModelForm):
     class Meta:
         model=Enquiry
         exclude=('property',)
+
 
     def __init__(self,*args,**kwargs):
         super(EnquiryForm, self).__init__(*args,**kwargs)
@@ -48,6 +50,8 @@ class EnquiryForm(forms.ModelForm):
         self.fields['email'].widget.attrs['placeholder']='Email'
         self.fields['phone'].widget.attrs['placeholder']='Phone'
         self.fields['message'].widget.attrs['placeholder']='Message'
+
+
 
 class MakeOfferForm(forms.ModelForm):
 
