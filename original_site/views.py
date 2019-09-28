@@ -117,6 +117,11 @@ class SellList(ListView):
         queryset=SellProperty.published.all().filter(action='sale')
         return queryset
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(SellList, self).get_context_data(**kwargs)
+        context['action'] = 'Sale'
+        return context
+
 class RentList(ListView):
     template_name = 'site/sell_list.html'
     model=SellProperty
@@ -124,12 +129,21 @@ class RentList(ListView):
         queryset=SellProperty.published.all().filter(action='rent')
         return queryset
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(RentList, self).get_context_data(**kwargs)
+        context['action'] = 'Rent'
+        return context
+
 class OfferForSell(ListView):
     template_name = 'site/offer_list.html'
     model=MakeOffer
     def get_queryset(self):
         queryset=MakeOffer.objects.all().filter(property__action='sale')
         return queryset
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context=super(OfferForSell, self).get_context_data(**kwargs)
+        context['offer_for']='Sale'
+        return context
 
 class OfferForRent(ListView):
     template_name = 'site/offer_list.html'
@@ -137,6 +151,10 @@ class OfferForRent(ListView):
     def get_queryset(self):
         queryset=MakeOffer.objects.all().filter(property__action='rent')
         return queryset
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context=super(OfferForRent, self).get_context_data(**kwargs)
+        context['offer_for']='Rent'
+        return context
 
 #search
 def Search(request):

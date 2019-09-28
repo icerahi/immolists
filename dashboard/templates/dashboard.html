@@ -6,17 +6,15 @@
 					<div class="row">
 						<div class="full-row deshbord_panel w-100 mb-5">
 							<h4 class="color-primary mb-4">Dashboard</h4>
-							<div class="panel_massage color-primary mt_30 mb_60">
-								<div class="success bg-white">
-								  <span class="closebtn">&times;</span>
-								 	Hi, You have got a new message from new customer on <span class="color-default">City Tradecenter</span> for rent request
-								</div>
+								{% if messages %}
+						{% for message in messages %}
+						<div class="alert alert-{{message.tags}} alert-dismissible">
+					  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					  <strong>{{message.tags}}!</strong> {{message}}
+						</div>
+						 {% endfor %}
+							{% endif %}
 
-								<div class="alert success bg-white">
-								  <span class="closebtn">&times;</span>
-								  Password change notice for security issue and make your password more strong.
-								</div>
-							</div>
 
 							<div class="available">
 								<div class="row">
@@ -145,10 +143,10 @@
 												    		<div class="recent_properties">
 																<img src="{{property.main_image.url}}" alt="">
 																<div class="properties_info light_gray icon_default">
-																	<a class="btn btn-default1" href="#">For {{property.get_action_display}}</a>
-																	<h5 class="font-weight-bold color-primary">{{property.title}}</h5>
-																	<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{property.location.place}}</p>
-																	<span class="dates">{{property.created}}</span>
+																	<a class="btn btn-default1" href="{% url 'dashboard:mylist' %}">For {{property.get_action_display}}</a>
+																	<h5 class="font-weight-bold color-primary notranslate">{{property.title}}</h5>
+																	<p class="notranslate"><i class="fa fa-map-marker" aria-hidden="true"></i> {{property.location.place}}</p>
+																	<span class="dates notranslate">{{property.created}}</span>
 														  		</div>
 															</div>
 												    	</div>

@@ -12,7 +12,7 @@ Properties for Sale in the Philippines
 		<div class="row">
 			<div class="col-md-12 col-lg-12">
 				<div class="main-title-one">
-					<h2 class="title color-primary">Properties for Sale </h2>
+					<h2 class="title color-primary">Properties for {{action}} </h2>
 					<p class="sub-title color-secondery py_60"></p>
 				</div>
 			</div>
@@ -31,16 +31,16 @@ Properties for Sale in the Philippines
 								<div class="Featured">{{ object.category}}</div>
 
 								<div class="sale sale_position bg-primary">For {{object.get_action_display}}</div>
-								<div class="area_price price_position">${{object.min_price}}-${{object.max_price}}</div>
+								<div class="area_price price_position">{{object.min_price}}-{{object.max_price}}</div>
 								<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
 							</div>
 							<div class="thum_one_content">
-								<div class="thum_title">
+								<div class="thum_title notranslate">
 									<h5 class="hover_primary"><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h5>
 									<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ object.location.place }}</p>
 								</div>
 								<div class="ft_area p_20">
-									<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i> {{ object.realator.fullname }}</div>
+									<div class="post_author notranslate"><i class="fa fa-user" aria-hidden="true"></i> {{ object.realator.username }}</div>
 									<div class="post_date float-right"><i class="fa fa-calendar-o" aria-hidden="true"></i>{{ object.created|timesince}}</div>
 								</div>
 							</div>

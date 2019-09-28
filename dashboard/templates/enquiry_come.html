@@ -8,6 +8,14 @@
 					<div class="row">
 						<div class="full-row deshbord_panel w-100 mb-5">
 							<h4 class="color-primary mb-4">Enquire Request List</h4>
+					 {% if messages %}
+						{% for message in messages %}
+						<div class="alert alert-{{message.tags}} alert-dismissible">
+					  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					  <strong>{{message.tags}}!</strong> {{message}}
+						</div>
+						 {% endfor %}
+							{% endif %}
 
 							<div class="items_list color-secondery">
 								<table class="w-100">
@@ -27,13 +35,13 @@
 											<td>#{{objec.id}}</td>
 											<td>{{ object.name }}</td>
 											<td>
-												<h6 class="color-primary">{{ object.property.title}}</h6>
-												<p>{{ object.property.location.place}}</p>
+												<h6 class="color-primary notranslate">{{ object.property.title}}</h6>
+												<p class="notranslate">{{ object.property.location.place}}</p>
 											</td>
-											<td>{{ object.time}}</td>
+											<td class="notranslate">{{ object.time}}</td>
 											<td>
-												<span>{{ object.phone }}</span>
-												<span>{{ object.email }}</span>
+												<span class="notranslate">{{ object.phone }}</span>
+												<span class="notranslate">{{ object.email }}</span>
 												<br> <br>
 												Message:<p>{{object.message}}</p>
 											</td>
@@ -80,7 +88,7 @@
 
 
 						</div>
-						<div class="dashboard_copyright bg-white py-4 color-secondery text-center">© 2019 Homex All right reserved</div>
+						<div class="dashboard_copyright bg-white py-4 color-secondery text-center notranslate">© 2019 Homex All right reserved</div>
 					</div>
 				</div>
 {% endblock %}

@@ -27,7 +27,7 @@
 		<!-- Slide 2-->
 		<div class="ls-slide" data-ls="kenburnsscale:1.2; duration:12000;">
 			<img width="1920" height="960" src="{% static 'images/slider/05.jpg' %}" class="ls-l" alt="" style="top:-339px; left:-260px; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; mix-blend-mode:normal; filter:blur(10px);" data-ls="showinfo:1; durationin:1500; easingin:easeOutQuint; rotateyin:-5; scalexin:.8; scaleyin:.8; filterin:blur(30px); loop:true; loopduration:5000; loopstartat:allinend + 0; loopeasing:easeInOutSine; loopscalex:.8; loopscaley:.8; loopcount:1; loopfilter:blur(0px);">
-			<p style="top:120px; left:50%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; mix-blend-mode:normal; font-family:'URW Chancery L', cursive; font-size:70px; color:#fff;" class="ls-l" data-ls="showinfo:1; offsetyin:top; delayin:1000; easingin:easeOutQuint; offsetxout:left; texttransitionin:true; texttypein:chars_desc; textshiftin:20; textoffsetyin:-70lh; textdurationin:800; texteasingin:easeOutQuint; textfadein:false; textstartatin:transitioninstart + 0;">Immolists </p>
+			<p style="top:120px; left:50%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; mix-blend-mode:normal; font-family:'URW Chancery L', cursive; font-size:70px; color:#fff;" class="ls-l notranslate" data-ls="showinfo:1; offsetyin:top; delayin:1000; easingin:easeOutQuint; offsetxout:left; texttransitionin:true; texttypein:chars_desc; textshiftin:20; textoffsetyin:-70lh; textdurationin:800; texteasingin:easeOutQuint; textfadein:false; textstartatin:transitioninstart + 0;">Immolists </p>
 			<p style="top:250px; left:50%; text-align:initial; text-decoration:none; mix-blend-mode:normal; font-size:30px; color:#fff; padding-right:20px;" class="ls-l" data-ls="showinfo:1; offsetxin:-100lw; durationin:1500; delayin:2000; transformoriginin:0% 50% 0; clipin:0 0 0 100%; offsetxout:left;"> Our mission is to establish a trusted and user
 				<br> friendly online property or real estate marketplace. </p>
 
@@ -40,7 +40,7 @@
 		<!-- Slide 3-->
 			<div class="ls-slide" data-ls="kenburnsscale:1.2; duration:12000;">
 			<img width="1920" height="960" src="{% static 'images/slider/05.jpg' %}" class="ls-l" alt="" style="top:-339px; left:-260px; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; mix-blend-mode:normal; filter:blur(10px);" data-ls="showinfo:1; durationin:1500; easingin:easeOutQuint; rotateyin:-5; scalexin:.8; scaleyin:.8; filterin:blur(30px); loop:true; loopduration:5000; loopstartat:allinend + 0; loopeasing:easeInOutSine; loopscalex:.8; loopscaley:.8; loopcount:1; loopfilter:blur(0px);">
-			<p style="top:120px; left:50%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; mix-blend-mode:normal; font-family:'URW Chancery L', cursive; font-size:70px; color:#fff;" class="ls-l" data-ls="showinfo:1; offsetyin:top; delayin:1000; easingin:easeOutQuint; offsetxout:left; texttransitionin:true; texttypein:chars_desc; textshiftin:20; textoffsetyin:-70lh; textdurationin:800; texteasingin:easeOutQuint; textfadein:false; textstartatin:transitioninstart + 0;">Immolists </p>
+			<p style="top:120px; left:50%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; mix-blend-mode:normal; font-family:'URW Chancery L', cursive; font-size:70px; color:#fff;" class="ls-l notranslate" data-ls="showinfo:1; offsetyin:top; delayin:1000; easingin:easeOutQuint; offsetxout:left; texttransitionin:true; texttypein:chars_desc; textshiftin:20; textoffsetyin:-70lh; textdurationin:800; texteasingin:easeOutQuint; textfadein:false; textstartatin:transitioninstart + 0;">Immolists </p>
 			<p style="top:220px; left:50%; text-align:initial; text-decoration:none; mix-blend-mode:normal; font-size:30px; color:#fff; padding-right:20px;" class="ls-l" data-ls="showinfo:1; offsetxin:-100lw; durationin:1500; delayin:2000; transformoriginin:0% 50% 0; clipin:0 0 0 100%; offsetxout:left;">The RealEsate Source </p>
 
 			<p style="top:270px; left:50%; text-align:initial; text-decoration:none; mix-blend-mode:normal; font-size:30px; color:#fff; padding-right:20px;" class="ls-l" data-ls="showinfo:1; offsetxin:-100lw; durationin:1500; delayin:2000; transformoriginin:0% 50% 0; clipin:0 0 0 100%; offsetxout:left;">Greetings from immolists.com, the pioneer in the search for modern living. </p>
@@ -115,7 +115,7 @@
 			<div class="col-md-12 col-lg-12">
 				<div class="main-title-one">
 					<h2 class="title color-primary">Featured Properties</h2>
-					<p class="sub-title color-secondery py_60">All of our featured property of this month are include </p>
+					<p class="sub-title color-secondery py_60">All of our latest featured property are include here</p>
 				</div>
 			</div>
 		</div>
@@ -129,11 +129,11 @@
 						<div class="Featured">{{object.category}}</div>
 
 						<div class="sale sale_position bg-primary">For {{object.get_action_display }}</div>
-						<div class="area_price price_position">${{object.min_price}}-${{object.max_price}}<span>{{object.views }} views</span></div>
+						<div class="area_price price_position">{{object.min_price}}-{{object.max_price}}<span>{{object.views }} views</span></div>
 						<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
 					</div>
 					<div class="thum_one_content">
-						<div class="thum_title color-secondery pb-4">
+						<div class="thum_title color-secondery pb-4 notranslate">
 							<h5 class="hover_primary"><a href="{{object.get_absolute_url }}">{{object.title}}</a></h5>
 							<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{object.location.place}}</p>
 						</div>
@@ -159,9 +159,9 @@
 				<div class="col-md-3 col-lg-3">
 				    <div class="counter count wow icon_white color-white text-center flat_medium" data-wow-duration="300ms"><i class="flaticon-house" aria-hidden="true"></i>
 		            	<div class="counting_digit color-default pb_5 mt_15 mb-0">
-							<span class="count-num" data-speed="3000" data-stop="{{ object_list.count }}">0</span>
+
 		            	</div>
-		            	<div class="ach_name">Property Available</div>
+		            	<div class="ach_name">Digital RealEstate Media</div>
 		          	</div>
 				</div>
 				<div class="col-md-3 col-lg-3">
@@ -169,23 +169,23 @@
 		            	<div class="counting_digit color-default pb_5 mt_15 mb-0">
 							<span class="count-num" data-speed="3000" data-stop="{{ object}}">0</span>
 		            	</div>
-		            	<div class="ach_name">Registered Agents</div>
+		            	<div class="ach_name">Connectivity</div>
 		          	</div>
 				</div>
 				<div class="col-md-3 col-lg-3">
 				    <div class="counter count wow icon_white color-white text-center flat_medium" data-wow-duration="300ms"><i class="flaticon-invention" aria-hidden="true"></i>
 		            	<div class="counting_digit color-default pb_5 mt_15 mb-0">
-							<span class="count-num" data-speed="3000" data-stop="2350">0</span>
+
 		            	</div>
-		            	<div class="ach_name">People Are Invested</div>
+		            	<div class="ach_name">online real estate research</div>
 		          	</div>
 				</div>
 				<div class="col-md-3 col-lg-3">
 				    <div class="counter count wow icon_white color-white text-center flat_medium" data-wow-duration="300ms"><i class="flaticon-investment" aria-hidden="true"></i>
 		            	<div class="counting_digit color-default pb_5 mt_15 mb-0">
-							<span class="count-num" data-speed="3000" data-stop="13780">0K</span>
+
 		            	</div>
-		            	<div class="ach_name">Total Investment</div>
+		            	<div class="ach_name">easier and faster</div>
 		          	</div>
 				</div>
 			</div>
@@ -251,37 +251,12 @@
 				<div class="col-md-6 col-lg-3">
 					<div class="box-one p-4 text-center icon_default icon_font rounded mb-4">
 						<i class="flaticon-increase" aria-hidden="true"></i>
-						<h5 class="hover_primary py_15 m-0"><a href="#">No Subscription Cost</a></h5>
- 					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-3">
-					<div class="box-one p-4 text-center icon_default icon_font rounded mb-4">
-						<i class="flaticon-increase" aria-hidden="true"></i>
-						<h5 class="hover_primary py_15 m-0"><a href="#">Manage Enquiry</a></h5>
- 					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-3">
-					<div class="box-one p-4 text-center icon_default icon_font rounded mb-4">
-						<i class="flaticon-increase" aria-hidden="true"></i>
 						<h5 class="hover_primary py_15 m-0"><a href="#">List Favourite</a></h5>
  					</div>
 				</div>
 
-					<div class="col-md-6 col-lg-3">
-					<div class="box-one p-4 text-center icon_default icon_font rounded mb-4">
-						<i class="flaticon-increase" aria-hidden="true"></i>
-						<h5 class="hover_primary py_15 m-0"><a href="#">Make Offer</a></h5>
- 					</div>
-				</div>
 
-				<div class="col-md-6 col-lg-3">
-					<div class="box-one p-4 text-center icon_default icon_font rounded mb-4">
-						<i class="flaticon-increase" aria-hidden="true"></i>
-						<h5 class="hover_primary py_15 m-0"><a href="#">Easy and Flexible</a></h5>
- 					</div>
-				</div>
+
 
 
 			</div>

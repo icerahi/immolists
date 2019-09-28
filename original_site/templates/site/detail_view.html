@@ -15,7 +15,7 @@
 							<div class="full-row overflow-hidden">
 								<div class="property-slider-two">
 									<!-- Slider HTML markup -->
-									{{ object.build_absolute_uri }}
+
 									<div id="single-property-2" style="width:1200px;height:640px;margin:0 auto;margin-bottom: 0px;">
 
 										<!-- Slide 1-->
@@ -46,20 +46,19 @@
 						<div class="row">
 							<div class="col-md-6 col-lg-6">
 								<div class="sale bg-default">For {{object.get_action_display}}</div>
-								<div class="icon_default">
-									<h5 class="mt_10 color-primary">{{object.title }}</h5>
+								<div class="icon_default notranslate">
+									<h5 class="mt_10 color-primary ">{{object.title }}</h5>
 									<p><i class="fa fa-map-marker" aria-hidden="true"></i>{{object.location.place}}</p>
 								</div>
 							</div>
 							<div class="col-md-6 col-lg-6">
 								<div class="property-price">
-									<div class="add_favourite float-right color-secondery">
-										<form action="#">
-											<button value="" title="{{object.views}} views">{{object.views}}views</button>
-										</form>
-									</div>
-									<div class="area_price"><h1>${{object.min_price}}-${{object.max_price}}</h1></div>
-									<div class="amount">Fixed Amount</div>
+
+											<p value="" title="{{object.views}} views">{{object.views}}views</p>
+
+									<div class="area_price"><h3>{{object.min_price}}-{{object.max_price}}</h3></div>
+
+									<div class="amount">{{object.min_price.currency.name}}/{{object.min_price.currency}}</div>
 								</div>
 							</div>
 						</div>
@@ -113,26 +112,26 @@
 									</div>
 
 									<h5 class="pt_60 mb_30 color-primary">Other Properties from <span class="font-weight-bold color-default"> <a
-											href="{% url 'site:profile' username=object.realator.username %}">{{object.realator.realator.fullname }}[{{object.realator.username}}]</a></span></h5>
+											href="{% url 'site:profile' username=object.realator.username %}">This Property Realtor</a></span></h5>
 									<div class="list_item related-property">
 										<!-- Thumbnail 1 Start -->
 										{% for property in other_properties %}
 										<div class="thumbnail_one mb_30">
 											<div class="image_area overlay_one overfollow">
 												<img src="{{property.main_image.url}}" alt="">
-												<div class="Featured">Featured</div>
+												<div class="Featured">{{property.category}}</div>
 												<div class="sale sale_position bg-primary">For {{property.get_action_display}}</div>
-												<div class="area_price price_position">${{property.max_price}}-${{property.min_price}}</div>
+												<div class="area_price price_position">{{property.max_price}}-{{property.min_price}}</div>
 												<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
 											</div>
 											<div class="thum_one_content">
-												<div class="thum_title color-secondery">
+												<div class="thum_title color-secondery notranslate">
 													<h5 class="hover_primary"><a href="{{ property.get_absolute_url }}">{{property.title}}</a></h5>
-													<p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ property.location.place}}</p>
+													<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ property.location.place}}</p>
 												</div>
 
 												<div class="ft_area p_20">
-													<div class="post_author"><i class="fa fa-user" aria-hidden="true"></i>
+													<div class="post_author notranslate"><i class="fa fa-user" aria-hidden="true"></i>
 														<a href="{% url 'site:profile' username=property.realator.username %}">{{ property.realator.realator.fullname}} </a> </div>
 
 
@@ -149,8 +148,7 @@
 							</div>
 							<div class="col-md-12 col-lg-4">
 								<ul class="property_btn mt-5">
-									<li class="download"><a href="#" class="btn btn-primary"><i class="fa fa-download" aria-hidden="true"></i></a></li>
-									{% if is_favourite %}
+ 									{% if is_favourite %}
 									<li><a href="{% url 'dashboard:add_favourite' pk=object.pk %}" class="btn btn-danger">Remove Favourite</a></li>
 									{% else %}
 									<li><a href="{% url 'dashboard:add_favourite' pk=object.pk %}" class="btn btn-success">Add Favourite</a></li>
@@ -163,7 +161,7 @@
 
 									<div class="broker_name">
 
-										<h6 class="font-weight-bold color-default"><a href="{% url 'site:profile' username=object.realator.username %}">{{object.realator.username }}</h6>
+										<h6 class="font-weight-bold color-default notranslate"><a href="{% url 'site:profile' username=object.realator.username %}">{{object.realator.username }}</h6>
 										<span class="color-secondery">Property Owner</span></a>
 									</div>
 
@@ -195,7 +193,7 @@
  												</div>
 											</div>
 											<div class="col-md-12 col-lg-12">
-												<button type="submit" value="submit" class="btn btn-default1 w-100">Send Message</button>
+												<button type="submit" value="submit" class="btn btn-default1 w-100">Send Enquiry</button>
 											</div>
 										</div>
 									</form>
@@ -208,13 +206,13 @@
 										<div class="thumbnail_three">
 											<div class="image_area overlay_one overfollow">
 												<img src="{{ property.main_image.url }}" alt="">
-												<div class="Featured">Featured</div>
+												<div class="Featured">{{property.category}}</div>
 												<div class="sale sale_position bg-primary">For {{property.get_action_display}}</div>
-												<div class="area_price price_position">${{property.max_price}}-${{property.min_price}}<span>{{property.views}} views</span></div>
+												<div class="area_price price_position">{{property.max_price}}-{{property.min_price}}<span>{{property.views}} views</span></div>
 												<div class="starmark starmark_position"><i class="fa fa-star-o" aria-hidden="true"></i></div>
 											</div>
 											<div class="thum_three_content bg-white color-secondery">
-												<div class="thum_title2 icon_default bg-gray">
+												<div class="thum_title2 icon_default bg-gray notranslate">
 													<h5 class="hover_primary"><a href="{{property.get_absolute_url}}">{{property.title }}</a></h5>
 													<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ property.location.place }}</p>
 												</div>

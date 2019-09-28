@@ -95,9 +95,10 @@ AUTHENTICATION_BACKENDS=(
 
 )
 
-ACCOUNT_CONFIRM_EMAIL_ON_GET =True
-ACCOUNT_EMAIL_REQUIRED =True
-LOGIN_REDIRECT_URL ='/dashboard/'
+LOGIN_REDIRECT_URL = '/dashboard/'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
 LOGOUT_REDIRECT_URL='/'
 ACCOUNT_LOGOUT_ON_GET=False
 LOGIN_URL='/accounts/login'
@@ -112,7 +113,8 @@ PLACES_MAP_OPTIONS='{"center": { "lat": 38.971584, "lng": -95.235072 }, "zoom": 
 PLACES_MARKER_OPTIONS='{"draggable": true}'
 
 
-ACCOUNT_FORMS = {'login': 'accounts.forms.MyLoginForm','signup':'accounts.forms.MyRegisterForm'}
+ACCOUNT_FORMS = {'login': 'accounts.forms.MyLoginForm','signup':'accounts.forms.MyRegisterForm',
+                 'reset_password':'accounts.forms.PasswordResetForm',}
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -156,7 +158,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+CURRENCIES = ('USD', 'EUR','DZD')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

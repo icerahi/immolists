@@ -6,7 +6,14 @@
 					<div class="row">
 						<div class="full-row deshbord_panel w-100 mb-5">
 							<h4 class="color-primary mb-4">Make Offer On Your Item’s List</h4>
-
+							{% if messages %}
+						{% for message in messages %}
+						<div class="alert alert-{{message.tags}} alert-dismissible">
+					  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					  <strong>{{message.tags}}!</strong> {{message}}
+						</div>
+						 {% endfor %}
+							{% endif %}
 							<div class="items_list bg_transparent color-secondery icon_default">
 								<table class="w-100">
 									<thead>
@@ -25,10 +32,10 @@
 											<td>
 												<img src="{{object.property.main_image.url}}" alt="">
 												<div class="property_info d-table">
-													<h4 class="color-primary">{{object.property.title}}</h4>
-													<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> {{object.property.location.place}}</span>
+													<h4 class="color-primary notranslate">{{object.property.title}}</h4>
+													<span class="location notranslate"><i class="fa fa-map-marker" aria-hidden="true"></i> {{object.property.location.place}}</span>
 													<div class="price mt-3">
-														<span class="color-default">${{object.property.max_price}}-${{object.property.min_price }}</span>
+														<span class="color-default notranslate">{{object.property.max_price}}-{{object.property.min_price }}</span>
 
 													</div>
 												</div>

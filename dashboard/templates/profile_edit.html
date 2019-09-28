@@ -6,6 +6,14 @@
 					<div class="row">
 						<div class="full-row deshbord_panel w-100 mb-5">
 							<h4 class="color-primary mb-4">Personal Information</h4>
+						{% if messages %}
+						{% for message in messages %}
+						<div class="alert alert-{{message.tags}} alert-dismissible">
+					  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					  <strong>{{message.tags}}!</strong> {{message}}
+						</div>
+						 {% endfor %}
+							{% endif %}
 							<div class="dashboard_personal_info p-5 bg-white">
 								<form action="#" method="post" enctype="multipart/form-data">
 									{% csrf_token %}
@@ -82,9 +90,9 @@
 
  												</div>
 												<div class="user_info mt-4">
-													<span class="d-table mb-1"><b>Name:</b> {{request.user.realator.fullname}}</span>
-													<span class="d-table mb-1"><b>Email:</b>{{request.user.email}}</span>
-													<span class="d-table mb-1"><b>Phone:</b> {{request.user.realator.phone}}</span>
+													<span class="d-table mb-1 notranslate"><b>Name:</b> {{request.user.realator.fullname}}</span>
+													<span class="d-table mb-1 notranslate"><b>Email:</b>{{request.user.email}}</span>
+													<span class="d-table mb-1 notranslate"><b>Phone:</b> {{request.user.realator.phone}}</span>
 												</div>
 											</div>
 										</div>

@@ -1,8 +1,4 @@
 {% load static %}
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +15,7 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Unicoder">
 
-	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
 	<!-- google translator -->
 	<style>
 		.goog-logo-link {
@@ -81,7 +77,7 @@
 			<div class="row">
 				<div class="col-md-9 col-lg-9">
 					<div class="top_left color-white icon_default">
-						<ul class="pl-0">
+						<ul class="pl-0 notranslate">
 							<li><i class="fa fa-phone" aria-hidden="true"></i>+213-555-051-055</li>
 							<li><i class="fa fa-envelope" aria-hidden="true"></i>contact@immolists.com</li>
 							<li>
@@ -100,17 +96,12 @@
 				</div>
 				<div class="col-md-3 col-lg-3">
 					<div class="currency float-right">
-						<form action="#" method="post">
-							<select class="color-white">
-								<option>$ USD</option>
-								<option>£ EUR</option>
-								<option>₹ Rupi</option>
-								<option>৳ Taka</option>
-							</select>
+
+
 							<div class="color-white"  id="google_translate_element">
 
 							</div>
-						</form>
+
 					</div>
 				</div>
 			</div>
@@ -143,7 +134,7 @@
 
 						  </li>
 							<li class="nav-item dropdown">
-							<a class="nav-link" href="{% url 'site:realators' %}"   aria-haspopup="true" aria-expanded="false">Realators</a>
+							<a class="nav-link" href="{% url 'site:realators' %}"   aria-haspopup="true" aria-expanded="false">Realtors</a>
 
 						  </li>
 
@@ -170,7 +161,7 @@
 					{% if request.user.is_authenticated %}
 						  <div class="profile_user d-inline-block mr_20">
 							<div class="dropdown">
-							  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							  <a class="dropdown-toggle notranslate" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							  	<img src="{{ request.user.realator.image.url }}" alt="">
 							   <span>Hi, {{request.user.username}}</span>
 							  </a>
@@ -200,6 +191,17 @@
 		</div>
 	</div>
 </header>
+
+		{% if messages %}
+<div class="container">
+    {% for message in messages %}
+	<div class="alert alert-{{message.tags}} alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>{{message.tags}}!</strong> {{message}}
+	</div>
+     {% endfor %}
+</div>
+{% endif %}
 {% block content %}{% endblock content %}
 
 <footer class="full-row bg-gray">
@@ -262,9 +264,9 @@ Immolists websites aim to make online real estate research easier and faster by 
 								</div>
 								<div class="help_links pt_50 pb_30 color-secondery">
 									<ul>
-										<li class="pb_20">Collins Street West, Victoria 8007, Australia</li>
-										<li class="pb_20">+1 246-345-0695</li>
-										<li class="pb_20">helpline@homex.com</li>
+										<li class="pb_20"> Feni, Dhaka, Bangladesh</li>
+										<li class="pb_20">+213-555-051-055</li>
+										<li class="pb_20">contact@immolists.com</li>
 									</ul>
 								</div>
 								<div class="social_media hover_primary">
@@ -283,11 +285,11 @@ Immolists websites aim to make online real estate research easier and faster by 
 			</div>
 		</div>
 		<div class="copyright py_30">
-			<div class="copy_text color-secondery d-inline">© 2019 Immolists All right reserved</div>
-			<div class="policy hover_gray">
+			<div class="copy_text color-secondery d-inline notranslate">© 2019 Immolists All right reserved</div>
+			<div class="policy hover_gray notranslate">
 				<ul>
 					<li><a href="#">Developed by</a></li>
-					<li><a href="#"> Imran Hasan Rahi</a></li>
+					<li><a href="https://www.facebook.com/icerahi"> Imran Hasan Rahi</a></li>
 				</ul>
 			</div>
 		</div>
@@ -298,9 +300,8 @@ Immolists websites aim to make online real estate research easier and faster by 
 <!-- End Scroll To top -->
 </div>
 </div>
-<!-- Wrapper End -->
 
-
+<!-- google translator -->
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
